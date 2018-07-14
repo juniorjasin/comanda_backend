@@ -18,6 +18,8 @@ class LoginHandler(tornado.web.RequestHandler):
     def get(self):
         logger.debug("loginHandler get")
         svc = loginService.LoginService()
+        token = svc.validarUsuario()
+        self.write(token)
         self.finish()
         
     @tornado.web.asynchronous

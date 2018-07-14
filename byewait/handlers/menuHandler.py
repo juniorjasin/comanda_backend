@@ -1,20 +1,13 @@
 from tornado.ioloop import IOLoop
 import tornado.web
-import logging
+import json
 from services import menuService
+from decorators.decorator import check_authentication
 
-
-logger = logging.getLogger('menuHandler')
-logger.setLevel(logging.DEBUG)
-logger.propagate = False
-ch = logging.StreamHandler()
-ch.setLevel(logging.DEBUG)
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-ch.setFormatter(formatter)
-logger.addHandler(ch)
+from utils.logger import Logger
+logger = Logger('menuHandler')
 
 class MenuHandler(tornado.web.RequestHandler):
-
     @tornado.web.asynchronous
     def get(self, restaurante):
         logger.debug("menuHandler get")
@@ -22,6 +15,7 @@ class MenuHandler(tornado.web.RequestHandler):
         self.finish()
         
     @tornado.web.asynchronous
+    @check_authentication
     def post(self, restaurante):
         logger.debug("menuHandler post")
         svc = menuService.MenuService()

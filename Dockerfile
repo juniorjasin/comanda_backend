@@ -1,6 +1,6 @@
 FROM python:3.6-alpine3.6
 
-ENV INSTALL_DIR /opt/byewait
+ENV INSTALL_DIR /opt/byewait/
 ENV PYTHONPATH /opt
 
 RUN apk add --no-cache ca-certificates musl-dev gcc make openssl-dev curl-dev

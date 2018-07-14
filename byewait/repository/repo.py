@@ -1,7 +1,6 @@
 import pymysql
 import logging
 import os
-from model import dish as dishModel
 
 logger = logging.getLogger('mysql_repo')
 logger.setLevel(logging.DEBUG)

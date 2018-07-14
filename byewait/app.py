@@ -1,7 +1,6 @@
 from tornado.ioloop import IOLoop
 import tornado.web
 from repository import repo
-from services import service
 from handlers import loginHandler
 from handlers import registerHandler
 from handlers import restaurantesHandler

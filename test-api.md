@@ -1,3 +1,9 @@
 # Curl para APIs
 
 curl -v -X GET 'http://localhost:8888/restaurantes' | python -m json.tool
+
+curl -v -X GET 'http://localhost:8888/login' | python -m json.tool
+
+# post menu
+
+curl -v -H "Content-Type: application/json" -X POST -d '{"token":"eyJ0eXAiOiAiSldUIiwgImFsZyI6ICJSUzI1NiJ9.eyJ1c2VyTmFtZSI6ICJhbmR5IiwgImp0aSI6ICI4V1lhNHl1UFdyRmw5T3pGcFZJbFFRPT0iLCAibmJmIjogMTUzMTM0NzAyNiwgImlhdCI6IDE1MzEzNDcwMjYsICJleHAiOiAxNTYzNzQ3MDI2fQ.rMrd1QZHvPrOMde2yicof0r9XI4WXjDN8z8KQap4yPpNgF9cIInt4BHkXsKv8HHPCMPHBc2QEH89ok06JwVxhRA5GWpi6ZxH8WoGfbN_h5mzHLeNZFyKFhIuNxugBBbNozySz8X9Do57WWLxcVXsEE_loz6_4yxsx4R64dXIgd9CzRYZyVcKNx1cODmqc0sFPehccmRnxR2sE8ov_-9FIznA38CHSG5c05_0XQOMWYkMJ0vZGoeCqXFVzAy2T37Hj2F6BuOupQDVcpYYoaLMFxVvYzDHMC7brPgv44sLTDyWc5occD4UOyYwNNkpF6_xsPNuCLwX11tu9e0eqlWV-bXAC9Aak2NLzpSrFyUpH3Xw41o3cprmQuc6ia674INH5xG-6YmldSuhUZK_8dpVrdAK-zGdUws9mV5LKtnMrsarXMtjyigPGY2CuHffFXM7vqc1OtxqSNdouMZaQaSoxXuacliQIuo1ChYIaRU9L2WtM5thxUD_wdvcho92toxxt3Y_Ft9BdubXqy_f3Hed7cn6QjNrb28kHAFVLkhnurFT-r9Y7SB1iRDgj4Uysz6dmtpbSWDR5nHOlW3eOtJDtDVgqkZT0EuLQuDTbjTa-Bt5KPJC_FKRI7G7Rt692Kg1k-2F1O_48_RPwao2-6zOQe4DPGbD8bFJBnGA8VgEpKg"}' 'http://localhost:8888/prueba/menu' | python -m json.tool

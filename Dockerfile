@@ -17,4 +17,4 @@ ENV MYSQL_USER dev
 ENV MYSQL_PASSWORD changeme
 ENV MYSQL_PORT 3306
 
-CMD python3 ${INSTALL_DIR}/app.py
+CMD python3 ${INSTALL_DIR}/src/app.py

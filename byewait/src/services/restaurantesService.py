@@ -16,7 +16,8 @@ class RestaurantesService:
         jsonRestaurantes = []
         if len(restaurantes) > 0:
             try:
-                jsonRestaurantes = json.dumps([dict(r) for r in restaurantes])
+                jsonRestaurantes = [dict(r) for r in restaurantes]
+
             except Exception as e:
                 msg = "No se pudo convertir la lista de restaurantes a json: {}".format(e)
                 logger.error(msg)

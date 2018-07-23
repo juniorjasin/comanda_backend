@@ -5,6 +5,9 @@ import pymysql
 from model.restaurante import Restaurante
 from collections import namedtuple
 
+Resto = namedtuple('Resto', 'id name description address url_image')
+
+
 logger = Logger('restaurantesRepo')
 
 class RestaurantesRepo(repo.Repo):
@@ -29,6 +32,8 @@ class RestaurantesRepo(repo.Repo):
             else:
                 try:
                     for row in rows:
+                        
+                        r = Resto(id=row[0], name=row[1], description=row[2], address=row[3], url_image=row[4])
 
                         restaurante = {
                         "id":row[0],

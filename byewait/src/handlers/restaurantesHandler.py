@@ -4,6 +4,7 @@ import logging
 from services.restaurantesService import RestaurantesService
 from utils.logger import Logger
 from handlers import base
+import json
 
 logger = Logger('restaurantesHandler')
 

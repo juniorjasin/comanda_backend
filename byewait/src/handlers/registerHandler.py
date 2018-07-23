@@ -3,11 +3,12 @@ import tornado.web
 import logging
 from services.registerService import RegisterService
 from utils.logger import Logger
+from handlers import base
 
 logger = Logger('registerHandler')
 
 
-class RegisterHandler(tornado.web.RequestHandler):
+class RegisterHandler(base.BaseHandler):
 
     @tornado.web.asynchronous
     def get(self):

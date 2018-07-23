@@ -3,10 +3,11 @@ from decorators.checkExceptions import checkExceptions
 from exceptions import exceptions
 from services.loginService import LoginService
 from utils.logger import Logger
+from handlers import base
 
 logger = Logger('loginHandler')
 
-class LoginHandler(tornado.web.RequestHandler):
+class LoginHandler(base.BaseHandler):
 
     @tornado.web.asynchronous
     @checkExceptions

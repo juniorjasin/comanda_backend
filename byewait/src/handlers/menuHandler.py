@@ -4,10 +4,11 @@ import logging
 from services.menuService import MenuService
 from decorators.checkAuthentication import checkAuthentication
 from utils.logger import Logger
+from handlers import base
 
 logger = Logger('menuHandler')
 
-class MenuHandler(tornado.web.RequestHandler):
+class MenuHandler(base.BaseHandler):
     @tornado.web.asynchronous
     def get(self, restaurante):
         logger.debug("menuHandler get")

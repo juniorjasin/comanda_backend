@@ -15,6 +15,10 @@ class RegisterHandler(base.BaseHandler):
         logger.debug("registerHandler get")
         svc = RegisterService()
         self.finish()
+
+    @tornado.web.asynchronous
+    def options(self, restaurante):
+        self.finish()
         
     @tornado.web.asynchronous
     def post(self):

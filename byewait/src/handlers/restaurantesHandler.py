@@ -24,6 +24,10 @@ class RestaurantesHandler(base.BaseHandler):
             raise exceptions.InternalServerError(5001)
         
         self.finish()
+
+    @tornado.web.asynchronous
+    def options(self, restaurante):
+        self.finish()
         
     @tornado.web.asynchronous
     def post(self):

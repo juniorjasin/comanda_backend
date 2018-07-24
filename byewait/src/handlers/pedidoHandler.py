@@ -13,6 +13,10 @@ class PedidoHandler(base.BaseHandler):
         logger.debug("pedidoHandler get")
         svc = PedidoService()
         self.finish()
+
+    @tornado.web.asynchronous
+    def options(self, restaurante):
+        self.finish()
         
     @tornado.web.asynchronous
     def post(self, restaurante):

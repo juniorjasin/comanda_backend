@@ -17,6 +17,10 @@ class LoginHandler(base.BaseHandler):
         token = svc.validarUsuario()
         self.write(token)
         self.finish()
+
+    @tornado.web.asynchronous
+    def options(self, restaurante):
+        self.finish()
         
     @tornado.web.asynchronous
     @checkExceptions

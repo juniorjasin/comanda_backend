@@ -1,6 +1,7 @@
 from tornado.ioloop import IOLoop
 import tornado.web
 import logging
+import json
 from services.menuService import MenuService
 from decorators.checkAuthentication import checkAuthentication
 from utils.logger import Logger
@@ -19,49 +20,12 @@ class MenuHandler(base.BaseHandler):
     def options(self, restaurante):
         self.finish()
         
-    @tornado.web.asynchronous
-    @checkAuthentication
+    @tornado.web.asynchronous    
     def post(self, restaurante):
-        # logger.debug("menuHandler post")
-        # svc = MenuService()
-        menu = {
-          'style': {
-            'background-color': 'red'
-          },
-          'categories': [
-            {
-                'id': 1,
-                'name': 'Hamburguesas',
-                'items': [
-                    {
-                      "id": 1,
-                      "name":"Hamburguesa Completa",
-                      "description":"Hamburguesa con tomate, lechuga, etc",
-                      "image_url":"https://cdn1.eldia.com/022018/1517677620223.jpg",
-                      "price":14.99
-                    },
-                    {
-                      "id": 2,
-                      "name":"Hamburguesa Completa 2",
-                      "description":"Hamburguesa con tomate, lechuga, etc",
-                      "image_url":"https://cdn1.eldia.com/022018/1517677620223.jpg",
-                      "price":14.99
-                    }
-                ]
-            },
-            {
-                'id': 2,
-                'name': 'Pizzas',
-                'items': [
-                    {
-                      "id": 3,
-                      "name":"Pizza Completa",
-                      "description":"Pizza con tomate, lechuga, etc",
-                      "image_url":"https://cdn1.eldia.com/022018/1517677620223.jpg",
-                      "price":14.99
-                    }
-                ]
-            }
-          ]
-        }
-        self.finish({"menu": menu})
+        logger.debug("menuHandler post")
+        data = json.loads(self.request.body)        
+        id_restaurante = data['id_restaurante']
+        svc = MenuService()        
+        menu = svc.getItemsMenu(id_restaurante)
+        self.write({"menu":menu})
+        self.finish()

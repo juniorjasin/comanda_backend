@@ -1,8 +1,4 @@
-class Restaurante:
-    def __init__(self):
-        self.id = None
-        self.name = None
-        self.direction = None
-        self.description = None
-        self.image_url = None
+from collections import namedtuple
+
+Restaurante = namedtuple('Restaurante', 'id name description address image_url')
 

@@ -2,11 +2,8 @@ from repository import repo
 from utils.logger import Logger
 from exceptions import  exceptions
 import pymysql
-from model.restaurante import Restaurante
 from collections import namedtuple
-
-Resto = namedtuple('Resto', 'id name description address url_image')
-
+from model.restaurante import Restaurante
 
 logger = Logger('restaurantesRepo')
 
@@ -32,17 +29,8 @@ class RestaurantesRepo(repo.Repo):
             else:
                 try:
                     for row in rows:
-                        
-                        r = Resto(id=row[0], name=row[1], description=row[2], address=row[3], url_image=row[4])
-
-                        restaurante = {
-                        "id":row[0],
-                        "name":row[1],
-                        "description": row[2],
-                        "address": row[3],
-                        "image_url":row[4]
-                        }
-                        restaurantes.append(restaurante)
+                        r = Restaurante(id=row[0], name=row[1], description=row[2], address=row[3], image_url=row[4])
+                        restaurantes.append(r)
                 except Exception as e:
                     msg = "Fallo la creacion del array de restaurantes: {}".format(e)
                     logger.error(msg)

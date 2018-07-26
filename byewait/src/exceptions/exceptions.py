@@ -21,6 +21,7 @@ class InfoException (Exception):
         except Exception as e:
             self.info[USER_MESSAGE] = codes["DEFAULT_USER_MESSAGE"]["user_message"]
 
+        logger.debug(self.info)
         super(InfoException, self).__init__(self.info[USER_MESSAGE])
 
     def information(self):

@@ -1,31 +1,24 @@
 import json
 import configparser
-import logging
+from utils.logger import Logger
 import os
 
-logger = logging.getLogger('loginHandler2')
-logger.setLevel(logging.DEBUG)
-logger.propagate = False
-ch = logging.StreamHandler()
-ch.setLevel(logging.DEBUG)
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-ch.setFormatter(formatter)
-logger.addHandler(ch)
+logger = Logger('exceptions')
 
 # DEVELOPER_MESSAGE_KEY = "developer_message"
 USER_MESSAGE = 'user_message'
 CODE = 'code'
 
 class InfoException (Exception):
-    def __init__(self,info):
+    def __init__(self, info):
         self.info = info
 
         # Setting user message from config file
         try:
             codes = configparser.ConfigParser()
             codes.read(os.environ["INSTALL_DIR"] + '/config/userMessages.cfg')
-            self.info[USER_MESSAGE] = codes[self.info[CODE]]["user_message"]
-        except:
+            self.info[USER_MESSAGE] = codes[str(self.info[CODE])]["user_message"]
+        except Exception as e:
             self.info[USER_MESSAGE] = codes["DEFAULT_USER_MESSAGE"]["user_message"]
 
         super(InfoException, self).__init__(self.info[USER_MESSAGE])

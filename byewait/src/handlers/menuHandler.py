@@ -6,26 +6,34 @@ from services.menuService import MenuService
 from decorators.checkAuthentication import checkAuthentication
 from utils.logger import Logger
 from handlers import base
+from decorators.handleException import handleException
+from exceptions import exceptions
 
 logger = Logger('menuHandler')
 
 class MenuHandler(base.BaseHandler):
     @tornado.web.asynchronous
+    @handleException
     def get(self, restaurante):
         logger.debug("menuHandler get")
         svc = MenuService()
         self.finish()
 
     @tornado.web.asynchronous
+    @handleException
     def options(self, restaurante):
         self.finish()
         
-    @tornado.web.asynchronous    
+    @tornado.web.asynchronous
+    @handleException
     def post(self, restaurante):
         logger.debug("menuHandler post")
-        data = json.loads(self.request.body)        
-        id_restaurante = data['id_restaurante']
-        svc = MenuService()        
-        menu = svc.getItemsMenu(id_restaurante)
-        self.write({"menu":menu})
-        self.finish()
+        # Controlar entrada
+        try:
+            data = json.loads(self.request.body)
+            data['id_restaurante']
+        except:
+            raise exceptions.BadRequest(5001)
+        svc = MenuService()
+        menu = svc.getItemsMenu(data['id_restaurante'])
+        self.finish({"menu": menu})

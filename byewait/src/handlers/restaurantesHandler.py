@@ -5,31 +5,28 @@ from services.restaurantesService import RestaurantesService
 from utils.logger import Logger
 from handlers import base
 import json
-from exceptions import  exceptions
+from decorators.handleException import handleException
 
 logger = Logger('restaurantesHandler')
 
 class RestaurantesHandler(base.BaseHandler):
     
     @tornado.web.asynchronous
+    @handleException
     def get(self):
         logger.debug("restaurantesHandler get")
         svc = RestaurantesService()
-        try:
-            restaurantes = svc.getAllRestaurants()
-            self.write({"restaurantes": restaurantes})
-        except Exception as e:
-            msg = "Error durante svc.getAllRestaurants: {}".format(e)
-            logger.error(msg)
-            raise exceptions.InternalServerError(5001)
-        
+        restaurantes = svc.getAllRestaurants()
+        self.write({"restaurantes": restaurantes})
         self.finish()
 
     @tornado.web.asynchronous
+    @handleException
     def options(self, restaurante):
         self.finish()
         
     @tornado.web.asynchronous
+    @handleException
     def post(self):
         logger.debug("restaurantesHandler post")
         svc = RestaurantesService()

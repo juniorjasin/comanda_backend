@@ -1,4 +1,3 @@
-import json
 from repository import loginRepo
 import python_jwt as jwt
 import datetime

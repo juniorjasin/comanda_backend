@@ -14,11 +14,11 @@ logger = Logger('app')
 class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
-            (r"/login", LoginHandler),
-            (r"/register", RegisterHandler),
-            (r"/restaurantes", RestaurantesHandler),
-            (r"/([a-zA-Z0-9]+)/menu", MenuHandler),
-            (r"/([a-zA-Z0-9]+)/pedido", PedidoHandler)
+            (r"/login/?", LoginHandler),
+            (r"/register/?", RegisterHandler),
+            (r"/restaurantes/?", RestaurantesHandler),
+            (r"/([a-zA-Z0-9]+)/menu/?", MenuHandler),
+            (r"/([a-zA-Z0-9]+)/pedido/?", PedidoHandler)
         ]
         tornado.web.Application.__init__(self, handlers)
 

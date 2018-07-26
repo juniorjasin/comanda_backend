@@ -4,10 +4,10 @@ from utils.logger import Logger
 
 logger = Logger('checkExceptions')
 
-def checkExceptions(f):
+def handleException(f):
     @wraps(f)
     def wrapper(*args, **kwds):
-        try:        
+        try:
             logger.debug('Inside decorator. Calling decorated function')
             return f(*args, **kwds)
         except exception.InfoException as ex:

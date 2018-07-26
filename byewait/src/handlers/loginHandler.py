@@ -1,6 +1,5 @@
 import tornado.web
-from decorators.checkExceptions import checkExceptions
-from exceptions import exceptions
+from decorators.handleException import handleException
 from services.loginService import LoginService
 from utils.logger import Logger
 from handlers import base
@@ -10,7 +9,7 @@ logger = Logger('loginHandler')
 class LoginHandler(base.BaseHandler):
 
     @tornado.web.asynchronous
-    @checkExceptions
+    @handleException
     def get(self):
         logger.debug("loginHandler get")
         svc = LoginService()
@@ -19,11 +18,12 @@ class LoginHandler(base.BaseHandler):
         self.finish()
 
     @tornado.web.asynchronous
+    @handleException
     def options(self, restaurante):
         self.finish()
         
     @tornado.web.asynchronous
-    @checkExceptions
+    @handleException
     def post(self):
         logger.debug("loginHandler post")
         svc = LoginService()

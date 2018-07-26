@@ -4,5 +4,5 @@ curl -v -X GET 'http://localhost:8888/restaurantes' | python -m json.tool
 # login
 curl -v -X GET 'http://localhost:8888/login' | python -m json.tool
 
-# post menu
-curl -v -H "Content-Type: application/json" -X POST -d '{"token":"eyJ0eXAiOiAiSldUIiwgImFsZyI6ICJSUzI1NiJ9.eyJ1c2VyTmFtZSI6ICJhbmR5IiwgImp0aSI6ICJvci1hTGUtazFHUzQ5bHNOM0tyeGx3PT0iLCAibmJmIjogMTUzMTU4OTI2MywgImlhdCI6IDE1MzE1ODkyNjMsICJleHAiOiAxNTMyMTI5MjYzfQ.YPhMQgjG3HYobpE-yTY_VyoiS2F7IretB1fMBOQpZR2lZpACo8Ut7e3Xu0UriPiPNfCnPZ0vFCYKplIpt-oFn64n3MBZJK6sqxcn7Gs2qi0kY9fysYLKGZb8ov0w119czWOQtNdJfoqtIzpUueCuOs0wAKWPe387_DgZfEyCYNNuBe1YIvY26YZBgzaeruJEenSgl0urdAlB7ZQA_7dHpVL7B14MpUKiB--dDriB2FrH_sVwYwa1mK9mHjXTExY7u-RJ-I__9-_Uha1nsXjrOUw4ieAk7gB2kJZ2ME4rhC85ulyI65AEE_ClBj5ehbUMCI2d20Hg7FbXftEl0VFJlrlvxhGGeBm8nDNzB-bZlroW-q40opX6iyugmKuWa0ZPEbktbT0a21eL4i2g1V3Ivw5SRrnFv1bKNYGNoiFXL35-f2tCHwD4_EsfuctT1lr_q-G-Lax00B5EGNx-ot0COR9ug9k7plyk-duBORn0YNqSzFWVyYGbk0m_TWUnL_c2OFaZp8o1tcOzEemIAjjD1BJuH6-DCaSlKDIDMRIF2EhqHrOYztvsQYvY-ckD4zDigKpk8WX-xEvQvEJ2h6bmD5FjX-LA7a4iR2ny6M019kkzvHuvPCuWKqFgt4esgJNj1ZMxksNd0MJOVx336l8lElk6C98cJFAfkFspdd2H1Z0"}' 'http://localhost:8888/prueba/menu' | python -m json.tool
+# post consulta menu
+curl -v -H "Content-Type: application/json" -X POST -d '{"id_restaurante":1}' 'http://localhost:8888/asd/menu' | python -m json.tool

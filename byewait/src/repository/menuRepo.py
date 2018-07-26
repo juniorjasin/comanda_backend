@@ -2,6 +2,8 @@ from repository import repo
 from utils.logger import Logger
 from exceptions import  exceptions
 import pymysql
+from model.item import Item
+from model.categoria import Categoria
 
 logger = Logger('menuRepo')
 
@@ -35,41 +37,22 @@ class MenuRepo(repo.Repo):
                 try:
                     for row in rows:                        
                         if id_categoria != row[0] and items:
-                            categoria_nueva = {
-                                "id": id_categoria,
-                                "name":nombre_categoria,
-                                "items":items
-                            }
-                            categorias.append(categoria_nueva)
+                            categoria_nueva = Categoria(id=id_categoria, name=nombre_categoria, items=items)
+                            categorias.append(categoria_nueva._asdict())
                             id_categoria = row[0]
                             nombre_categoria = row[1]
                             items = []
-                            item = {
-                            "id":row[2],
-                            "name":row[3],
-                            "description": row[4],
-                            "image_url":row[5],
-                            "price": row[6]
-                            }
-                            items.append(item)
+                            item = Item(id=row[2], name=row[3], description=row[4], image_url=row[5], price=float(row[6]))
+                            items.append(item._asdict())
+
                         else:
-                            item = {
-                            "id":row[2],
-                            "name":row[3],
-                            "description": row[4],
-                            "image_url":row[5],
-                            "price": row[6]
-                            }
-                            items.append(item)
+                            item = Item(id=row[2], name=row[3], description=row[4], image_url=row[5], price=float(row[6]))
+                            items.append(item._asdict())
                             id_categoria = row[0]
                             nombre_categoria = row[1]
 
-                    categoria_nueva = {
-                                "id": id_categoria,
-                                "name":nombre_categoria,
-                                "items":items
-                            }
-                    categorias.append(categoria_nueva)
+                    categoria_nueva = Categoria(id=id_categoria, name=nombre_categoria, items=items)        
+                    categorias.append(categoria_nueva._asdict())
                 except Exception as e:
                     msg = "Fallo la creacion del array de menu: {}".format(e)
                     logger.error(msg)

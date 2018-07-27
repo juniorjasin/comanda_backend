@@ -18,7 +18,7 @@ class RestaurantesRepo(repo.Repo):
 
         try:        
             cursor = self.cnx.cursor()
-            query = "SELECT id, name, description, direction, image_url FROM restaurants"
+            query = "SELECT id_restaurante, name, description, direction, image_url FROM restaurants"
             cursor.execute(query)
             rows = cursor.fetchall()
             self.cnx.commit()
@@ -38,7 +38,7 @@ class RestaurantesRepo(repo.Repo):
         except Exception as e2:
             msg = "Fallo la consulta de getAllRestaurants a la base de datos: {}".format(e2)
             logger.error(msg)
-            raise exceptions.InternalServerError(5002)
+            raise exceptions.InternalServerError(5001)
         return restaurantes
 
         

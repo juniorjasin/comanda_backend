@@ -28,7 +28,7 @@ class TestRestaurante(unittest.TestCase):
             listOfRestaurants = restaurantes['restaurantes']
             if listOfRestaurants != None and len(listOfRestaurants) > 0:
                 for l in listOfRestaurants:
-                    self.assertIsNotNone(l['id'])
+                    self.assertIsNotNone(l['id_restaurante'])
                     self.assertIsNotNone(l['name'])
                     self.assertIsNotNone(l['description'])
                     self.assertIsNotNone(l['image_url'])

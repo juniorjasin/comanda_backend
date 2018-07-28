@@ -1,28 +1,29 @@
 -- creacion de tablas a ejecutar MYSQL
-/*drop table restaurants;*/ 
+drop table item_menu;
+drop table categorias;
+drop table restaurants; 
 
 create table if not exists restaurants (
     id_restaurante      integer         not null AUTO_INCREMENT,
     name                varchar(100)    not null,
     description         varchar(500)    not null,
-    direction           varchar(500)    not null,
+    address           varchar(500)    not null,
     image_url           varchar(500)    not null,
     PRIMARY KEY (id_restaurante)
 );
 
 
 -- test para tablas
-INSERT INTO restaurants (name, description, direction, image_url)
+INSERT INTO restaurants (name, description, address, image_url)
 VALUES ('Antares', 'Cerveceria', 'San Lorenzo 79, Nueva Cordoba', 'https://comercioyjusticia.info/wp-content/uploads/2016/11/Antares.jpg');
 
-INSERT INTO restaurants (name, description, direction, image_url)
+INSERT INTO restaurants (name, description, address, image_url)
 VALUES ('Fresco', 'Restaurante', 'Jose Manuel Estrada 18, Nueva Cordoba', 'http://s3-us-west-2.amazonaws.com/puntoapunto.com.ar/wp-content/uploads/2017/02/21161917/Fresco.jpg');
 
-INSERT INTO restaurants (name, description, direction, image_url)
+INSERT INTO restaurants (name, description, address, image_url)
 VALUES ('Peñon', 'Cerveceria', ' Belgrano 902, Güemes', 'http://wpc.72c72.betacdn.net/8072C72/vos-images/sites/default/files/styles/landscape_1020_560/public/nota_periodistica/14_Jul_2016_18_04_01_penon.jpg');
 
 
-/*drop table categorias;*/
 
 create table if not exists categorias (
     id_categoria        integer         not null AUTO_INCREMENT,
@@ -34,7 +35,6 @@ INSERT INTO categorias (nombre_categoria) VALUES ("Hamburguesas");
 INSERT INTO categorias (nombre_categoria) VALUES ("Pizzas");
 INSERT INTO categorias (nombre_categoria) VALUES ("Cervezas");
 
-/*drop table item_menu;*/
 
 create table if not exists item_menu (
     id_item_menu        integer         not null AUTO_INCREMENT,
@@ -62,6 +62,41 @@ VALUES (2, 1, "Fugazza con queso","Pizza de base sencilla con cebolla, un poco d
 INSERT INTO item_menu (id_categoria, id_restaurante, nombre_item_menu, description, precio, image_url)
 VALUES (3, 1, "Cerveza IPA", "Es un estilo de cerveza de tradición inglesa que se caracteriza como una ale pálida y espumosa con un alto nivel del alcohol y de lúpulo", "110", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Fuller%27s_India_pale_ale.jpg/220px-Fuller%27s_India_pale_ale.jpg");
 
-/*select categorias.id_categoria, categorias.nombre_categoria, item_menu.id_item_menu, item_menu.nombre_item_menu, item_menu.description, item_menu.image_url, item_menu.precio
-from item_menu join categorias on item_menu.id_categoria = categorias.id_categoria
-where item_menu.id_restaurante = 1*/
+
+drop table items_pedido; 
+drop table pedidos; 
+drop table usuarios; 
+
+create table if not exists usuarios (
+    id_usuario          integer         not null AUTO_INCREMENT,
+    username            varchar(100)    not null UNIQUE,
+    email               varchar(100)    not null,
+    password            varchar(400)    not null,
+    PRIMARY KEY (id_usuario)
+);
+
+INSERT INTO usuarios (username, email, password) VALUES ('jborssotto', 'jborssottogmail.com', 'juan');
+INSERT INTO usuarios (username, email, password) VALUES ('andresbalestrini', 'andresbalestrini@gmail.com', 'andi');
+INSERT INTO usuarios (username, email, password) VALUES ('juniorjasin', 'juniorjasingmail.com', 'juni');
+
+
+create table if not exists pedidos (
+    id_pedidos          integer         not null AUTO_INCREMENT,
+    id_usuario          integer         not null,
+    fecha_hora          timestamp       not null,
+    PRIMARY KEY (id_pedidos),
+    FOREIGN KEY(id_usuario) REFERENCES usuarios(id_usuario)
+);
+
+
+
+create table if not exists items_pedido (
+    id_item_menu        integer         not null,
+    id_pedidos          integer         not null,
+    cantidad            integer         not null,
+    aclaraciones        varchar(500)    not null,
+    PRIMARY KEY (id_item_menu, id_pedidos),
+    FOREIGN KEY(id_item_menu) REFERENCES item_menu(id_item_menu),
+    FOREIGN KEY(id_pedidos) REFERENCES pedidos(id_pedidos)
+);
+

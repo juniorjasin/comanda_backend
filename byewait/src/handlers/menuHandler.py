@@ -31,9 +31,7 @@ class MenuHandler(base.BaseHandler):
         # Controlar entrada
         try:
             data = json.loads(self.request.body)
-            
-            logger.debug(data)
-            logger.debug(data['id_restaurante'])
+
         except Exception as e:
             msg = "Fallo conversion body a json: {}".format(e)
             logger.error(msg)

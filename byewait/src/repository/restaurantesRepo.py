@@ -18,7 +18,7 @@ class RestaurantesRepo(repo.Repo):
 
         try:        
             cursor = self.cnx.cursor()
-            query = "SELECT id_restaurante, name, description, direction, image_url FROM restaurants"
+            query = "SELECT id_restaurante, name, description, address, image_url FROM restaurants"
             cursor.execute(query)
             rows = cursor.fetchall()
             self.cnx.commit()

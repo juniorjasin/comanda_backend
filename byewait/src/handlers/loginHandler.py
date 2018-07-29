@@ -1,8 +1,10 @@
 import tornado.web
+import json
 from decorators.handleException import handleException
 from services.loginService import LoginService
 from utils.logger import Logger
 from handlers import base
+from exceptions import exceptions
 
 logger = Logger('loginHandler')
 
@@ -26,6 +28,26 @@ class LoginHandler(base.BaseHandler):
     @handleException
     def post(self):
         logger.debug("loginHandler post")
-        svc = LoginService()
+        try:
+            data = json.loads(self.request.body)
+            if 'user' in data and 'username' in data['user'] and 'password' in data['user']:
+                username = data['user']['username']
+                password = data['user']['password']
+                svc = LoginService()                
+                respuesta = svc.validarUsuario(username,password)
+                self.write(respuesta)
+            else:
+                logger.error('Error, el body es incorrecto, faltan atributos')
+                raise exceptions.BadRequest(3001)
+        except exceptions.BadRequest as ex:
+            raise(ex)
+        except exceptions.InternalServerError as ex:
+            raise(ex)
+        except exceptions.NotFound as ex:
+            raise(ex)
+        except Exception as e:
+            msg = "Error: {}".format(e)
+            logger.error(msg)
+            raise exceptions.BadRequest(4001)
         self.finish()
         

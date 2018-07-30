@@ -20,7 +20,9 @@ def handleException(f):
                 handler.set_status(401)
             elif isinstance(ex, exception.NotFound):
                 handler.set_status(404)
+            elif isinstance(ex, exception.ConflictException):
+                handler.set_status(409)
             elif isinstance(ex, exception.InternalServerError):
-                handler.set_status(500)
+                handler.set_status(500)            
             handler.finish(responseBody)
     return wrapper

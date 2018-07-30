@@ -34,8 +34,8 @@ class LoginRepo(repo.Repo):
             raise(ex)
         except Exception as e:
             messg = "Fallo la consulta a la base de datos: {}".format(e)
-            logger.error(e)
-            raise exceptions.InternalServerError(5001)        
+            logger.error(messg)
+            raise exceptions.InternalServerError(5001)
         return respuesta
 
         

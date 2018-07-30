@@ -62,3 +62,11 @@ class InternalServerError(InfoException):
         self.info[CODE] = code
 
         super(InternalServerError, self).__init__(self.info)
+
+class ConflictException(InfoException):
+    def __init__(self, code):
+        self.info = dict()
+        self.info[USER_MESSAGE] = ''
+        self.info[CODE] = code
+
+        super(ConflictException, self).__init__(self.info)

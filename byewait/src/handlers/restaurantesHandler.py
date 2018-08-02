@@ -22,7 +22,7 @@ class RestaurantesHandler(base.BaseHandler):
 
     @tornado.web.asynchronous
     @handleException
-    def options(self, restaurante):
+    def options(self):
         self.finish()
         
     @tornado.web.asynchronous

@@ -15,18 +15,16 @@ class LoginService:
     def __init__(self):
         self.repo = loginRepo.LoginRepo()
 
-    def validarUsuario(self,userName,password):
+    def validarUsuario(self, userName, password):
         logger.debug('validarUsuario loginService')
         temp = self.repo.validarUsuario(userName,password)
-        
         #asumimos que el usuario existe (hay que hacer la consulta en bd)
-
         payload = {'userName': userName }
         token = jwt.generate_jwt(payload, private_key, 'RS256', datetime.timedelta(minutes=9000))
         answer = {
             "user": temp,
             "token":token
         }
-        # return {"token":token}        
+        # return {"token":token}
         return answer
 

@@ -27,31 +27,15 @@ class LoginHandler(base.BaseHandler):
     @tornado.web.asynchronous
     @handleException
     def post(self):
-        logger.debug("loginHandler post")
-        try:
+        try: # Ver si el body está bien
             data = json.loads(self.request.body)
-            if 'user' in data and 'username' in data['user'] and 'password' in data['user']:
-                username = data['user']['username']
-                password = data['user']['password']
-                try: # Pruebo que se puede encodear en latin-1
-                    username.encode('latin-1')
-                    password.encode('latin-1')
-                except:
-                    raise exceptions.BadRequest(3001)
-                svc = LoginService()                
-                respuesta = svc.validarUsuario(username,password)
-                self.write(respuesta)
-            else:
-                logger.error('Error, el body es incorrecto, faltan atributos')
-                raise exceptions.BadRequest(3001)
-        except exceptions.BadRequest as ex:
-            raise(ex)
-        except exceptions.InternalServerError as ex:
-            raise(ex)
-        except exceptions.NotFound as ex:
-            raise(ex)
-        except Exception as e:
-            msg = "Error: {}".format(e)
-            logger.error(msg)
-            raise exceptions.BadRequest(4001)
-        self.finish()
+            username = data['user']['username']
+            password = data['user']['password']
+            username.encode('latin-1')
+            password.encode('latin-1')
+        except:
+            logger.error('Error, el body es incorrecto, faltan atributos')
+            raise exceptions.BadRequest(3001)
+        svc = LoginService()
+        respuesta = svc.validarUsuario(username,password)
+        self.finish(respuesta)

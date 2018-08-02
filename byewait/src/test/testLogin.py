@@ -7,7 +7,7 @@ import sys
 # con el nombre 'test', sino no funciona.
 
 # TODO: 
-# Caractéres extraños en username, password y email.
+# Caracteres extranios en username, password y email.
 class TestLogin(unittest.TestCase):
 
     def test_postIncorrectBody(self):
@@ -26,13 +26,12 @@ class TestLogin(unittest.TestCase):
         self.assertEqual(response.status_code, 400)
 
     def test_postUnauthorized(self):
-        body = '{"user":{"username": "testunauthorized", "password": "testunauthorized", "email": "testunauthorized@test.com"}'
+        body = '{"user":{"username": "testunauthorized", "password": "testunauthorized", "email": "testunauthorized@test.com"}}'
         response = requests.post("http://localhost:8888/login", data=body)
         content = json.loads(response.content)
         self.assertTrue('user_message' in content)
         self.assertTrue('code' in content)
-        # self.assertEqual(response.status_code, 401)
-        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.status_code, 401)
 
     def test_postSuccesfulLogin(self):
         # Registrar usuario
@@ -52,14 +51,14 @@ class TestLogin(unittest.TestCase):
 
     def test_postIncorrectPassword(self):
         # Registrar usuario
-        body = '{"user":{"username": "testbadpass", "password": "testbadpass", "email": "testbadpass@test.com"}'
-        requests.post("http://localhost:8888/register", data=body)
+        body = '{"user":{"username": "testbadpass", "password": "testbadpass", "email": "testbadpass@test.com"}}'
+        response = requests.post("http://localhost:8888/register", data=body)
+        self.assertEqual(response.status_code, 200)
 
         # Probar logueo
-        body = '{"user":{"username": "testbadpass", "password": "otherpass", "email": "testbadpass@test.com"}'
+        body = '{"user":{"username": "testbadpass", "password": "otherpass", "email": "testbadpass@test.com"}}'
         response = requests.post("http://localhost:8888/login", data=body)
-        # self.assertEqual(response.status_code, 401)
-        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.status_code, 401)
         content = json.loads(response.content)
         self.assertTrue('user_message' in content)
         self.assertTrue('code' in content)

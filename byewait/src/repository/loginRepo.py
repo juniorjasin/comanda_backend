@@ -1,6 +1,7 @@
 from repository import repo
 from utils.logger import Logger
 from exceptions import exceptions
+import bcrypt
 
 logger = Logger('loginRepo')
 
@@ -10,28 +11,27 @@ class LoginRepo(repo.Repo):
         super(LoginRepo, self).__init__()
         logger.debug("loginRepo")
     
-    def validarUsuario(self,username,password):        
+    def validarUsuario(self, username, password):        
         logger.debug('validarUsuario loginRepo')        
         respuesta = {}
         try:
             cursor = self.cnx.cursor()
-            consulta = "SELECT id_usuario, username, password FROM usuarios WHERE usuarios.username = %s AND usuarios.password = %s"
-            cursor.execute(consulta,(username,password,))
+            consulta = "SELECT id_usuario, username, password FROM usuarios WHERE usuarios.username = %s"
+            cursor.execute(consulta,(username,))
             row = cursor.fetchone()
             self.cnx.commit()
             cursor.close()
-            if row != None:                  
-                respuesta = {
-                                "id": row[0],
-                                "username": row[1],
-                                "password":row[2]
-                            }
-                            
-            else:                
+            if row is None: # No existe user
                 raise exceptions.NotFound(3001)
-        except exceptions.NotFound as ex:
-            logger.error("no existe ningun usuario que coincida con esa informacion")
-            raise(ex)
+            if not bcrypt.checkpw(password.encode('latin-1'), row[2].encode('latin-1')): # No coincide password
+                raise exceptions.Unauthorized(3001)
+            respuesta = { "id": row[0], "username": row[1], "password": row[2]}
+        except exceptions.NotFound as notFoundException:
+            logger.error("No existe ningun usuario que coincida con esa informacion")
+            raise(notFoundException)
+        except exceptions.Unauthorized as unauthorizedException:
+            logger.error("Usuario no autorizado")
+            raise(unauthorizedException)
         except Exception as e:
             messg = "Fallo la consulta a la base de datos: {}".format(e)
             logger.error(messg)

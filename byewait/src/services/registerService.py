@@ -17,7 +17,7 @@ class RegisterService:
         self.repo = registerRepo.RegisterRepo()
 
     def registrarUsuario(self,userName,password,email):
-        respuesta = self.repo.registrarUsuario(userName,password,email)
+        respuesta = self.repo.registrarUsuario(userName, password, email)
         payload = {'userName': userName }
         token = jwt.generate_jwt(payload, private_key, 'RS256', datetime.timedelta(minutes=9000))
-        return {"user":respuesta,"token":token}
+        return { "user": respuesta, "token": token }

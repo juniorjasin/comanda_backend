@@ -33,6 +33,11 @@ class LoginHandler(base.BaseHandler):
             if 'user' in data and 'username' in data['user'] and 'password' in data['user']:
                 username = data['user']['username']
                 password = data['user']['password']
+                try: # Pruebo que se puede encodear en latin-1
+                    username.encode('latin-1')
+                    password.encode('latin-1')
+                except:
+                    raise exceptions.BadRequest(3001)
                 svc = LoginService()                
                 respuesta = svc.validarUsuario(username,password)
                 self.write(respuesta)
@@ -50,4 +55,3 @@ class LoginHandler(base.BaseHandler):
             logger.error(msg)
             raise exceptions.BadRequest(4001)
         self.finish()
-        

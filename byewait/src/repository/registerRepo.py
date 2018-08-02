@@ -1,6 +1,7 @@
 from repository import repo
 from utils.logger import Logger
 from exceptions import exceptions
+import bcrypt
 
 logger = Logger('registerRepo')
 
@@ -11,21 +12,22 @@ class RegisterRepo(repo.Repo):
         logger.debug("RegisterRepo")
     
     def registrarUsuario(self,userName,password,email):
-        idUsuario = -1        
+        idUsuario = -1
         try:
             cursor = self.cnx.cursor()
             consulta = "SELECT * FROM usuarios WHERE username = %s"
             cursor.execute(consulta,(userName,))
             row = cursor.fetchone()            
             if row != None:
-                logger.error("ya existe ese nombre de usuario")
+                logger.error("Ya existe ese nombre de usuario")
                 self.cnx.rollback()
                 cursor.close()
                 raise exceptions.ConflictException(5001)
             else:
-                try:                    
+                try:
+                    hashedPassword = bcrypt.hashpw(password.encode('latin-1'), bcrypt.gensalt())
                     consulta = "INSERT INTO usuarios(username, email, password) VALUES(%s,%s,%s)"
-                    cursor.execute(consulta,(userName, email,password))
+                    cursor.execute(consulta,(userName, email, hashedPassword))
                     idUsuario = cursor.lastrowid
                     self.cnx.commit()
                     cursor.close()

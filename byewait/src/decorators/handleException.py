@@ -23,6 +23,14 @@ def handleException(f):
             elif isinstance(ex, exception.ConflictException):
                 handler.set_status(409)
             elif isinstance(ex, exception.InternalServerError):
-                handler.set_status(500)            
+                handler.set_status(500)
+        except Exception as ex: # Caso de exception que se nos pase, se atrapa acá
+            handler = args[0]
+            logger.error('Exception no contemplada!!!')
+            handler.set_status(500)
+            # Hay que cambiar está línea para que no esté hardcodeado, no sé me ocurre
+            # una buena forma ahora...
+            responseBody = {"user_message": "Error interno del servidor", "code": 4001}
+        finally:
             handler.finish(responseBody)
     return wrapper

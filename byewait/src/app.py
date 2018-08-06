@@ -6,10 +6,11 @@ from handlers.registerHandler import RegisterHandler
 from handlers.restaurantesHandler import RestaurantesHandler
 from handlers.menuHandler import MenuHandler
 from handlers.pedidoHandler import PedidoHandler
+from handlers.comandasWebSocket import ComandasWebSocket
 from utils.logger import Logger
+import utils.globalvars
 
 logger = Logger('app')
-
 
 class Application(tornado.web.Application):
     def __init__(self):
@@ -18,7 +19,8 @@ class Application(tornado.web.Application):
             (r"/register/?", RegisterHandler),
             (r"/restaurantes/?", RestaurantesHandler),
             (r"/([a-zA-Z0-9]+)/menu/?", MenuHandler),
-            (r"/([a-zA-Z0-9]+)/pedido/?", PedidoHandler)
+            (r"/([a-zA-Z0-9]+)/pedido/?", PedidoHandler),
+            (r"/comandas/?", ComandasWebSocket)
         ]
         tornado.web.Application.__init__(self, handlers)
 
@@ -26,6 +28,7 @@ class Application(tornado.web.Application):
 def main():
     app = Application()
     app.listen(8888)
+    # utils.globals.init() # Inicializo web socket connections en []
     IOLoop.instance().start()
 
 

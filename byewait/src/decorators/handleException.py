@@ -11,6 +11,7 @@ def handleException(f):
             logger.debug('Inside decorator. Calling decorated function')
             return f(*args, **kwds)
         except exception.InfoException as ex:
+            logger.error(ex)
             handler = args[0]
             # Viene de la excepción
             responseBody = str(ex)
@@ -24,13 +25,13 @@ def handleException(f):
                 handler.set_status(409)
             elif isinstance(ex, exception.InternalServerError):
                 handler.set_status(500)
+            handler.finish(responseBody)
         except Exception as ex: # Caso de exception que se nos pase, se atrapa acá
             handler = args[0]
-            logger.error('Exception no contemplada!!!')
+            logger.error(ex)
             handler.set_status(500)
             # Hay que cambiar está línea para que no esté hardcodeado, no sé me ocurre
             # una buena forma ahora...
             responseBody = {"user_message": "Error interno del servidor", "code": 4001}
-        finally:
             handler.finish(responseBody)
     return wrapper

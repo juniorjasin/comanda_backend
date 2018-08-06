@@ -29,13 +29,15 @@ class MenuHandler(base.BaseHandler):
     def post(self, restaurante):
         logger.debug("menuHandler post")
         # Controlar entrada
+        id_restaurante = -1
         try:
             data = json.loads(self.request.body)
+            id_restaurante = data['id_restaurante']
 
         except Exception as e:
             msg = "Fallo conversion body a json: {}".format(e)
             logger.error(msg)
             raise exceptions.BadRequest(5001)
         svc = MenuService()
-        menu = svc.getItemsMenu(data['id_restaurante'])
+        menu = svc.getItemsMenu(id_restaurante)
         self.finish({"menu": menu})

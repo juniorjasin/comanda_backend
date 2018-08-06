@@ -9,7 +9,7 @@ class PedidoService:
     def __init__(self):
         self.repo = pedidoRepo.PedidoRepo()
 
-    def insertOrder(self, id_restaurante, items, id_usuario):
+    def insertOrder(self, id_restaurante, items, id_usuario, id_mesa):
         logger.debug('insertOrder')
-        order = self.repo.insertNewOrder(id_restaurante, items, id_usuario)
+        order = self.repo.insertNewOrder(id_restaurante, items, id_usuario, id_mesa)
         return order

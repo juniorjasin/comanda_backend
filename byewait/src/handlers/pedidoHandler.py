@@ -32,11 +32,13 @@ class PedidoHandler(base.BaseHandler):
 
         # Controlar entrada
         id_restaurante = None
+        id_mesa = None
         items = None
         id_usuario = 1
         try:
             data = json.loads(self.request.body)
             id_restaurante = data['order']['id_restaurante']
+            id_mesa = data['order']['id_mesa']
             items = data['order']['items']
 
         except Exception as e:
@@ -46,7 +48,7 @@ class PedidoHandler(base.BaseHandler):
         
         svc = PedidoService()
         if 'order' in data and 'id_restaurante' in data['order']:
-            pedido = svc.insertOrder(id_restaurante, items, id_usuario)
+            pedido = svc.insertOrder(id_restaurante, items, id_usuario, id_mesa)
             # Enviar la información del pedido a los clientes del web socket
             for conn in utils.globalvars.webSockConns:
                 conn.on_message({'order': pedido, 'data': data})

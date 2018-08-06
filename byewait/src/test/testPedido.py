@@ -25,7 +25,7 @@ class TestPedido(unittest.TestCase):
 
     def test_postCorrectBody(self):
         for i in range(1, 5):
-            body = '{"order":{"id_restaurante":1,"items":[{"id":"1","cantidad": 3,"aclaraciones": "sin ajo"},{"id":"2","cantidad": 1,"aclaraciones": "sin queso"}]}}'
+            body = '{"order":{"id_restaurante":1,"id_mesa":3, "items":[{"id":"1","cantidad": 3,"aclaraciones": "sin ajo"},{"id":"2","cantidad": 1,"aclaraciones": "sin queso"}]}}'
             response = requests.post("http://localhost:8888/asd/pedido", data=body)
             self.assertEqual(response.status_code, 200)
 

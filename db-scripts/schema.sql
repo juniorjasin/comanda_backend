@@ -83,6 +83,7 @@ INSERT INTO usuarios (username, email, password) VALUES ('juniorjasin', 'juniorj
 create table if not exists pedidos (
     id_pedidos          integer         not null AUTO_INCREMENT,
     id_usuario          integer         not null,
+    id_mesa             integer         not null,
     fecha_hora          timestamp       not null,
     PRIMARY KEY (id_pedidos),
     FOREIGN KEY(id_usuario) REFERENCES usuarios(id_usuario)

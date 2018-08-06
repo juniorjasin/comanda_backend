@@ -7,8 +7,8 @@ import sys
 # con el nombre 'test', sino no funciona.
 
 # TODO: 
-# Caractéres extraños en username, password y email.
-# Enviar más caractéres de los que la base de datos soporta varchar(20) enviar 30.
+# Caracteres extranios en username, password y email.
+# Enviar mas caracteres de los que la base de datos soporta varchar(20) enviar 30.
 class TestRegister(unittest.TestCase):
 
     def test_postIncorrectBody(self):

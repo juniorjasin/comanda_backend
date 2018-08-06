@@ -10,7 +10,7 @@ class PedidoRepo(repo.Repo):
         super(PedidoRepo, self).__init__()
         logger.debug("pedidoRepo")
 
-    def insertNewOrder(self, id_restaurante, items, id_usuario):
+    def insertNewOrder(self, id_restaurante, items, id_usuario, id_mesa):
 
         logger.debug('insertNewOrder')        
         order = {}
@@ -18,8 +18,8 @@ class PedidoRepo(repo.Repo):
         try:        
             cursor = self.cnx.cursor()
             # inserto el pedido
-            insertPedido = 'INSERT INTO pedidos(id_usuario) VALUES(%s)'
-            pedidoUsuario = (id_usuario)
+            insertPedido = 'INSERT INTO pedidos(id_usuario, id_mesa) VALUES(%s,%s)'
+            pedidoUsuario = (id_usuario, id_mesa)
             cursor.execute(insertPedido, pedidoUsuario)
             idPedido = cursor.lastrowid
 

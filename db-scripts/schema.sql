@@ -75,9 +75,9 @@ create table if not exists usuarios (
     PRIMARY KEY (id_usuario)
 );
 
-INSERT INTO usuarios (username, email, password) VALUES ('jborssotto', 'jborssottogmail.com', 'juan');
-INSERT INTO usuarios (username, email, password) VALUES ('andresbalestrini', 'andresbalestrini@gmail.com', 'andi');
-INSERT INTO usuarios (username, email, password) VALUES ('juniorjasin', 'juniorjasingmail.com', 'juni');
+INSERT INTO usuarios (username, email, password) VALUES ('juan', 'juan@gmail.com', '$2b$12$qxYL/c5KbxDb0iIvVgvrYuow20y7BRgk8JV6BeMQ2Cy1wMrNAabU2');
+INSERT INTO usuarios (username, email, password) VALUES ('andi', 'andi@gmail.com', '$2b$12$AftbQ7QacpeB/VOVlXeJT.HEt0NwfNbIKF0NozVxvhZuhKnheeN6m');
+INSERT INTO usuarios (username, email, password) VALUES ('jrjs', 'jrjs@gmail.com', '$2b$12$xzcHoLXLOa.bO7XEkqQ8wupvMUFTsMgNnX8.KbxCSEMJ.zfv95DbO');
 
 
 create table if not exists pedidos (

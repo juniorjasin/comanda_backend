@@ -1,4 +1,3 @@
-
 from tornado.ioloop import IOLoop
 import tornado.web
 from services.pedidoService import PedidoService
@@ -51,7 +50,7 @@ class PedidoHandler(base.BaseHandler):
             pedido = svc.insertOrder(id_restaurante, items, id_usuario, id_mesa)
             # Enviar la información del pedido a los clientes del web socket
             for conn in utils.globalvars.webSockConns:
-                conn.on_message({'order': pedido, 'data': data})
+                conn.on_message({'order': pedido, 'data': data['order']})
             self.write({"order": pedido})
         else:
             logger.error('falta order o id_restaurante en body')

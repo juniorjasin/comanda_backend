@@ -41,6 +41,7 @@ class TestMenu(unittest.TestCase):
                 for cat in categories:
                     self.assertTrue('id' in cat)
                     self.assertTrue('name' in cat)
+                    self.assertTrue('image' in cat)
                     self.assertTrue('items' in cat)
 
                     items = cat['items']

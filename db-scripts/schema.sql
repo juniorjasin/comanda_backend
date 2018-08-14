@@ -26,14 +26,15 @@ VALUES ('Peñon', 'Cerveceria', ' Belgrano 902, Güemes', 'http://wpc.72c72.beta
 
 
 create table if not exists categorias (
-    id_categoria        integer         not null AUTO_INCREMENT,
-    nombre_categoria    varchar(100)    not null,
+    id_categoria         integer         not null AUTO_INCREMENT,
+    nombre_categoria     varchar(100)    not null,
+    imagen_categoria varchar(255)    not null
     PRIMARY KEY (id_categoria)
 );
 
-INSERT INTO categorias (nombre_categoria) VALUES ("Hamburguesas");
-INSERT INTO categorias (nombre_categoria) VALUES ("Pizzas");
-INSERT INTO categorias (nombre_categoria) VALUES ("Cervezas");
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Hamburguesas", "https://image.flaticon.com/icons/svg/174/174387.svg");
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Pizzas", "https://image.flaticon.com/icons/svg/174/174359.svg");
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Cervezas", "https://image.flaticon.com/icons/svg/174/174403.svg");
 
 
 create table if not exists item_menu (

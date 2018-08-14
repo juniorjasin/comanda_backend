@@ -17,8 +17,8 @@ class ItemsRepo(repo.Repo):
         item = None
         try:        
             cursor = self.cnx.cursor()
-            query = "SELECT id_item_menu, nombre_item_menu, description, image_url, precio FROM item_menu"
-            cursor.execute(query)
+            query = "SELECT id_item_menu, nombre_item_menu, description, image_url, precio FROM item_menu WHERE item_menu.id_item_menu = %s"
+            cursor.execute(query, (id,))
             row = cursor.fetchone()
             cursor.close()
             if row is not None:

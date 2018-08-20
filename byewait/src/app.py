@@ -20,7 +20,8 @@ class Application(tornado.web.Application):
             (r"/restaurantes/?", RestaurantesHandler),
             (r"/([a-zA-Z0-9]+)/menu/?", MenuHandler),
             (r"/([a-zA-Z0-9]+)/pedido/?", PedidoHandler),
-            (r"/comandas/?", ComandasWebSocket)
+            (r"/comandas/?", ComandasWebSocket),
+            (r"/images/(.*)",tornado.web.StaticFileHandler, {"path": "/opt/byewait/images"},),
         ]
         tornado.web.Application.__init__(self, handlers)
 

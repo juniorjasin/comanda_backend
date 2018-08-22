@@ -33,6 +33,7 @@ class TestRestaurante(unittest.TestCase):
                     self.assertIsNotNone(l['description'])
                     self.assertIsNotNone(l['image_url'])
                     self.assertIsNotNone(l['address'])
+                    self.assertIsNotNone(l['tags'])
                 
 
 if __name__ == "__main__":

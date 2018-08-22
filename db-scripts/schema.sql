@@ -66,6 +66,7 @@ create table if not exists item_menu (
     description         varchar(500)    not null,
     precio              varchar(500)    not null,
     image_url           varchar(500)    not null,
+    rating              decimal(4,2)    null      check (rate >= 0 and rate <= 5),
     PRIMARY KEY (id_item_menu),
     FOREIGN KEY(id_categoria) REFERENCES categorias(id_categoria),
     FOREIGN KEY (id_restaurante) REFERENCES restaurants(id_restaurante)

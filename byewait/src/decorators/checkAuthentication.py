@@ -22,7 +22,7 @@ def checkAuthentication(f):
             header, claims = jwt.verify_jwt(token, public_key,['RS256'])
             logger.debug(claims)
             logger.debug(claims['userName'])
-        except Exception as ex:
+        except jwt.MalformedJWKError as ex:
             logger.debug("Error: {0}".format(ex))
             raise Exception
         

@@ -8,4 +8,4 @@ class BaseHandler(tornado.web.RequestHandler):
         self.set_header('Access-Control-Allow-Origin', '*')
         self.set_header('Content-Type', 'application/json')
         self.set_header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS')
-        self.set_header('Access-Control-Allow-Headers', 'Origin, Accept, Content-Type, X-Requested-With, X-CSRF-Token, X-LAT, X-LON')
+        self.set_header('Access-Control-Allow-Headers', 'Origin, Accept, Content-Type, X-Requested-With, X-CSRF-Token, X-LAT, X-LON, Authorization')

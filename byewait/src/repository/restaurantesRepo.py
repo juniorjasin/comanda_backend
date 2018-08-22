@@ -48,17 +48,19 @@ class RestaurantesRepo(repo.Repo):
         tags = []
 
         cursor = self.cnx.cursor()
-        query = "SELECT tags.nombre \
+        query = "SELECT tags.id_tag, tags.nombre \
                    FROM tags_restaurants \
                    JOIN tags \
                      ON tags_restaurants.id_tag = tags.id_tag \
-                  WHERE tags_restaurants.id_restaurante = %s"
+                  WHERE tags_restaurants.id_restaurante = %s "
         values = (id_restaurante)
         cursor.execute(query, values)
         rows = cursor.fetchall()
 
+        
         for row in rows:
-            tags.append(row[0])
+            tag = {"id":row[0], "nombre":row[1]}
+            tags.append(tag)
 
         self.cnx.commit()
         cursor.close()

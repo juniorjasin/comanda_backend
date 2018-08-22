@@ -21,7 +21,8 @@ class MenuRepo(repo.Repo):
             cursor = self.cnx.cursor()
             cursor.execute("select categorias.id_categoria, categorias.nombre_categoria, categorias.imagen_categoria, item_menu.id_item_menu, item_menu.nombre_item_menu, item_menu.description, item_menu.image_url, item_menu.precio \
                      from item_menu join categorias on item_menu.id_categoria = categorias.id_categoria \
-                     where item_menu.id_restaurante = %s",(id,))
+                     where item_menu.id_restaurante = %s \
+                     ORDER BY categorias.id_categoria ASC",(id,))
             rows = cursor.fetchall()
             self.cnx.commit()
             cursor.close()

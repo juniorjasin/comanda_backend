@@ -4,6 +4,7 @@ from services.pedidoService import PedidoService
 from utils.logger import Logger
 from handlers import base
 from decorators.handleException import handleException
+from decorators.checkAuthentication import checkAuthentication
 from exceptions import exceptions
 import json
 import utils.globalvars
@@ -26,6 +27,7 @@ class PedidoHandler(base.BaseHandler):
         
     @tornado.web.asynchronous
     @handleException
+    @checkAuthentication
     def post(self, restaurante):
         logger.debug("pedidoHandler post")
 

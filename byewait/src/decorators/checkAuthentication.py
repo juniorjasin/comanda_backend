@@ -14,18 +14,15 @@ def checkAuthentication(f):
     def wrapper(*args):
         logger.debug('check_authentication decorator')
         request = args[0].request
-        data = json.loads(request.body)
-        token = data['token']
-        logger.debug(data)
+        token = request.headers.get("Authorization")
         
         try:
             header, claims = jwt.verify_jwt(token, public_key,['RS256'])
             logger.debug(claims)
             logger.debug(claims['userName'])
-        except jwt.MalformedJWKError as ex:
-            logger.debug("Error: {0}".format(ex))
+        except Exception as ex:
+            logger.debug("Error1: {0}".format(ex))
             raise Exception
-        
 
         return f(*args)
     return wrapper

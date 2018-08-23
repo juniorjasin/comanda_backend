@@ -19,7 +19,7 @@ class MenuRepo(repo.Repo):
 
         try:        
             cursor = self.cnx.cursor()
-            cursor.execute("select categorias.id_categoria, categorias.nombre_categoria, categorias.imagen_categoria, item_menu.id_item_menu, item_menu.nombre_item_menu, item_menu.description, item_menu.image_url, item_menu.precio \
+            cursor.execute("select categorias.id_categoria, categorias.nombre_categoria, categorias.imagen_categoria, item_menu.id_item_menu, item_menu.nombre_item_menu, item_menu.description, item_menu.image_url, item_menu.precio, item_menu.rating \
                      from item_menu join categorias on item_menu.id_categoria = categorias.id_categoria \
                      where item_menu.id_restaurante = %s \
                      ORDER BY categorias.id_categoria ASC",(id,))
@@ -43,12 +43,12 @@ class MenuRepo(repo.Repo):
                             id_categoria = row[0]
                             nombre_categoria = row[1]
                             imagen_categoria = row[2]
-                            items = []
-                            item = Item(id=row[3], name=row[4], description=row[5], image_url=row[6], price=float(row[7]))
+                            rating = row[8] if (row[8] is None) else float(row[8])
+                            item = Item(id=row[3], name=row[4], description=row[5], image_url=row[6], price=float(row[7]), rating=rating)
                             items.append(item._asdict())
-
                         else:
-                            item = Item(id=row[3], name=row[4], description=row[5], image_url=row[6], price=float(row[7]))
+                            rating = row[8] if (row[8] is None) else float(row[8])
+                            item = Item(id=row[3], name=row[4], description=row[5], image_url=row[6], price=float(row[7]), rating=rating)
                             items.append(item._asdict())
                             id_categoria = row[0]
                             nombre_categoria = row[1]

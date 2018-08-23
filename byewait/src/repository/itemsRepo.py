@@ -17,13 +17,13 @@ class ItemsRepo(repo.Repo):
         item = None
         try:        
             cursor = self.cnx.cursor()
-            query = "SELECT id_item_menu, nombre_item_menu, description, image_url, precio FROM item_menu WHERE item_menu.id_item_menu = %s"
+            query = "SELECT id_item_menu, nombre_item_menu, description, image_url, precio, rating FROM item_menu WHERE item_menu.id_item_menu = %s"
             cursor.execute(query, (id,))
             row = cursor.fetchone()
             cursor.close()
             if row is not None:
-                id, name, description, image_url, price = row
-                item = Item(id, name, description, image_url, price)
+                id, name, description, image_url, price, rating = row
+                item = Item(id, name, description, image_url, price, rating)
         except Exception as e:
             msg = "Fallo la consulta de getItem a la base de datos: {}".format(e)
             logger.error(msg)

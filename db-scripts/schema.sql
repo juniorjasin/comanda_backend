@@ -237,7 +237,7 @@ create table if not exists scores_item_menu (
     id                  integer         not null AUTO_INCREMENT,
     id_item_menu        integer         not null,
     id_usuario          integer         not null,
-    score               integer         not null check(score in(1, 2, 3, 4, 5)),
+    score               integer         not null check(score >= 1 and score <= 5),
     PRIMARY KEY (id),
     FOREIGN KEY(id_item_menu)    REFERENCES item_menu(id_item_menu),
     FOREIGN KEY (id_usuario)     REFERENCES usuarios(id_usuario)

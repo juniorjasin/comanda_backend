@@ -7,6 +7,7 @@ from handlers.restaurantesHandler import RestaurantesHandler
 from handlers.menuHandler import MenuHandler
 from handlers.pedidoHandler import PedidoHandler
 from handlers.comandasWebSocket import ComandasWebSocket
+from handlers.menuItemScoreHandler import MenuItemScoreHandler
 from utils.logger import Logger
 import utils.globalvars
 
@@ -20,6 +21,7 @@ class Application(tornado.web.Application):
             (r"/restaurantes/?", RestaurantesHandler),
             (r"/([a-zA-Z0-9]+)/menu/?", MenuHandler),
             (r"/([a-zA-Z0-9]+)/pedido/?", PedidoHandler),
+            (r"/menu/item/score/?", MenuItemScoreHandler),
             (r"/comandas/?", ComandasWebSocket),
             (r"/images/(.*)",tornado.web.StaticFileHandler, {"path": "/opt/byewait/images"},),
         ]

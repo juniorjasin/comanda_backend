@@ -20,7 +20,11 @@ class MenuItemScoreRepo(repo.Repo):
             query = "INSERT into scores_item_menu(id_item_menu, id_usuario, score) values (%s, %s, %s)"
             cursor.execute(query, (idItemMenu, idUsuario, score))
             self.cnx.commit()
-            result = ScoreItem(cursor.lastrowid, idItemMenu, idUsuario, score)
+            result = ScoreItem(
+                id=cursor.lastrowid, 
+                id_item_menu=idItemMenu, 
+                id_usuario=idUsuario, 
+                score=score)
             cursor.close()
         except Exception as e:
             msg = "Fallo la consulta de insertScore a la base de datos: {}".format(e)

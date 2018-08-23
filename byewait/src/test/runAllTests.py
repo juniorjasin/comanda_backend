@@ -4,11 +4,12 @@ from testMenu import TestMenu
 from testPedido import TestPedido
 from testRegister import TestRegister
 from testRestaurantes import TestRestaurante
+from testMenuItemScore import TestMenuItemScore
 
 if __name__ == '__main__':
     # Run only the tests in the specified classes
 
-    test_classes_to_run = [TestLogin, TestMenu, TestPedido, TestRegister, TestRestaurante]
+    test_classes_to_run = [TestLogin, TestMenu, TestPedido, TestRegister, TestRestaurante, TestMenuItemScore]
 
     loader = unittest.TestLoader()
 

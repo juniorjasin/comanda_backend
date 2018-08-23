@@ -1,12 +1,17 @@
 -- creacion de tablas a ejecutar MYSQL
-drop table tags_restaurants; 
-drop table tags; 
-drop table items_pedido; 
-drop table pedidos; 
-drop table usuarios; 
+drop trigger update_item_menu_rating_on_delete;
+drop trigger update_item_menu_rating_on_update;
+drop trigger update_item_menu_rating_on_insert;
+
+drop table tags_restaurants;
+drop table scores_item_menu;
+drop table tags;
+drop table items_pedido;
+drop table pedidos;
+drop table usuarios;
 drop table item_menu;
 drop table categorias;
-drop table restaurants; 
+drop table restaurants;
 
 
 create table if not exists restaurants (
@@ -226,6 +231,53 @@ create table if not exists usuarios (
 INSERT INTO usuarios (username, email, password) VALUES ('juan', 'juan@gmail.com', '$2b$12$qxYL/c5KbxDb0iIvVgvrYuow20y7BRgk8JV6BeMQ2Cy1wMrNAabU2');
 INSERT INTO usuarios (username, email, password) VALUES ('andi', 'andi@gmail.com', '$2b$12$AftbQ7QacpeB/VOVlXeJT.HEt0NwfNbIKF0NozVxvhZuhKnheeN6m');
 INSERT INTO usuarios (username, email, password) VALUES ('jrjs', 'jrjs@gmail.com', '$2b$12$xzcHoLXLOa.bO7XEkqQ8wupvMUFTsMgNnX8.KbxCSEMJ.zfv95DbO');
+
+
+create table if not exists scores_item_menu (
+    id                  integer         not null AUTO_INCREMENT,
+    id_item_menu        integer         not null,
+    id_usuario          integer         not null,
+    score               integer         not null check(score in(1, 2, 3, 4, 5)),
+    PRIMARY KEY (id),
+    FOREIGN KEY(id_item_menu)    REFERENCES item_menu(id_item_menu),
+    FOREIGN KEY (id_usuario)     REFERENCES usuarios(id_usuario)
+);
+
+delimiter |
+create trigger update_item_menu_rating_on_insert
+  after insert on scores_item_menu
+  for each row begin
+    update item_menu set rating = (select avg(score) 
+                                    from scores_item_menu 
+                                   where id_item_menu = new.id_item_menu)
+    where id_item_menu = new.id_item_menu;
+end
+|
+delimiter ;
+
+delimiter |
+create trigger update_item_menu_rating_on_update
+  after update on scores_item_menu
+  for each row begin
+  update item_menu set rating = (select avg(score) 
+                                  from scores_item_menu 
+                                 where id_item_menu = new.id_item_menu)
+  where id_item_menu = new.id_item_menu;
+end
+|
+delimiter ;
+
+delimiter |
+create trigger update_item_menu_rating_on_delete
+  after delete on scores_item_menu
+  for each row begin
+  update item_menu set rating = (select avg(score) 
+                                  from scores_item_menu 
+                                 where id_item_menu = old.id_item_menu)
+  where id_item_menu = old.id_item_menu;
+end
+|
+delimiter ;
 
 
 create table if not exists pedidos (

@@ -24,52 +24,35 @@ class MenuRepo(repo.Repo):
                      where item_menu.id_restaurante = %s \
                      ORDER BY categorias.id_categoria ASC",(id,))
             rows = cursor.fetchall()
-            self.cnx.commit()
             cursor.close()
-            if rows == None or len(rows) == 0:     
-                #logger.debug('No hay items en el menu del restaurante indicado...')
+            if rows == None or len(rows) == 0:
                 return menu
-            else:
-                #logger.debug('Si hay items en el menu del restaurante indicado...')
-                id_categoria = -1
-                nombre_categoria = ""
-                categorias = [] # array que contendra las categorias del menu con sus items
-                items = [] # array que contendra los items pertenecientes a cada categoria
-                try:
-                    for row in rows:                        
-                        if id_categoria != row[0] and items:
-                            categoria_nueva = Categoria(id=id_categoria, name=nombre_categoria, image=imagen_categoria, items=items)
-                            categorias.append(categoria_nueva._asdict())
-                            id_categoria = row[0]
-                            nombre_categoria = row[1]
-                            imagen_categoria = row[2]
-                            rating = row[8] if (row[8] is None) else float(row[8])
-                            item = Item(id=row[3], name=row[4], description=row[5], image_url=row[6], price=float(row[7]), rating=rating)
-                            items.append(item._asdict())
-                        else:
-                            rating = row[8] if (row[8] is None) else float(row[8])
-                            item = Item(id=row[3], name=row[4], description=row[5], image_url=row[6], price=float(row[7]), rating=rating)
-                            items.append(item._asdict())
-                            id_categoria = row[0]
-                            nombre_categoria = row[1]
-                            imagen_categoria = row[2]
+            items = []
+            categorias = []
+            for index, row in enumerate(rows):
+            	idCategoria, nombreCategoria, imagenCategoria, idItemMenu, nombreItemMenu, \
+            	descriptionItemMenu, imageUrlItemMenu, precioItemMenu, ratingItemMenu \
+            	= row
+            	# Si viene null no le aplico float
+            	ratingItemMenu = float(ratingItemMenu) if ratingItemMenu != None else ratingItemMenu
 
-                    categoria_nueva = Categoria(id=id_categoria, name=nombre_categoria, image=imagen_categoria, items=items)        
-                    categorias.append(categoria_nueva._asdict())
-                except Exception as e:
-                    msg = "Fallo la creacion del array de menu: {}".format(e)
-                    logger.error(msg)
-                    raise exceptions.InternalServerError(5001)
-        except Exception as e2:
-            msg = "Fallo la consulta de getItemsMenu a la base de datos: {}".format(e2)
+            	items.append(Item(id=idItemMenu, name=nombreCategoria, 
+            		description=descriptionItemMenu, image_url=imageUrlItemMenu, 
+            		price=float(precioItemMenu), rating=ratingItemMenu)._asdict())
+
+            	if index + 1 == len(rows) or idCategoria != rows[index + 1][0]:
+            		categorias.append(Categoria(
+            	        	id=idCategoria, name=nombreCategoria, image=imagenCategoria, items=items)._asdict())
+            		items = []
+            menu = {
+                "style":{  
+                    "font-family":"Helvetica",
+                    "background-color":"#00ff00"
+                },
+                "categories": categorias
+            }
+        except Exception as e:
+            msg = "Fallo la consulta de getItemsMenu a la base de datos: {}".format(e)
             logger.error(msg)
             raise exceptions.InternalServerError(5002)
-        menu = {
-            "style":{  
-                "font-family":"Helvetica",
-                "background-color":"#00ff00"
-            },
-            "categories": categorias
-        }        
         return menu
-        

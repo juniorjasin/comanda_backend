@@ -36,7 +36,7 @@ class MenuRepo(repo.Repo):
             	# Si viene null no le aplico float
             	ratingItemMenu = float(ratingItemMenu) if ratingItemMenu != None else ratingItemMenu
 
-            	items.append(Item(id=idItemMenu, name=nombreCategoria, 
+            	items.append(Item(id=idItemMenu, name=nombreItemMenu, 
             		description=descriptionItemMenu, image_url=imageUrlItemMenu, 
             		price=float(precioItemMenu), rating=ratingItemMenu)._asdict())
 

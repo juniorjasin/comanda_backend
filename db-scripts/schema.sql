@@ -243,6 +243,7 @@ create table if not exists scores_item_menu (
     FOREIGN KEY (id_usuario)     REFERENCES usuarios(id_usuario)
 );
 
+
 delimiter |
 create trigger update_item_menu_rating_on_insert
   after insert on scores_item_menu
@@ -279,6 +280,17 @@ end
 |
 delimiter ;
 
+INSERT INTO scores_item_menu (id_item_menu, id_usuario, score) VALUES (1, 3, 5);
+INSERT INTO scores_item_menu (id_item_menu, id_usuario, score) VALUES (2, 3, 5);
+INSERT INTO scores_item_menu (id_item_menu, id_usuario, score) VALUES (4, 3, 5);
+INSERT INTO scores_item_menu (id_item_menu, id_usuario, score) VALUES (5, 3, 5);
+INSERT INTO scores_item_menu (id_item_menu, id_usuario, score) VALUES (6, 3, 5);
+
+INSERT INTO scores_item_menu (id_item_menu, id_usuario, score) VALUES (7, 3, 1);
+INSERT INTO scores_item_menu (id_item_menu, id_usuario, score) VALUES (8, 3, 5);
+INSERT INTO scores_item_menu (id_item_menu, id_usuario, score) VALUES (9, 3, 5);
+INSERT INTO scores_item_menu (id_item_menu, id_usuario, score) VALUES (10, 3, 5);
+INSERT INTO scores_item_menu (id_item_menu, id_usuario, score) VALUES (11, 3, 5);
 
 create table if not exists pedidos (
     id_pedidos          integer         not null AUTO_INCREMENT,

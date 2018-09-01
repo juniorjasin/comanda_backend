@@ -22,11 +22,12 @@ class MenuItemScoreHandler(base.BaseHandler):
         logger.debug("menuItemScoreHandler post")
         try:
           data = json.loads(self.request.body)
-          data['id_item_menu']
-          data['id_usuario']
-          data['score']
+          data['menu_item_score']
+          data['menu_item_score']['id_item_menu']
+          data['menu_item_score']['id_usuario']
+          data['menu_item_score']['score']
         except:
           raise exceptions.BadRequest(4001)
-        svc = MenuItemScoreService() 
-        score = svc.insertScore(data['id_item_menu'], data['id_usuario'], data['score'])
+        svc = MenuItemScoreService()
+        score = svc.insertScore(**data['menu_item_score'])
         self.finish({'score': score})

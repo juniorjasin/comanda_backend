@@ -30,4 +30,4 @@ class MenuItemScoreHandler(base.BaseHandler):
           raise exceptions.BadRequest(4001)
         svc = MenuItemScoreService()
         score = svc.insertScore(**data['menu_item_score'])
-        self.finish({'score': score})
+        self.finish({'menu_item_score': score})

@@ -13,17 +13,24 @@ class ItemsRepo(repo.Repo):
         logger.debug('ItemsRepo')
 
     def getItem(self, id):
-        logger.debug('getItem')
+        logger.debug('getItem con id:{}'.format(id))
         item = None
         try:        
             cursor = self.cnx.cursor()
-            query = "SELECT id_item_menu, nombre_item_menu, description, image_url, precio, rating FROM item_menu WHERE item_menu.id_item_menu = %s"
+            query = "SELECT id_item_menu, nombre_item_menu, description, image_url, precio, rating \
+                       FROM item_menu \
+                      WHERE item_menu.id_item_menu = %s"
             cursor.execute(query, (id,))
             row = cursor.fetchone()
             cursor.close()
-            if row is not None:
+            if row is not None and len(row) > 0:
                 id, name, description, image_url, price, rating = row
-                item = Item(id, name, description, image_url, price, rating)
+                if rating != None:
+                    item = Item(id, name, description, image_url, price, int(rating))
+                else:
+                    item = Item(id, name, description, image_url, price, None)
+
+
         except Exception as e:
             msg = "Fallo la consulta de getItem a la base de datos: {}".format(e)
             logger.error(msg)

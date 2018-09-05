@@ -355,3 +355,21 @@ INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (2,4);
 INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (3,4);
 
 
+create table if not exists managers (
+    id_manager          integer         not null AUTO_INCREMENT,
+    username            varchar(100)    not null UNIQUE,
+    email               varchar(100)    not null,
+    id_restaurante      integer         not null,
+    password            varchar(400)    not null,
+    FOREIGN KEY(id_restaurante) REFERENCES restaurants(id_restaurante)
+    PRIMARY KEY (id_usuario)
+);
+
+INSERT INTO usuarios (username, email, password, id_restaurante) 
+VALUES ('jrjs', 'jrjs@gmail.com', '$2b$12$xzcHoLXLOa.bO7XEkqQ8wupvMUFTsMgNnX8.KbxCSEMJ.zfv95DbO', 1);
+
+INSERT INTO usuarios (username, email, password, id_restaurante) 
+VALUES ('juan', 'juan@gmail.com', '$2b$12$qxYL/c5KbxDb0iIvVgvrYuow20y7BRgk8JV6BeMQ2Cy1wMrNAabU2', 2);
+
+INSERT INTO usuarios (username, email, password, id_restaurante) 
+ VALUES ('andi', 'andi@gmail.com', '$2b$12$AftbQ7QacpeB/VOVlXeJT.HEt0NwfNbIKF0NozVxvhZuhKnheeN6m', 3);

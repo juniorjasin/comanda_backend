@@ -27,7 +27,7 @@ class PedidoHandler(base.BaseHandler):
         
     @tornado.web.asynchronous
     @handleException
-    @checkAuthentication
+    # @checkAuthentication
     def post(self, restaurante):
         logger.debug("pedidoHandler post")
 
@@ -51,8 +51,11 @@ class PedidoHandler(base.BaseHandler):
         if 'order' in data and 'id_restaurante' in data['order']:
             pedido = svc.insertOrder(id_restaurante, items, id_usuario, id_mesa)
             # Enviar la información del pedido a los clientes del web socket
-            for conn in utils.globalvars.webSockConns:
-                conn.on_message({'order': pedido, 'data': data['order']})
+
+            if utils.globalvars.webSockConns != None:
+                for conn in utils.globalvars.webSockConns:
+                    conn.conexion.on_message({'order': pedido, 'data': data['order'], 'restaurante':id_restaurante})
+
             self.write({"order": pedido})
         else:
             logger.error('falta order o id_restaurante en body')

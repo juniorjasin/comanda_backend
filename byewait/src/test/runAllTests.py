@@ -5,11 +5,12 @@ from testPedido import TestPedido
 from testRegister import TestRegister
 from testRestaurantes import TestRestaurante
 from testMenuItemScore import TestMenuItemScore
+from testCredenciales import TestCredenciales
 
 if __name__ == '__main__':
     # Run only the tests in the specified classes
 
-    test_classes_to_run = [TestLogin, TestMenu, TestPedido, TestRegister, TestRestaurante, TestMenuItemScore]
+    test_classes_to_run = [TestLogin, TestMenu, TestPedido, TestRegister, TestRestaurante, TestMenuItemScore, TestCredenciales]
 
     loader = unittest.TestLoader()
 

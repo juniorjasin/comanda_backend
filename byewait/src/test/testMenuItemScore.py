@@ -24,14 +24,13 @@ class TestMenuItemScore(unittest.TestCase):
         self.assertEqual(response.status_code, 400)
 
     def test_getItemsMenuCorrectBody(self):
-      body = '{"id_item_menu": 1, "id_usuario": 1, "score": 1}'
+      body = '{"menu_item_score": {"id_item_menu": 1,"id_usuario": 1,"score": 2}}'
       response = requests.post("http://localhost:8888/menu/item/score", body)
       content = json.loads(response.content)
-      self.assertTrue('score' in content)
-      self.assertTrue('id' in content['score'])
-      self.assertTrue('id_item_menu' in content['score'])
-      self.assertTrue('id_usuario' in content['score'])
-      self.assertTrue('score' in content['score'])
+      self.assertTrue('id' in content['menu_item_score'])
+      self.assertTrue('id_item_menu' in content['menu_item_score'])
+      self.assertTrue('id_usuario' in content['menu_item_score'])
+      self.assertTrue('score' in content['menu_item_score'])
       self.assertEqual(response.status_code, 200)
 
 if __name__ == "__main__":

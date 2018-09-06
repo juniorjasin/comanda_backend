@@ -1,11 +1,12 @@
 import tornado.web
 import json
 from decorators.handleException import handleException
+from services.managerService import ManagerService
 from utils.logger import Logger
 from handlers import base
 from exceptions import exceptions
 
-logger = Logger('managerHandler')
+logger = Logger('---------------managerHandler---------------')
 
 class ManagerHandler(base.BaseHandler):
 
@@ -23,17 +24,22 @@ class ManagerHandler(base.BaseHandler):
     @tornado.web.asynchronous
     @handleException
     def post(self):
-        respuesta = {"user":{"id": 201,"username":"newuser","id_restaurante":1},"token":"...."}
+        logger.debug('managerHandler post')
+        body = json.loads(self.request.body)
+        svc = ManagerService()
 
-        # try: # Ver si el body está bien
-        #     data = json.loads(self.request.body)
-        #     username = data['user']['username']
-        #     password = data['user']['password']
-        #     username.encode('latin-1')
-        #     password.encode('latin-1')
-        # except:
-        #     logger.error('Error, el body es incorrecto, faltan atributos')
-        #     raise exceptions.BadRequest(3001)
-        # svc = LoginService()
-        # respuesta = svc.validarUsuario(username,password)
-        self.finish(respuesta)
+        try:
+            user = body['user'] 
+            password = body['user']['password']
+            username = body['user']['username']
+            
+            logger.debug('intento iniciar sesion manager:{}'.format(user))
+
+        except Exception as ex:
+            logger.error('Error, el body es incorrecto, faltan atributos')
+            raise exceptions.BadRequest(3001)
+            
+        response = svc.validarUsuario(body['user']['username'], body['user']['password'])
+        logger.debug('response:{}'.format(response))
+
+        self.finish(response)

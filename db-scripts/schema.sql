@@ -3,6 +3,7 @@ drop trigger update_item_menu_rating_on_delete;
 drop trigger update_item_menu_rating_on_update;
 drop trigger update_item_menu_rating_on_insert;
 
+drop table managers;
 drop table tags_restaurants;
 drop table scores_item_menu;
 drop table tags;
@@ -361,15 +362,15 @@ create table if not exists managers (
     email               varchar(100)    not null,
     id_restaurante      integer         not null,
     password            varchar(400)    not null,
-    FOREIGN KEY(id_restaurante) REFERENCES restaurants(id_restaurante)
-    PRIMARY KEY (id_usuario)
+    FOREIGN KEY(id_restaurante) REFERENCES restaurants(id_restaurante),
+    PRIMARY KEY (id_manager)
 );
 
-INSERT INTO usuarios (username, email, password, id_restaurante) 
+INSERT INTO managers (username, email, password, id_restaurante) 
 VALUES ('jrjs', 'jrjs@gmail.com', '$2b$12$xzcHoLXLOa.bO7XEkqQ8wupvMUFTsMgNnX8.KbxCSEMJ.zfv95DbO', 1);
 
-INSERT INTO usuarios (username, email, password, id_restaurante) 
+INSERT INTO managers (username, email, password, id_restaurante) 
 VALUES ('juan', 'juan@gmail.com', '$2b$12$qxYL/c5KbxDb0iIvVgvrYuow20y7BRgk8JV6BeMQ2Cy1wMrNAabU2', 2);
 
-INSERT INTO usuarios (username, email, password, id_restaurante) 
+INSERT INTO managers (username, email, password, id_restaurante) 
  VALUES ('andi', 'andi@gmail.com', '$2b$12$AftbQ7QacpeB/VOVlXeJT.HEt0NwfNbIKF0NozVxvhZuhKnheeN6m', 3);

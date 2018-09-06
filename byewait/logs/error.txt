@@ -1,0 +1,341 @@
+2018-09-05 23:52:47,340 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 00:24:29,815 - checkExceptions-err - 60 - must be str, not JSONDecodeError
+2018-09-06 00:27:08,364 - checkExceptions-err - 60 - must be str, not KeyError
+2018-09-06 00:28:32,978 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 00:29:38,856 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 00:29:38,861 - checkExceptions-err - 60 - must be str, not KeyError
+2018-09-06 00:30:21,598 - checkExceptions-err - 60 - must be str, not KeyError
+2018-09-06 00:30:56,363 - checkExceptions-err - 60 - must be str, not KeyError
+2018-09-06 00:31:34,291 - loginHandler-err - 60 - Body incorrecto, exception: 
+2018-09-06 00:31:34,293 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 00:33:01,375 - loginHandler-err - 60 - Body incorrecto, exception: : 'password'
+2018-09-06 00:33:01,376 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 00:35:19,090 - loginHandler-err - 60 - Body incorrecto, exception: : 'password'
+2018-09-06 00:35:19,092 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 00:36:36,129 - checkExceptions-err - 60 - must be str, not bytes
+2018-09-06 00:37:14,030 - loginHandler-err - 60 - Body incorrecto, exception: : 'password'body: b'{"user": {"username": "juan", "pasword":"juan"}}'
+2018-09-06 00:37:14,032 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 00:57:49,188 - loginHandler-err - 60 - Body incorrecto, exception: : 'password' body: b'{"user": {"username": "juan", "pasword":"juan"}}'
+2018-09-06 00:57:49,220 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:11:47,554 - loginHandler-err - 60 - Body incorrecto, exception: : 'username' body: b'{"user": {"userne":"xyz","password":"xyz"}}'
+2018-09-06 01:11:47,555 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:12:37,170 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:12:37,172 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:12:37,197 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 01:12:37,201 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:12:37,206 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:12:37,208 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:12:37,219 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 01:12:37,220 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:12:37,234 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 01:12:37,235 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:17:37,632 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:17:37,633 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:17:38,574 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 01:17:38,575 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:17:38,581 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:17:38,581 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:17:39,445 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 01:17:39,446 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:17:50,239 - registerHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:17:50,239 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:17:50,245 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:17:50,251 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:17:50,255 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:17:50,262 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:17:50,267 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:17:50,272 - checkExceptions-err - 60 - Expecting value: line 1 column 1 (char 0)
+2018-09-06 01:17:50,708 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 01:17:50,709 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:18:08,233 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:18:08,238 - credencialesHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:18:08,239 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:18:08,246 - credencialesHandler-err - 60 - Body incorrecto, exception: : 'token' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:18:08,247 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:18:19,269 - menuItemScoreRepo-err - 60 - Fallo la consulta de insertScore a la base de datos: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`byewait`.`scores_item_menu`, CONSTRAINT `scores_item_menu_ibfk_1` FOREIGN KEY (`id_item_menu`) REFERENCES `item_menu` (`id_item_menu`))')
+2018-09-06 01:18:19,271 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:18:19,276 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:18:19,276 - checkExceptions-err - 60 - name 'msg' is not defined
+2018-09-06 01:18:19,282 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : 'menu_item_score' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:18:19,282 - checkExceptions-err - 60 - name 'msg' is not defined
+2018-09-06 01:18:37,532 - menuHandler-err - 60 - Body incorrecto, exception: : 'id_restaurante' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:18:37,533 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:18:37,540 - menuHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:18:37,542 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:19:08,975 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:19:08,982 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:19:08,989 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:19:08,995 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:19:09,002 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:19:09,008 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:08,325 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:20:08,326 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:20:09,133 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 01:20:09,134 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:20:09,140 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:20:09,141 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:20:10,015 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 01:20:10,016 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:20:10,071 - menuHandler-err - 60 - Body incorrecto, exception: : 'id_restaurante' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:20:10,073 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:20:10,079 - menuHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:20:10,081 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:20:10,091 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:10,097 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:10,116 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:10,129 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:10,135 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:10,141 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:10,148 - registerHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:20:10,152 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:20:10,161 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:20:10,166 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:20:10,171 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:20:10,176 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:20:10,181 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:20:10,185 - checkExceptions-err - 60 - Expecting value: line 1 column 1 (char 0)
+2018-09-06 01:20:10,626 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 01:20:10,627 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:20:11,071 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:11,076 - credencialesHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:20:11,076 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:20:11,082 - credencialesHandler-err - 60 - Body incorrecto, exception: : 'token' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:20:11,083 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:25:35,133 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:25:45,260 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:30:39,071 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:30:39,079 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:30:39,585 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:03,693 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:03,699 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:04,162 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:24,095 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:24,102 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:34,813 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:34,822 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:32:28,086 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:32:28,094 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:32:28,118 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 01:32:28,120 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:33:49,487 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:33:49,493 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:33:49,972 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:34:11,408 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:34:11,414 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:34:11,858 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:36:06,136 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:36:50,488 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:37:08,152 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:38:50,191 - pedidoRepo-err - 60 - Fallo insert a pedidos: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`byewait`.`pedidos`, CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`))')
+2018-09-06 01:38:50,193 - checkExceptions-err - 60 - {"user_message": "Ha ocurrido un error", "code": 5002}
+2018-09-06 11:38:49,212 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:38:49,246 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:38:50,823 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:38:50,824 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:38:50,829 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:38:50,830 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:38:51,671 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:38:51,673 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:19,949 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:42:19,950 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:20,739 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:42:20,740 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:20,747 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:42:20,748 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:21,631 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:42:21,633 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:50,948 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:42:50,949 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:51,742 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:42:51,743 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:51,751 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:42:51,752 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:52,638 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:42:52,639 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:43:09,040 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:43:09,041 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:43:09,823 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:43:09,824 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:43:09,831 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:43:09,833 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:43:10,658 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:43:10,659 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:01,263 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:44:01,264 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:02,031 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:44:02,032 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:02,039 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:44:02,040 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:02,896 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:44:02,897 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:12,481 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:44:12,482 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:13,254 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:44:13,256 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:13,263 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:44:13,264 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:14,085 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:44:14,087 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:49:18,838 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:49:18,839 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:49:19,611 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:49:19,612 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:49:19,732 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:49:19,733 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:49:20,581 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:49:20,583 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:13,813 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:50:13,815 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:14,590 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:50:14,591 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:14,722 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:50:14,723 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:15,571 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:50:15,573 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:26,500 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:50:26,501 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:27,269 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:50:27,270 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:27,322 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:50:27,322 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:28,170 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:50:28,172 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:35,990 - menuHandler-err - 60 - Body incorrecto, exception: : 'id_restaurante' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:50:35,992 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 11:50:36,004 - menuHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:50:36,005 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 11:50:47,705 - menuHandler-err - 60 - Body incorrecto, exception: : 'id_restaurante' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:50:47,707 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 11:50:47,721 - menuHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:50:47,722 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 11:50:57,386 - registerHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:50:57,387 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:57,399 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 11:50:57,410 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 11:50:57,417 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 11:50:57,423 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 11:50:57,429 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 11:50:57,441 - checkExceptions-err - 60 - Expecting value: line 1 column 1 (char 0)
+2018-09-06 11:50:57,868 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 11:50:57,869 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 11:51:05,953 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 11:51:05,966 - credencialesHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:51:05,967 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:51:05,977 - credencialesHandler-err - 60 - Body incorrecto, exception: : 'token' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:51:05,979 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:51:20,647 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 11:51:20,658 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 11:51:20,675 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 11:51:25,394 - pedidoRepo-err - 60 - Fallo insert a pedidos: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`byewait`.`pedidos`, CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`))')
+2018-09-06 11:51:25,395 - checkExceptions-err - 60 - {"user_message": "Ha ocurrido un error", "code": 5002}
+2018-09-06 12:32:48,110 - checkExceptions-err - 60 - 
+2018-09-06 12:32:49,710 - checkExceptions-err - 60 - 
+2018-09-06 12:34:53,386 - checkExceptions-err - 60 - 
+2018-09-06 12:34:54,228 - checkExceptions-err - 60 - 
+2018-09-06 12:34:54,871 - checkExceptions-err - 60 - 
+2018-09-06 12:36:03,963 - checkExceptions-err - 60 - 
+2018-09-06 12:37:13,350 - checkExceptions-err - 60 - 
+2018-09-06 12:37:35,540 - checkExceptions-err - 60 - 
+2018-09-06 12:39:24,023 - checkExceptions-err - 60 - 
+2018-09-06 12:40:11,160 - checkExceptions-err - 60 - 
+2018-09-06 12:41:59,132 - checkExceptions-err - 60 - 
+2018-09-06 12:42:14,670 - checkExceptions-err - 60 - 
+2018-09-06 12:42:30,042 - checkExceptions-err - 60 - 
+2018-09-06 12:52:04,745 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : 'menu_item_score' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:52:04,745 - checkExceptions-err - 60 - name 'msg' is not defined
+2018-09-06 12:52:34,052 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : 'menu_item_score' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:52:34,064 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:52:55,700 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 12:52:55,701 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:52:56,344 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : 'menu_item_score' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:52:56,345 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:55:13,831 - pedidoHandler-err - 60 - Body incorrecto, exception: : 'order' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:55:13,833 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:55:24,179 - pedidoHandler-err - 60 - Body incorrecto, exception: : 'order' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:55:24,180 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:56:05,494 - pedidoHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 12:56:05,495 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:56:06,009 - pedidoHandler-err - 60 - Body incorrecto, exception: : 'order' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:56:06,010 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:58:32,380 - pedidoRepo-err - 60 - Fallo insert a pedidos: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`byewait`.`pedidos`, CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`))')
+2018-09-06 12:58:32,382 - checkExceptions-err - 60 - {"user_message": "Ha ocurrido un error", "code": 5002}
+2018-09-06 12:58:33,085 - pedidoHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 12:58:33,086 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:58:33,736 - pedidoHandler-err - 60 - Body incorrecto, exception: : 'order' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:58:33,737 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:58:58,100 - pedidoRepo-err - 60 - Fallo insert a pedidos: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`byewait`.`pedidos`, CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`))')
+2018-09-06 12:58:58,101 - checkExceptions-err - 60 - {"user_message": "Ha ocurrido un error", "code": 5002}
+2018-09-06 12:59:40,656 - pedidoHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 12:59:40,657 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:59:41,343 - pedidoHandler-err - 60 - Body incorrecto, exception: : 'order' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:59:41,345 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:00:25,602 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:25,603 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:26,982 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 13:00:26,984 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:27,669 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:27,670 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:29,701 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 13:00:29,702 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:30,925 - menuHandler-err - 60 - Body incorrecto, exception: : 'id_restaurante' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:30,926 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 13:00:31,615 - menuHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:31,616 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 13:00:33,188 - pedidoHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:33,190 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:00:33,854 - pedidoHandler-err - 60 - Body incorrecto, exception: : 'order' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:33,855 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:00:34,491 - registerHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:34,492 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:35,101 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:35,109 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:35,118 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:35,124 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:35,131 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:35,676 - checkExceptions-err - 60 - Expecting value: line 1 column 1 (char 0)
+2018-09-06 13:00:36,713 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 13:00:36,714 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 13:00:39,755 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:39,756 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:00:40,489 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : 'menu_item_score' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:40,490 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:00:41,123 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 13:00:41,747 - credencialesHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:41,748 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:42,422 - credencialesHandler-err - 60 - Body incorrecto, exception: : 'token' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:42,424 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:46,661 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:46,662 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:48,066 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 13:00:48,067 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:48,679 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:48,680 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:50,746 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 13:00:50,748 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:52,045 - menuHandler-err - 60 - Body incorrecto, exception: : 'id_restaurante' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:52,046 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 13:00:52,680 - menuHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:52,681 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 13:00:54,484 - pedidoHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:54,485 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:00:56,392 - pedidoHandler-err - 60 - Body incorrecto, exception: : 'order' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:56,393 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:00:57,177 - registerHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:57,178 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:57,867 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:57,879 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:57,891 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:57,907 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:57,915 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:58,664 - checkExceptions-err - 60 - Expecting value: line 1 column 1 (char 0)
+2018-09-06 13:00:59,814 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 13:00:59,815 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 13:01:02,856 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:01:02,857 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:01:03,600 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : 'menu_item_score' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:01:03,601 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:01:04,246 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 13:01:04,855 - credencialesHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:01:04,857 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:01:05,454 - credencialesHandler-err - 60 - Body incorrecto, exception: : 'token' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:01:05,455 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}

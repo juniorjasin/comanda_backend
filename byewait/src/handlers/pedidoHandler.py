@@ -12,11 +12,11 @@ import utils.globalvars
 logger = Logger('pedidoHandler')
 
 class PedidoHandler(base.BaseHandler):
-
+  
     @tornado.web.asynchronous
     @handleException
     def get(self, restaurante):
-        logger.debug("pedidoHandler get")
+        logger.debug('get')
         svc = PedidoService()
         self.finish()
 
@@ -29,33 +29,19 @@ class PedidoHandler(base.BaseHandler):
     @handleException
     @checkAuthentication
     def post(self, restaurante):
-        logger.debug("pedidoHandler post")
-
-        # Controlar entrada
-        id_restaurante = None
-        id_mesa = None
-        items = None
+        logger.debug("post")
         id_usuario = 1
         try:
             data = json.loads(self.request.body)
             id_restaurante = data['order']['id_restaurante']
             id_mesa = data['order']['id_mesa']
             items = data['order']['items']
-
         except Exception as e:
-            msg = "Fallo conversion body a json o no existen atributos: {}".format(e)
-            logger.error(msg)
+            logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(self.request.body)) 
             raise exceptions.BadRequest(4001)
-        
         svc = PedidoService()
-        if 'order' in data and 'id_restaurante' in data['order']:
-            pedido = svc.insertOrder(id_restaurante, items, id_usuario, id_mesa)
-            # Enviar la información del pedido a los clientes del web socket
-            for conn in utils.globalvars.webSockConns:
-                conn.on_message({'order': pedido, 'data': data['order']})
-            self.write({"order": pedido})
-        else:
-            logger.error('falta order o id_restaurante en body')
-            raise exceptions.BadRequest(4001)
-
-        self.finish()
+        pedido = svc.insertOrder(id_restaurante, items, id_usuario, id_mesa)
+        # Enviar la información del pedido a los clientes del web socket
+        for conn in utils.globalvars.webSockConns:
+            conn.on_message({'order': pedido, 'data': data['order']})
+        self.finish({"order": pedido})

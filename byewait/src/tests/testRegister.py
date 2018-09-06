@@ -2,6 +2,7 @@ import unittest
 import requests
 import json
 import sys
+from test import Test
 
 # Nota: los metodos de las clases de test DEBEN comenzar
 # con el nombre 'test', sino no funciona.
@@ -9,7 +10,7 @@ import sys
 # TODO: 
 # Caracteres extranios en username, password y email.
 # Enviar mas caracteres de los que la base de datos soporta varchar(20) enviar 30.
-class TestRegister(unittest.TestCase):
+class TestRegister(Test):
 
     def test_postIncorrectBody(self):
         body = '{"incorrect_parameter": 1}'

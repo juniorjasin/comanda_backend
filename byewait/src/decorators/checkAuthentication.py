@@ -28,7 +28,7 @@ def checkAuthentication(f):
             logger.critical("Token invalido")
             raise exceptions.Unauthorized(2001)
         except Exception as ex:
-            logger.debug("Error1: {0}".format(ex))
+            logger.debug("Exception: {}".format(ex))
             raise Exception
 
         return f(*args)

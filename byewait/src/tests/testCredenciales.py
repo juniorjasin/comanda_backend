@@ -2,8 +2,9 @@ import unittest
 import requests
 import json
 import sys
+from test import Test
 
-class TestCredenciales(unittest.TestCase):
+class TestCredenciales(Test):
 
     def test_postPedidoIncorrectBody(self):
         body = '{"incorrect_parameter": 1}'

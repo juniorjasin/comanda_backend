@@ -1,0 +1,1807 @@
+2018-09-05 23:52:37,326 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-05 23:52:37,326 - restaurantesHandler-d - 51 - restaurantesHandler get
+2018-09-05 23:52:47,339 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-05 23:52:47,340 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 00:24:29,799 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 00:24:29,815 - checkExceptions-err - 60 - must be str, not JSONDecodeError
+2018-09-06 00:27:08,363 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 00:27:08,364 - checkExceptions-err - 60 - must be str, not KeyError
+2018-09-06 00:28:22,892 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 00:28:32,977 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 00:28:32,978 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 00:29:28,852 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 00:29:38,856 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 00:29:38,856 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 00:29:38,860 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 00:29:38,861 - checkExceptions-err - 60 - must be str, not KeyError
+2018-09-06 00:30:21,597 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 00:30:21,598 - checkExceptions-err - 60 - must be str, not KeyError
+2018-09-06 00:30:56,363 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 00:30:56,363 - loginHandler-d - 51 - post
+2018-09-06 00:30:56,363 - checkExceptions-err - 60 - must be str, not KeyError
+2018-09-06 00:31:34,290 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 00:31:34,291 - loginHandler-d - 51 - post
+2018-09-06 00:31:34,291 - loginHandler-err - 60 - Body incorrecto, exception: 
+2018-09-06 00:31:34,293 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 00:31:34,293 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 00:33:01,375 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 00:33:01,375 - loginHandler-d - 51 - post
+2018-09-06 00:33:01,375 - loginHandler-err - 60 - Body incorrecto, exception: : 'password'
+2018-09-06 00:33:01,376 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 00:33:01,376 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 00:35:19,090 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 00:35:19,090 - loginHandler-d - 51 - post
+2018-09-06 00:35:19,090 - loginHandler-err - 60 - Body incorrecto, exception: : 'password'
+2018-09-06 00:35:19,091 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 00:35:19,092 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 00:36:36,128 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 00:36:36,129 - loginHandler-d - 51 - post
+2018-09-06 00:36:36,129 - checkExceptions-err - 60 - must be str, not bytes
+2018-09-06 00:37:14,029 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 00:37:14,029 - loginHandler-d - 51 - post
+2018-09-06 00:37:14,030 - loginHandler-err - 60 - Body incorrecto, exception: : 'password'body: b'{"user": {"username": "juan", "pasword":"juan"}}'
+2018-09-06 00:37:14,032 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 00:37:14,032 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 00:57:49,170 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 00:57:49,188 - loginHandler-d - 51 - post
+2018-09-06 00:57:49,188 - loginHandler-err - 60 - Body incorrecto, exception: : 'password' body: b'{"user": {"username": "juan", "pasword":"juan"}}'
+2018-09-06 00:57:49,219 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 00:57:49,220 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:00:02,962 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:00:02,962 - restaurantesHandler-d - 51 - get
+2018-09-06 01:00:03,482 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:00:03,482 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 01:00:03,482 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 01:00:03,483 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 01:10:16,560 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:10:16,560 - loginHandler-d - 51 - post
+2018-09-06 01:10:16,594 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:10:16,594 - loginRepo-d - 51 - loginRepo
+2018-09-06 01:10:16,595 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 01:10:16,595 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 01:11:47,553 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:11:47,553 - loginHandler-d - 51 - post
+2018-09-06 01:11:47,554 - loginHandler-err - 60 - Body incorrecto, exception: : 'username' body: b'{"user": {"userne":"xyz","password":"xyz"}}'
+2018-09-06 01:11:47,555 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:11:47,555 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:12:37,170 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:12:37,170 - loginHandler-d - 51 - post
+2018-09-06 01:12:37,170 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:12:37,171 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:12:37,172 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:12:37,178 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:12:37,178 - registerHandler-d - 51 - post
+2018-09-06 01:12:37,195 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:12:37,195 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:12:37,197 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 01:12:37,201 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 01:12:37,201 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:12:37,206 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:12:37,206 - loginHandler-d - 51 - post
+2018-09-06 01:12:37,206 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:12:37,207 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:12:37,208 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:12:37,212 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:12:37,212 - registerHandler-d - 51 - post
+2018-09-06 01:12:37,218 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:12:37,218 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:12:37,219 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 01:12:37,220 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 01:12:37,220 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:12:37,226 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:12:37,227 - loginHandler-d - 51 - post
+2018-09-06 01:12:37,232 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:12:37,232 - loginRepo-d - 51 - loginRepo
+2018-09-06 01:12:37,232 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 01:12:37,232 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 01:12:37,234 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 01:12:37,235 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:12:37,235 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:17:37,632 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:37,632 - loginHandler-d - 51 - post
+2018-09-06 01:17:37,632 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:17:37,633 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:17:37,633 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:17:37,638 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:37,638 - registerHandler-d - 51 - post
+2018-09-06 01:17:37,655 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:17:37,655 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:17:38,204 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:38,205 - loginHandler-d - 51 - post
+2018-09-06 01:17:38,222 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:17:38,223 - loginRepo-d - 51 - loginRepo
+2018-09-06 01:17:38,223 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 01:17:38,223 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 01:17:38,574 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 01:17:38,575 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:17:38,575 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:17:38,580 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:38,580 - loginHandler-d - 51 - post
+2018-09-06 01:17:38,581 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:17:38,581 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:17:38,581 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:17:38,586 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:38,586 - registerHandler-d - 51 - post
+2018-09-06 01:17:38,588 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:17:38,588 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:17:39,035 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:39,035 - loginHandler-d - 51 - post
+2018-09-06 01:17:39,037 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:17:39,037 - loginRepo-d - 51 - loginRepo
+2018-09-06 01:17:39,037 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 01:17:39,037 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 01:17:39,418 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:39,419 - loginHandler-d - 51 - post
+2018-09-06 01:17:39,422 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:17:39,424 - loginRepo-d - 51 - loginRepo
+2018-09-06 01:17:39,424 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 01:17:39,424 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 01:17:39,445 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 01:17:39,446 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:17:39,446 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:17:50,238 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:50,238 - registerHandler-d - 51 - post
+2018-09-06 01:17:50,239 - registerHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:17:50,239 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:17:50,239 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:17:50,244 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:50,244 - registerHandler-d - 51 - post
+2018-09-06 01:17:50,245 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:17:50,249 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:50,250 - registerHandler-d - 51 - post
+2018-09-06 01:17:50,251 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:17:50,255 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:50,255 - registerHandler-d - 51 - post
+2018-09-06 01:17:50,255 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:17:50,261 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:50,262 - registerHandler-d - 51 - post
+2018-09-06 01:17:50,262 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:17:50,267 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:50,267 - registerHandler-d - 51 - post
+2018-09-06 01:17:50,267 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:17:50,272 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:50,272 - registerHandler-d - 51 - post
+2018-09-06 01:17:50,272 - checkExceptions-err - 60 - Expecting value: line 1 column 1 (char 0)
+2018-09-06 01:17:50,277 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:50,277 - registerHandler-d - 51 - post
+2018-09-06 01:17:50,278 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:17:50,279 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:17:50,704 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:50,704 - registerHandler-d - 51 - post
+2018-09-06 01:17:50,706 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:17:50,707 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:17:50,708 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 01:17:50,709 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 01:17:50,709 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:17:50,714 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:17:50,714 - registerHandler-d - 51 - post
+2018-09-06 01:17:50,718 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:17:50,719 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:18:08,232 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:18:08,232 - credencialesHandler-d - 51 - post
+2018-09-06 01:18:08,232 - credencialesService-crit - 63 - Token invalido
+2018-09-06 01:18:08,233 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:18:08,233 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:18:08,238 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:18:08,238 - credencialesHandler-d - 51 - post
+2018-09-06 01:18:08,238 - credencialesHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:18:08,239 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:18:08,239 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:18:08,245 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:18:08,245 - credencialesHandler-d - 51 - post
+2018-09-06 01:18:08,246 - credencialesHandler-err - 60 - Body incorrecto, exception: : 'token' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:18:08,247 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:18:08,247 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:18:08,252 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:18:08,253 - credencialesHandler-d - 51 - post
+2018-09-06 01:18:08,254 - credencialesService-crit - 63 - Token expirado
+2018-09-06 01:18:19,250 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:18:19,250 - menuItemScoreHandler-d - 51 - post
+2018-09-06 01:18:19,250 - menuItemScoreRepo-d - 51 - menuItemScoreRepo
+2018-09-06 01:18:19,252 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:18:19,252 - menuItemScoreService-d - 51 - insertScore
+2018-09-06 01:18:19,252 - menuItemScoreService-d - 51 - 1
+2018-09-06 01:18:19,252 - menuItemScoreService-d - 51 - 1
+2018-09-06 01:18:19,252 - menuItemScoreService-d - 51 - 2
+2018-09-06 01:18:19,252 - menuItemScoreRepo-d - 51 - insertScore
+2018-09-06 01:18:19,269 - menuItemScoreRepo-err - 60 - Fallo la consulta de insertScore a la base de datos: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`byewait`.`scores_item_menu`, CONSTRAINT `scores_item_menu_ibfk_1` FOREIGN KEY (`id_item_menu`) REFERENCES `item_menu` (`id_item_menu`))')
+2018-09-06 01:18:19,270 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 01:18:19,271 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:18:19,276 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:18:19,276 - menuItemScoreHandler-d - 51 - post
+2018-09-06 01:18:19,276 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:18:19,276 - checkExceptions-err - 60 - name 'msg' is not defined
+2018-09-06 01:18:19,281 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:18:19,282 - menuItemScoreHandler-d - 51 - post
+2018-09-06 01:18:19,282 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : 'menu_item_score' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:18:19,282 - checkExceptions-err - 60 - name 'msg' is not defined
+2018-09-06 01:18:37,402 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:18:37,402 - menuHandler-d - 51 - post
+2018-09-06 01:18:37,435 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:18:37,436 - menuRepo-d - 51 - menuRepo
+2018-09-06 01:18:37,436 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 01:18:37,483 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:18:37,483 - menuHandler-d - 51 - post
+2018-09-06 01:18:37,503 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:18:37,504 - menuRepo-d - 51 - menuRepo
+2018-09-06 01:18:37,504 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 01:18:37,512 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:18:37,512 - menuHandler-d - 51 - post
+2018-09-06 01:18:37,514 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:18:37,515 - menuRepo-d - 51 - menuRepo
+2018-09-06 01:18:37,515 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 01:18:37,521 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:18:37,521 - menuHandler-d - 51 - post
+2018-09-06 01:18:37,522 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:18:37,523 - menuRepo-d - 51 - menuRepo
+2018-09-06 01:18:37,523 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 01:18:37,531 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:18:37,532 - menuHandler-d - 51 - post
+2018-09-06 01:18:37,532 - menuHandler-err - 60 - Body incorrecto, exception: : 'id_restaurante' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:18:37,533 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 01:18:37,533 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:18:37,540 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:18:37,540 - menuHandler-d - 51 - post
+2018-09-06 01:18:37,540 - menuHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:18:37,541 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 01:18:37,542 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:18:54,706 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:18:54,706 - restaurantesHandler-d - 51 - get
+2018-09-06 01:18:54,708 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:18:54,708 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 01:18:54,708 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 01:18:54,709 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 01:18:54,710 - restaurantesRepo-d - 51 - No hay ningun restaurante insertado...
+2018-09-06 01:19:08,973 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:19:08,974 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:19:08,974 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:19:08,975 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:19:08,975 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:19:08,981 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:19:08,981 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:19:08,981 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:19:08,982 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:19:08,982 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:19:08,988 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:19:08,988 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:19:08,988 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:19:08,989 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:19:08,989 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:19:08,994 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:19:08,994 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:19:08,994 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:19:08,995 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:19:08,995 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:19:09,000 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:19:09,000 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:19:09,001 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:19:09,002 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:19:09,002 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:19:09,007 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:19:09,007 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:19:09,007 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:19:09,008 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:19:09,008 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:19:16,846 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:19:16,847 - restaurantesHandler-d - 51 - get
+2018-09-06 01:19:16,849 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:19:16,849 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 01:19:16,849 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 01:19:16,849 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 01:19:16,850 - restaurantesRepo-d - 51 - No hay ningun restaurante insertado...
+2018-09-06 01:20:08,325 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:08,325 - loginHandler-d - 51 - post
+2018-09-06 01:20:08,325 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:20:08,326 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:20:08,326 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:20:08,331 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:08,331 - registerHandler-d - 51 - post
+2018-09-06 01:20:08,349 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:20:08,352 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:20:08,770 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:08,770 - loginHandler-d - 51 - post
+2018-09-06 01:20:08,772 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:20:08,772 - loginRepo-d - 51 - loginRepo
+2018-09-06 01:20:08,773 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 01:20:08,773 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 01:20:09,133 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 01:20:09,134 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:20:09,134 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:20:09,139 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:09,140 - loginHandler-d - 51 - post
+2018-09-06 01:20:09,140 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:20:09,141 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:20:09,141 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:20:09,145 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:09,146 - registerHandler-d - 51 - post
+2018-09-06 01:20:09,147 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:20:09,147 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:20:09,613 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:09,613 - loginHandler-d - 51 - post
+2018-09-06 01:20:09,616 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:20:09,617 - loginRepo-d - 51 - loginRepo
+2018-09-06 01:20:09,617 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 01:20:09,617 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 01:20:09,995 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:09,995 - loginHandler-d - 51 - post
+2018-09-06 01:20:10,013 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:20:10,014 - loginRepo-d - 51 - loginRepo
+2018-09-06 01:20:10,014 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 01:20:10,014 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 01:20:10,015 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 01:20:10,016 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:20:10,016 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:20:10,023 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,023 - menuHandler-d - 51 - post
+2018-09-06 01:20:10,025 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:20:10,026 - menuRepo-d - 51 - menuRepo
+2018-09-06 01:20:10,026 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 01:20:10,033 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,034 - menuHandler-d - 51 - post
+2018-09-06 01:20:10,036 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:20:10,036 - menuRepo-d - 51 - menuRepo
+2018-09-06 01:20:10,037 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 01:20:10,048 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,049 - menuHandler-d - 51 - post
+2018-09-06 01:20:10,050 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:20:10,050 - menuRepo-d - 51 - menuRepo
+2018-09-06 01:20:10,050 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 01:20:10,061 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,061 - menuHandler-d - 51 - post
+2018-09-06 01:20:10,064 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:20:10,064 - menuRepo-d - 51 - menuRepo
+2018-09-06 01:20:10,064 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 01:20:10,071 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,071 - menuHandler-d - 51 - post
+2018-09-06 01:20:10,071 - menuHandler-err - 60 - Body incorrecto, exception: : 'id_restaurante' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:20:10,072 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 01:20:10,073 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:20:10,079 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,079 - menuHandler-d - 51 - post
+2018-09-06 01:20:10,079 - menuHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:20:10,081 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 01:20:10,081 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:20:10,089 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,089 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:20:10,090 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:20:10,091 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:20:10,091 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:10,095 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,095 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:20:10,096 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:20:10,096 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:20:10,097 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:10,115 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,115 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:20:10,115 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:20:10,116 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:20:10,116 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:10,128 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,128 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:20:10,128 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:20:10,129 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:20:10,129 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:10,133 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,134 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:20:10,134 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:20:10,134 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:20:10,135 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:10,139 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,140 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:20:10,140 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:20:10,141 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:20:10,141 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:10,148 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,148 - registerHandler-d - 51 - post
+2018-09-06 01:20:10,148 - registerHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:20:10,152 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:20:10,152 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:20:10,160 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,161 - registerHandler-d - 51 - post
+2018-09-06 01:20:10,161 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:20:10,166 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,166 - registerHandler-d - 51 - post
+2018-09-06 01:20:10,166 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:20:10,171 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,171 - registerHandler-d - 51 - post
+2018-09-06 01:20:10,171 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:20:10,176 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,176 - registerHandler-d - 51 - post
+2018-09-06 01:20:10,176 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:20:10,180 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,181 - registerHandler-d - 51 - post
+2018-09-06 01:20:10,181 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 01:20:10,185 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,185 - registerHandler-d - 51 - post
+2018-09-06 01:20:10,185 - checkExceptions-err - 60 - Expecting value: line 1 column 1 (char 0)
+2018-09-06 01:20:10,190 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,190 - registerHandler-d - 51 - post
+2018-09-06 01:20:10,191 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:20:10,192 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:20:10,622 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,623 - registerHandler-d - 51 - post
+2018-09-06 01:20:10,625 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:20:10,625 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:20:10,626 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 01:20:10,627 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 01:20:10,627 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:20:10,633 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:10,634 - registerHandler-d - 51 - post
+2018-09-06 01:20:10,637 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:20:10,637 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:20:11,061 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:11,061 - restaurantesHandler-d - 51 - get
+2018-09-06 01:20:11,062 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:20:11,062 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 01:20:11,063 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 01:20:11,063 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 01:20:11,064 - restaurantesRepo-d - 51 - No hay ningun restaurante insertado...
+2018-09-06 01:20:11,069 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:11,069 - credencialesHandler-d - 51 - post
+2018-09-06 01:20:11,070 - credencialesService-crit - 63 - Token invalido
+2018-09-06 01:20:11,071 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:20:11,071 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:20:11,075 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:11,075 - credencialesHandler-d - 51 - post
+2018-09-06 01:20:11,076 - credencialesHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 01:20:11,076 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:20:11,076 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:20:11,081 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:11,082 - credencialesHandler-d - 51 - post
+2018-09-06 01:20:11,082 - credencialesHandler-err - 60 - Body incorrecto, exception: : 'token' body: b'{"incorrect_parameter": 1}'
+2018-09-06 01:20:11,083 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 01:20:11,083 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 01:20:11,088 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:20:11,089 - credencialesHandler-d - 51 - post
+2018-09-06 01:20:11,090 - credencialesService-crit - 63 - Token expirado
+2018-09-06 01:25:35,101 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:25:35,119 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:25:35,119 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:25:35,133 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:25:35,133 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:25:45,256 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:25:45,257 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:25:45,257 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:25:45,260 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:25:45,260 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:30:39,060 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:30:39,060 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:30:39,060 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:30:39,071 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:30:39,071 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:30:39,077 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:30:39,077 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:30:39,078 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:30:39,079 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:30:39,079 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:30:39,084 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:30:39,084 - registerHandler-d - 51 - post
+2018-09-06 01:30:39,116 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:30:39,116 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:30:39,584 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:30:39,584 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:30:39,584 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:30:39,585 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:30:39,585 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:03,691 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:31:03,692 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:31:03,692 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:31:03,693 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:31:03,693 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:03,698 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:31:03,698 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:31:03,698 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:31:03,699 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:31:03,699 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:03,704 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:31:03,704 - registerHandler-d - 51 - post
+2018-09-06 01:31:03,727 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:31:03,728 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:31:04,160 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:31:04,160 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:31:04,161 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:31:04,161 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:31:04,162 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:24,094 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:31:24,094 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:31:24,094 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:31:24,095 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:31:24,095 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:24,100 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:31:24,101 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:31:24,101 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:31:24,101 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:31:24,102 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:24,108 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:31:24,108 - registerHandler-d - 51 - post
+2018-09-06 01:31:24,125 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:31:24,125 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:31:34,812 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:31:34,812 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:31:34,812 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:31:34,813 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:31:34,813 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:34,819 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:31:34,819 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:31:34,820 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:31:34,821 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:31:34,822 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:31:34,828 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:31:34,828 - registerHandler-d - 51 - post
+2018-09-06 01:31:34,830 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:31:34,830 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:32:28,084 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:32:28,085 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:32:28,085 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:32:28,086 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:32:28,086 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:32:28,092 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:32:28,092 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:32:28,093 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:32:28,094 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:32:28,094 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:32:28,100 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:32:28,100 - registerHandler-d - 51 - post
+2018-09-06 01:32:28,113 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:32:28,114 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:32:28,118 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 01:32:28,119 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 01:32:28,120 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 01:33:49,485 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:33:49,485 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:33:49,486 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:33:49,486 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:33:49,487 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:33:49,491 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:33:49,491 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:33:49,492 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:33:49,492 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:33:49,493 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:33:49,498 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:33:49,499 - registerHandler-d - 51 - post
+2018-09-06 01:33:49,521 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:33:49,522 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:33:49,970 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:33:49,970 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:33:49,970 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:33:49,971 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:33:49,972 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:34:11,407 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:34:11,407 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:34:11,407 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:34:11,408 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:34:11,408 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:34:11,412 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:34:11,413 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:34:11,413 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:34:11,414 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:34:11,414 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:34:11,422 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:34:11,422 - registerHandler-d - 51 - post
+2018-09-06 01:34:11,437 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:34:11,438 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:34:11,856 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:34:11,857 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:34:11,857 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:34:11,858 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:34:11,858 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:36:05,655 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:36:05,656 - registerHandler-d - 51 - post
+2018-09-06 01:36:05,680 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:36:05,680 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:36:06,134 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:36:06,135 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:36:06,135 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:36:06,136 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:36:06,136 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:36:50,023 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:36:50,023 - registerHandler-d - 51 - post
+2018-09-06 01:36:50,039 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:36:50,040 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:36:50,486 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:36:50,486 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:36:50,486 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:36:50,488 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:36:50,488 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:37:07,725 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:37:07,726 - registerHandler-d - 51 - post
+2018-09-06 01:37:07,727 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:37:07,727 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:37:08,150 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:37:08,151 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:37:08,151 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 01:37:08,152 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 01:37:08,152 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 01:38:49,628 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:38:49,629 - registerHandler-d - 51 - post
+2018-09-06 01:38:49,716 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:38:49,716 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 01:38:50,141 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 01:38:50,141 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 01:38:50,142 - checkAuthentication-d - 51 - {'userName': 'postPedidoIncBody', 'exp': 1536208910}
+2018-09-06 01:38:50,142 - checkAuthentication-d - 51 - postPedidoIncBody
+2018-09-06 01:38:50,142 - pedidoHandler-d - 51 - post
+2018-09-06 01:38:50,144 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 01:38:50,145 - pedidoRepo-d - 51 - pedidoRepo
+2018-09-06 01:38:50,145 - pedidoService-d - 51 - insertOrder
+2018-09-06 01:38:50,145 - pedidoRepo-d - 51 - insertNewOrder
+2018-09-06 01:38:50,191 - pedidoRepo-err - 60 - Fallo insert a pedidos: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`byewait`.`pedidos`, CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`))')
+2018-09-06 01:38:50,193 - exceptions-d - 51 - {'user_message': 'Ha ocurrido un error', 'code': 5002}
+2018-09-06 01:38:50,193 - checkExceptions-err - 60 - {"user_message": "Ha ocurrido un error", "code": 5002}
+2018-09-06 11:22:56,451 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:22:56,501 - restaurantesHandler-d - 51 - get
+2018-09-06 11:22:56,514 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:22:56,515 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 11:22:56,515 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 11:22:56,515 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 11:22:56,517 - restaurantesRepo-d - 51 - No hay ningun restaurante insertado...
+2018-09-06 11:23:27,166 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:23:27,166 - restaurantesHandler-d - 51 - get
+2018-09-06 11:23:27,168 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:23:27,168 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 11:23:27,168 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 11:23:27,168 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 11:23:27,169 - restaurantesRepo-d - 51 - No hay ningun restaurante insertado...
+2018-09-06 11:26:26,914 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:26:26,914 - restaurantesHandler-d - 51 - get
+2018-09-06 11:26:26,916 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:26:26,916 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 11:26:26,917 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 11:26:26,917 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 11:26:26,918 - restaurantesRepo-d - 51 - No hay ningun restaurante insertado...
+2018-09-06 11:32:37,261 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:32:37,263 - restaurantesHandler-d - 51 - get
+2018-09-06 11:32:37,264 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:32:37,265 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 11:32:37,265 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 11:32:37,265 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 11:32:37,266 - restaurantesRepo-d - 51 - No hay ningun restaurante insertado...
+2018-09-06 11:32:42,688 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:32:42,689 - restaurantesHandler-d - 51 - get
+2018-09-06 11:32:42,690 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:32:42,691 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 11:32:42,691 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 11:32:42,691 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 11:32:42,692 - restaurantesRepo-d - 51 - No hay ningun restaurante insertado...
+2018-09-06 11:35:04,985 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:35:04,985 - restaurantesHandler-d - 51 - get
+2018-09-06 11:35:04,987 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:35:04,987 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 11:35:04,987 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 11:35:04,987 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 11:35:04,988 - restaurantesRepo-d - 51 - No hay ningun restaurante insertado...
+2018-09-06 11:35:28,321 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:35:28,321 - restaurantesHandler-d - 51 - get
+2018-09-06 11:35:28,323 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:35:28,323 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 11:35:28,323 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 11:35:28,324 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 11:35:28,325 - restaurantesRepo-d - 51 - No hay ningun restaurante insertado...
+2018-09-06 11:36:12,789 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:36:12,789 - restaurantesHandler-d - 51 - get
+2018-09-06 11:36:12,790 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:36:12,791 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 11:36:12,791 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 11:36:12,791 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 11:36:12,792 - restaurantesRepo-d - 51 - No hay ningun restaurante insertado...
+2018-09-06 11:38:49,211 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:38:49,211 - loginHandler-d - 51 - post
+2018-09-06 11:38:49,212 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:38:49,246 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:38:49,246 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:38:49,252 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:38:49,253 - registerHandler-d - 51 - post
+2018-09-06 11:38:49,255 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:38:49,255 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:38:50,474 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:38:50,474 - loginHandler-d - 51 - post
+2018-09-06 11:38:50,476 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:38:50,477 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:38:50,477 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:38:50,477 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:38:50,823 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:38:50,824 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:38:50,824 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:38:50,829 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:38:50,829 - loginHandler-d - 51 - post
+2018-09-06 11:38:50,829 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:38:50,830 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:38:50,830 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:38:50,835 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:38:50,835 - registerHandler-d - 51 - post
+2018-09-06 11:38:50,837 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:38:50,837 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:38:51,276 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:38:51,277 - loginHandler-d - 51 - post
+2018-09-06 11:38:51,278 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:38:51,278 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:38:51,279 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:38:51,279 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:38:51,667 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:38:51,668 - loginHandler-d - 51 - post
+2018-09-06 11:38:51,669 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:38:51,670 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:38:51,670 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:38:51,670 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:38:51,671 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:38:51,673 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:38:51,673 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:19,948 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:42:19,948 - loginHandler-d - 51 - post
+2018-09-06 11:42:19,949 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:42:19,949 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:42:19,950 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:19,955 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:42:19,956 - registerHandler-d - 51 - post
+2018-09-06 11:42:19,958 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:42:19,958 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:42:20,384 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:42:20,384 - loginHandler-d - 51 - post
+2018-09-06 11:42:20,385 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:42:20,386 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:42:20,386 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:42:20,386 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:42:20,739 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:42:20,740 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:42:20,740 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:20,747 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:42:20,747 - loginHandler-d - 51 - post
+2018-09-06 11:42:20,747 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:42:20,748 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:42:20,748 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:20,755 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:42:20,755 - registerHandler-d - 51 - post
+2018-09-06 11:42:20,757 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:42:20,757 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:42:21,228 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:42:21,228 - loginHandler-d - 51 - post
+2018-09-06 11:42:21,230 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:42:21,230 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:42:21,230 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:42:21,231 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:42:21,627 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:42:21,627 - loginHandler-d - 51 - post
+2018-09-06 11:42:21,629 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:42:21,629 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:42:21,629 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:42:21,630 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:42:21,631 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:42:21,633 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:42:21,633 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:50,947 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:42:50,948 - loginHandler-d - 51 - post
+2018-09-06 11:42:50,948 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:42:50,949 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:42:50,949 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:50,955 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:42:50,955 - registerHandler-d - 51 - post
+2018-09-06 11:42:50,957 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:42:50,957 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:42:51,390 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:42:51,390 - loginHandler-d - 51 - post
+2018-09-06 11:42:51,391 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:42:51,392 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:42:51,392 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:42:51,392 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:42:51,742 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:42:51,742 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:42:51,743 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:51,750 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:42:51,750 - loginHandler-d - 51 - post
+2018-09-06 11:42:51,751 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:42:51,752 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:42:51,752 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:42:51,761 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:42:51,761 - registerHandler-d - 51 - post
+2018-09-06 11:42:51,764 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:42:51,764 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:42:52,246 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:42:52,246 - loginHandler-d - 51 - post
+2018-09-06 11:42:52,248 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:42:52,248 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:42:52,248 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:42:52,248 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:42:52,634 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:42:52,634 - loginHandler-d - 51 - post
+2018-09-06 11:42:52,636 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:42:52,636 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:42:52,636 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:42:52,637 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:42:52,638 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:42:52,639 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:42:52,639 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:43:09,039 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:43:09,039 - loginHandler-d - 51 - post
+2018-09-06 11:43:09,040 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:43:09,041 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:43:09,041 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:43:09,047 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:43:09,047 - registerHandler-d - 51 - post
+2018-09-06 11:43:09,049 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:43:09,049 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:43:09,473 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:43:09,473 - loginHandler-d - 51 - post
+2018-09-06 11:43:09,475 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:43:09,475 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:43:09,475 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:43:09,476 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:43:09,823 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:43:09,824 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:43:09,824 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:43:09,831 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:43:09,831 - loginHandler-d - 51 - post
+2018-09-06 11:43:09,831 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:43:09,832 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:43:09,833 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:43:09,839 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:43:09,839 - registerHandler-d - 51 - post
+2018-09-06 11:43:09,840 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:43:09,841 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:43:10,266 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:43:10,266 - loginHandler-d - 51 - post
+2018-09-06 11:43:10,268 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:43:10,268 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:43:10,268 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:43:10,268 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:43:10,655 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:43:10,655 - loginHandler-d - 51 - post
+2018-09-06 11:43:10,657 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:43:10,657 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:43:10,657 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:43:10,657 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:43:10,658 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:43:10,659 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:43:10,659 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:01,262 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:44:01,263 - loginHandler-d - 51 - post
+2018-09-06 11:44:01,263 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:44:01,264 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:44:01,264 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:01,270 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:44:01,271 - registerHandler-d - 51 - post
+2018-09-06 11:44:01,272 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:44:01,272 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:44:01,687 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:44:01,687 - loginHandler-d - 51 - post
+2018-09-06 11:44:01,689 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:44:01,689 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:44:01,689 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:44:01,689 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:44:02,031 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:44:02,032 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:44:02,032 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:02,039 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:44:02,039 - loginHandler-d - 51 - post
+2018-09-06 11:44:02,039 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:44:02,040 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:44:02,040 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:02,046 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:44:02,047 - registerHandler-d - 51 - post
+2018-09-06 11:44:02,048 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:44:02,048 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:44:02,512 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:44:02,512 - loginHandler-d - 51 - post
+2018-09-06 11:44:02,514 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:44:02,514 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:44:02,515 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:44:02,515 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:44:02,893 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:44:02,894 - loginHandler-d - 51 - post
+2018-09-06 11:44:02,895 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:44:02,895 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:44:02,895 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:44:02,895 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:44:02,896 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:44:02,897 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:44:02,897 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:12,481 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:44:12,481 - loginHandler-d - 51 - post
+2018-09-06 11:44:12,481 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:44:12,482 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:44:12,482 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:12,488 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:44:12,489 - registerHandler-d - 51 - post
+2018-09-06 11:44:12,491 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:44:12,491 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:44:12,911 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:44:12,911 - loginHandler-d - 51 - post
+2018-09-06 11:44:12,913 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:44:12,913 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:44:12,913 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:44:12,913 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:44:13,254 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:44:13,255 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:44:13,256 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:13,262 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:44:13,263 - loginHandler-d - 51 - post
+2018-09-06 11:44:13,263 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:44:13,264 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:44:13,264 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:44:13,270 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:44:13,271 - registerHandler-d - 51 - post
+2018-09-06 11:44:13,272 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:44:13,272 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:44:13,708 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:44:13,709 - loginHandler-d - 51 - post
+2018-09-06 11:44:13,710 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:44:13,710 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:44:13,710 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:44:13,710 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:44:14,082 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:44:14,082 - loginHandler-d - 51 - post
+2018-09-06 11:44:14,084 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:44:14,084 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:44:14,084 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:44:14,084 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:44:14,085 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:44:14,086 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:44:14,087 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:49:18,837 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:49:18,838 - loginHandler-d - 51 - post
+2018-09-06 11:49:18,838 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:49:18,839 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:49:18,839 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:49:18,851 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:49:18,852 - registerHandler-d - 51 - post
+2018-09-06 11:49:18,854 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:49:18,854 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:49:19,269 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:49:19,269 - loginHandler-d - 51 - post
+2018-09-06 11:49:19,271 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:49:19,271 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:49:19,271 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:49:19,271 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:49:19,611 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:49:19,612 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:49:19,612 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:49:19,732 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:49:19,732 - loginHandler-d - 51 - post
+2018-09-06 11:49:19,732 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:49:19,733 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:49:19,733 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:49:19,744 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:49:19,744 - registerHandler-d - 51 - post
+2018-09-06 11:49:19,746 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:49:19,746 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:49:20,158 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:49:20,158 - loginHandler-d - 51 - post
+2018-09-06 11:49:20,160 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:49:20,160 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:49:20,160 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:49:20,160 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:49:20,577 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:49:20,577 - loginHandler-d - 51 - post
+2018-09-06 11:49:20,579 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:49:20,579 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:49:20,580 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:49:20,580 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:49:20,581 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:49:20,583 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:49:20,583 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:13,812 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:13,812 - loginHandler-d - 51 - post
+2018-09-06 11:50:13,813 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:50:13,814 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:50:13,815 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:13,830 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:13,830 - registerHandler-d - 51 - post
+2018-09-06 11:50:13,832 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:13,832 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:50:14,247 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:14,247 - loginHandler-d - 51 - post
+2018-09-06 11:50:14,248 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:14,249 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:50:14,249 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:50:14,249 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:50:14,590 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:50:14,591 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:50:14,591 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:14,722 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:14,722 - loginHandler-d - 51 - post
+2018-09-06 11:50:14,722 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:50:14,723 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:50:14,723 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:14,735 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:14,736 - registerHandler-d - 51 - post
+2018-09-06 11:50:14,737 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:14,737 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:50:15,148 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:15,149 - loginHandler-d - 51 - post
+2018-09-06 11:50:15,150 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:15,150 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:50:15,150 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:50:15,151 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:50:15,567 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:15,568 - loginHandler-d - 51 - post
+2018-09-06 11:50:15,569 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:15,570 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:50:15,570 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:50:15,570 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:50:15,571 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:50:15,572 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:50:15,573 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:26,499 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:26,500 - loginHandler-d - 51 - post
+2018-09-06 11:50:26,500 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:50:26,501 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:50:26,501 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:26,510 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:26,511 - registerHandler-d - 51 - post
+2018-09-06 11:50:26,513 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:26,513 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:50:26,926 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:26,926 - loginHandler-d - 51 - post
+2018-09-06 11:50:26,927 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:26,928 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:50:26,928 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:50:26,928 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:50:27,269 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:50:27,270 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:50:27,270 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:27,321 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:27,321 - loginHandler-d - 51 - post
+2018-09-06 11:50:27,322 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:50:27,322 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:50:27,322 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:27,332 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:27,332 - registerHandler-d - 51 - post
+2018-09-06 11:50:27,334 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:27,334 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:50:27,747 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:27,748 - loginHandler-d - 51 - post
+2018-09-06 11:50:27,749 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:27,749 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:50:27,749 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:50:27,749 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:50:28,166 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:28,167 - loginHandler-d - 51 - post
+2018-09-06 11:50:28,168 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:28,169 - loginRepo-d - 51 - loginRepo
+2018-09-06 11:50:28,169 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 11:50:28,169 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 11:50:28,170 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 11:50:28,172 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:50:28,172 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:35,928 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:35,928 - menuHandler-d - 51 - post
+2018-09-06 11:50:35,929 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:35,930 - menuRepo-d - 51 - menuRepo
+2018-09-06 11:50:35,930 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 11:50:35,954 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:35,954 - menuHandler-d - 51 - post
+2018-09-06 11:50:35,956 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:35,956 - menuRepo-d - 51 - menuRepo
+2018-09-06 11:50:35,956 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 11:50:35,963 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:35,964 - menuHandler-d - 51 - post
+2018-09-06 11:50:35,967 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:35,968 - menuRepo-d - 51 - menuRepo
+2018-09-06 11:50:35,968 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 11:50:35,976 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:35,977 - menuHandler-d - 51 - post
+2018-09-06 11:50:35,978 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:35,978 - menuRepo-d - 51 - menuRepo
+2018-09-06 11:50:35,978 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 11:50:35,989 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:35,990 - menuHandler-d - 51 - post
+2018-09-06 11:50:35,990 - menuHandler-err - 60 - Body incorrecto, exception: : 'id_restaurante' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:50:35,991 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 11:50:35,992 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 11:50:36,003 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:36,004 - menuHandler-d - 51 - post
+2018-09-06 11:50:36,004 - menuHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:50:36,005 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 11:50:36,005 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 11:50:47,650 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:47,650 - menuHandler-d - 51 - post
+2018-09-06 11:50:47,652 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:47,652 - menuRepo-d - 51 - menuRepo
+2018-09-06 11:50:47,652 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 11:50:47,663 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:47,664 - menuHandler-d - 51 - post
+2018-09-06 11:50:47,665 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:47,666 - menuRepo-d - 51 - menuRepo
+2018-09-06 11:50:47,666 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 11:50:47,678 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:47,678 - menuHandler-d - 51 - post
+2018-09-06 11:50:47,680 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:47,681 - menuRepo-d - 51 - menuRepo
+2018-09-06 11:50:47,681 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 11:50:47,689 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:47,689 - menuHandler-d - 51 - post
+2018-09-06 11:50:47,690 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:47,691 - menuRepo-d - 51 - menuRepo
+2018-09-06 11:50:47,691 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 11:50:47,703 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:47,704 - menuHandler-d - 51 - post
+2018-09-06 11:50:47,705 - menuHandler-err - 60 - Body incorrecto, exception: : 'id_restaurante' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:50:47,707 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 11:50:47,707 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 11:50:47,720 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:47,721 - menuHandler-d - 51 - post
+2018-09-06 11:50:47,721 - menuHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:50:47,722 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 11:50:47,722 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 11:50:57,386 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:57,386 - registerHandler-d - 51 - post
+2018-09-06 11:50:57,386 - registerHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:50:57,387 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:50:57,387 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:50:57,398 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:57,399 - registerHandler-d - 51 - post
+2018-09-06 11:50:57,399 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 11:50:57,409 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:57,409 - registerHandler-d - 51 - post
+2018-09-06 11:50:57,410 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 11:50:57,417 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:57,417 - registerHandler-d - 51 - post
+2018-09-06 11:50:57,417 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 11:50:57,423 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:57,423 - registerHandler-d - 51 - post
+2018-09-06 11:50:57,423 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 11:50:57,428 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:57,429 - registerHandler-d - 51 - post
+2018-09-06 11:50:57,429 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 11:50:57,441 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:57,441 - registerHandler-d - 51 - post
+2018-09-06 11:50:57,441 - checkExceptions-err - 60 - Expecting value: line 1 column 1 (char 0)
+2018-09-06 11:50:57,451 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:57,451 - registerHandler-d - 51 - post
+2018-09-06 11:50:57,452 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:57,453 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:50:57,865 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:57,866 - registerHandler-d - 51 - post
+2018-09-06 11:50:57,867 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:57,867 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:50:57,868 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 11:50:57,869 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 11:50:57,869 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 11:50:57,974 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:50:57,974 - registerHandler-d - 51 - post
+2018-09-06 11:50:57,975 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:50:57,975 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:51:05,941 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:51:05,941 - credencialesHandler-d - 51 - post
+2018-09-06 11:51:05,942 - credencialesService-crit - 63 - Token invalido
+2018-09-06 11:51:05,953 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 11:51:05,953 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 11:51:05,965 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:51:05,966 - credencialesHandler-d - 51 - post
+2018-09-06 11:51:05,966 - credencialesHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 11:51:05,966 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:51:05,967 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:51:05,977 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:51:05,977 - credencialesHandler-d - 51 - post
+2018-09-06 11:51:05,977 - credencialesHandler-err - 60 - Body incorrecto, exception: : 'token' body: b'{"incorrect_parameter": 1}'
+2018-09-06 11:51:05,978 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 11:51:05,979 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 11:51:05,992 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:51:05,993 - credencialesHandler-d - 51 - post
+2018-09-06 11:51:05,997 - credencialesService-crit - 63 - Token expirado
+2018-09-06 11:51:15,681 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:51:15,681 - restaurantesHandler-d - 51 - get
+2018-09-06 11:51:15,683 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:51:15,683 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 11:51:15,683 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 11:51:15,683 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 11:51:15,684 - restaurantesRepo-d - 51 - No hay ningun restaurante insertado...
+2018-09-06 11:51:20,645 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:51:20,645 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 11:51:20,646 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 11:51:20,646 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 11:51:20,647 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 11:51:20,656 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:51:20,657 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 11:51:20,657 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 11:51:20,658 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 11:51:20,658 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 11:51:20,674 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:51:20,674 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 11:51:20,674 - checkAuthentication-crit - 63 - Token invalido
+2018-09-06 11:51:20,675 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 11:51:20,675 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 11:51:24,973 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:51:24,974 - registerHandler-d - 51 - post
+2018-09-06 11:51:24,975 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:51:24,976 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 11:51:25,389 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 11:51:25,389 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 11:51:25,390 - checkAuthentication-d - 51 - {'userName': 'postPedidoIncBody', 'exp': 1536245665}
+2018-09-06 11:51:25,391 - checkAuthentication-d - 51 - postPedidoIncBody
+2018-09-06 11:51:25,391 - pedidoHandler-d - 51 - post
+2018-09-06 11:51:25,392 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 11:51:25,392 - pedidoRepo-d - 51 - pedidoRepo
+2018-09-06 11:51:25,393 - pedidoService-d - 51 - insertOrder
+2018-09-06 11:51:25,393 - pedidoRepo-d - 51 - insertNewOrder
+2018-09-06 11:51:25,394 - pedidoRepo-err - 60 - Fallo insert a pedidos: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`byewait`.`pedidos`, CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`))')
+2018-09-06 11:51:25,395 - exceptions-d - 51 - {'user_message': 'Ha ocurrido un error', 'code': 5002}
+2018-09-06 11:51:25,395 - checkExceptions-err - 60 - {"user_message": "Ha ocurrido un error", "code": 5002}
+2018-09-06 12:32:48,094 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:32:48,109 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:32:48,110 - checkAuthentication-d - 51 - {'test': 'test'}
+2018-09-06 12:32:48,110 - checkAuthentication-d - 51 - Error1: 'userName'
+2018-09-06 12:32:48,110 - checkExceptions-err - 60 - 
+2018-09-06 12:32:49,709 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:32:49,709 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:32:49,710 - checkAuthentication-d - 51 - {'test': 'test'}
+2018-09-06 12:32:49,710 - checkAuthentication-d - 51 - Error1: 'userName'
+2018-09-06 12:32:49,710 - checkExceptions-err - 60 - 
+2018-09-06 12:34:53,384 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:34:53,385 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:34:53,386 - checkAuthentication-d - 51 - {'test': 'test'}
+2018-09-06 12:34:53,386 - checkAuthentication-d - 51 - Error1: 'userName'
+2018-09-06 12:34:53,386 - checkExceptions-err - 60 - 
+2018-09-06 12:34:54,226 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:34:54,226 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:34:54,227 - checkAuthentication-d - 51 - {'test': 'test'}
+2018-09-06 12:34:54,227 - checkAuthentication-d - 51 - Error1: 'userName'
+2018-09-06 12:34:54,228 - checkExceptions-err - 60 - 
+2018-09-06 12:34:54,869 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:34:54,869 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:34:54,870 - checkAuthentication-d - 51 - {'test': 'test'}
+2018-09-06 12:34:54,871 - checkAuthentication-d - 51 - Error1: 'userName'
+2018-09-06 12:34:54,871 - checkExceptions-err - 60 - 
+2018-09-06 12:36:03,899 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:36:03,899 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:36:03,963 - checkAuthentication-d - 51 - {'test': 'test'}
+2018-09-06 12:36:03,963 - checkAuthentication-d - 51 - Error1: 'userName'
+2018-09-06 12:36:03,963 - checkExceptions-err - 60 - 
+2018-09-06 12:37:13,282 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:37:13,283 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:37:13,350 - checkAuthentication-d - 51 - {'test': 'test'}
+2018-09-06 12:37:13,350 - checkAuthentication-d - 51 - Error1: 'userName'
+2018-09-06 12:37:13,350 - checkExceptions-err - 60 - 
+2018-09-06 12:37:35,476 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:37:35,477 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:37:35,540 - checkAuthentication-d - 51 - {'test': 'test'}
+2018-09-06 12:37:35,540 - checkAuthentication-d - 51 - Error1: 'userName'
+2018-09-06 12:37:35,540 - checkExceptions-err - 60 - 
+2018-09-06 12:39:23,961 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:39:23,962 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:39:24,023 - checkAuthentication-d - 51 - {'test': 'test'}
+2018-09-06 12:39:24,023 - checkAuthentication-d - 51 - Error1: 'userName'
+2018-09-06 12:39:24,023 - checkExceptions-err - 60 - 
+2018-09-06 12:39:47,975 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:39:48,040 - checkAuthentication-d - 51 - {'test': 'test'}
+2018-09-06 12:39:48,040 - checkAuthentication-d - 51 - Error1: 'userName'
+2018-09-06 12:40:11,092 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:40:11,092 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:40:11,159 - checkAuthentication-d - 51 - {'test': 'test'}
+2018-09-06 12:40:11,160 - checkAuthentication-d - 51 - Error1: 'userName'
+2018-09-06 12:40:11,160 - checkExceptions-err - 60 - 
+2018-09-06 12:41:59,070 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:41:59,071 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:41:59,131 - checkAuthentication-d - 51 - eohjqowjeoiqwjeoiwqjeqoiwje
+2018-09-06 12:41:59,131 - checkAuthentication-d - 51 - {'test': 'test'}
+2018-09-06 12:41:59,132 - checkAuthentication-d - 51 - Error1: 'userName'
+2018-09-06 12:41:59,132 - checkExceptions-err - 60 - 
+2018-09-06 12:42:14,605 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:42:14,605 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:42:14,670 - checkAuthentication-d - 51 - {'test': 'test'}
+2018-09-06 12:42:14,670 - checkAuthentication-d - 51 - eohjqowjeoiqwjeoiwqjeqoiwje
+2018-09-06 12:42:14,670 - checkAuthentication-d - 51 - Error1: 'userName'
+2018-09-06 12:42:14,670 - checkExceptions-err - 60 - 
+2018-09-06 12:42:29,975 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:42:29,975 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:42:30,041 - checkAuthentication-d - 51 - {'test': 'test'}
+2018-09-06 12:42:30,042 - checkAuthentication-d - 51 - Error1: 'userName'
+2018-09-06 12:42:30,042 - checkExceptions-err - 60 - 
+2018-09-06 12:52:04,677 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:52:04,677 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:52:04,744 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:52:04,744 - checkAuthentication-d - 51 - test
+2018-09-06 12:52:04,744 - menuItemScoreHandler-d - 51 - post
+2018-09-06 12:52:04,745 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : 'menu_item_score' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:52:04,745 - checkExceptions-err - 60 - name 'msg' is not defined
+2018-09-06 12:52:33,986 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:52:33,986 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:52:34,051 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:52:34,052 - checkAuthentication-d - 51 - test
+2018-09-06 12:52:34,052 - menuItemScoreHandler-d - 51 - post
+2018-09-06 12:52:34,052 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : 'menu_item_score' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:52:34,064 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 12:52:34,064 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:52:54,846 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:52:54,847 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:52:54,848 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:52:54,848 - checkAuthentication-d - 51 - test
+2018-09-06 12:52:54,848 - menuItemScoreHandler-d - 51 - post
+2018-09-06 12:52:54,848 - menuItemScoreRepo-d - 51 - menuItemScoreRepo
+2018-09-06 12:52:54,850 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 12:52:54,850 - menuItemScoreService-d - 51 - insertScore
+2018-09-06 12:52:54,850 - menuItemScoreService-d - 51 - 1
+2018-09-06 12:52:54,851 - menuItemScoreService-d - 51 - 1
+2018-09-06 12:52:54,851 - menuItemScoreService-d - 51 - 2
+2018-09-06 12:52:54,851 - menuItemScoreRepo-d - 51 - insertScore
+2018-09-06 12:52:55,699 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:52:55,699 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:52:55,700 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:52:55,700 - checkAuthentication-d - 51 - test
+2018-09-06 12:52:55,700 - menuItemScoreHandler-d - 51 - post
+2018-09-06 12:52:55,700 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 12:52:55,701 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 12:52:55,701 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:52:56,342 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:52:56,343 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:52:56,344 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:52:56,344 - checkAuthentication-d - 51 - test
+2018-09-06 12:52:56,344 - menuItemScoreHandler-d - 51 - post
+2018-09-06 12:52:56,344 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : 'menu_item_score' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:52:56,345 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 12:52:56,345 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:55:13,827 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:55:13,828 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:55:13,829 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:55:13,830 - checkAuthentication-d - 51 - test
+2018-09-06 12:55:13,830 - pedidoHandler-d - 51 - post
+2018-09-06 12:55:13,831 - pedidoHandler-err - 60 - Body incorrecto, exception: : 'order' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:55:13,833 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 12:55:13,833 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:55:24,177 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:55:24,177 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:55:24,178 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:55:24,178 - checkAuthentication-d - 51 - test
+2018-09-06 12:55:24,178 - pedidoHandler-d - 51 - post
+2018-09-06 12:55:24,179 - pedidoHandler-err - 60 - Body incorrecto, exception: : 'order' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:55:24,179 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 12:55:24,180 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:56:05,492 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:56:05,492 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:56:05,493 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:56:05,493 - checkAuthentication-d - 51 - test
+2018-09-06 12:56:05,493 - pedidoHandler-d - 51 - post
+2018-09-06 12:56:05,494 - pedidoHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 12:56:05,495 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 12:56:05,495 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:56:06,008 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:56:06,008 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:56:06,009 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:56:06,009 - checkAuthentication-d - 51 - test
+2018-09-06 12:56:06,009 - pedidoHandler-d - 51 - post
+2018-09-06 12:56:06,009 - pedidoHandler-err - 60 - Body incorrecto, exception: : 'order' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:56:06,010 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 12:56:06,010 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:58:32,376 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:58:32,376 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:58:32,377 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:58:32,377 - checkAuthentication-d - 51 - test
+2018-09-06 12:58:32,378 - pedidoHandler-d - 51 - post
+2018-09-06 12:58:32,379 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 12:58:32,379 - pedidoRepo-d - 51 - pedidoRepo
+2018-09-06 12:58:32,379 - pedidoService-d - 51 - insertOrder
+2018-09-06 12:58:32,380 - pedidoRepo-d - 51 - insertNewOrder
+2018-09-06 12:58:32,380 - pedidoRepo-err - 60 - Fallo insert a pedidos: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`byewait`.`pedidos`, CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`))')
+2018-09-06 12:58:32,381 - exceptions-d - 51 - {'user_message': 'Ha ocurrido un error', 'code': 5002}
+2018-09-06 12:58:32,382 - checkExceptions-err - 60 - {"user_message": "Ha ocurrido un error", "code": 5002}
+2018-09-06 12:58:33,082 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:58:33,082 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:58:33,083 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:58:33,083 - checkAuthentication-d - 51 - test
+2018-09-06 12:58:33,084 - pedidoHandler-d - 51 - post
+2018-09-06 12:58:33,085 - pedidoHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 12:58:33,086 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 12:58:33,086 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:58:33,734 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:58:33,734 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:58:33,735 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:58:33,736 - checkAuthentication-d - 51 - test
+2018-09-06 12:58:33,736 - pedidoHandler-d - 51 - post
+2018-09-06 12:58:33,736 - pedidoHandler-err - 60 - Body incorrecto, exception: : 'order' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:58:33,737 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 12:58:33,737 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:58:58,031 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:58:58,032 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:58:58,096 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:58:58,096 - checkAuthentication-d - 51 - test
+2018-09-06 12:58:58,096 - pedidoHandler-d - 51 - post
+2018-09-06 12:58:58,098 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 12:58:58,098 - pedidoRepo-d - 51 - pedidoRepo
+2018-09-06 12:58:58,099 - pedidoService-d - 51 - insertOrder
+2018-09-06 12:58:58,099 - pedidoRepo-d - 51 - insertNewOrder
+2018-09-06 12:58:58,100 - pedidoRepo-err - 60 - Fallo insert a pedidos: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`byewait`.`pedidos`, CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`))')
+2018-09-06 12:58:58,101 - exceptions-d - 51 - {'user_message': 'Ha ocurrido un error', 'code': 5002}
+2018-09-06 12:58:58,101 - checkExceptions-err - 60 - {"user_message": "Ha ocurrido un error", "code": 5002}
+2018-09-06 12:59:39,680 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:59:39,680 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:59:39,750 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:59:39,750 - checkAuthentication-d - 51 - test
+2018-09-06 12:59:39,750 - pedidoHandler-d - 51 - post
+2018-09-06 12:59:39,753 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 12:59:39,753 - pedidoRepo-d - 51 - pedidoRepo
+2018-09-06 12:59:39,753 - pedidoService-d - 51 - insertOrder
+2018-09-06 12:59:39,753 - pedidoRepo-d - 51 - insertNewOrder
+2018-09-06 12:59:39,754 - pedidoRepo-d - 51 - items:[{'id': '1', 'cantidad': 3, 'aclaraciones': 'sin ajo'}, {'id': '2', 'cantidad': 1, 'aclaraciones': 'sin queso'}]
+2018-09-06 12:59:40,654 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:59:40,654 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:59:40,655 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:59:40,656 - checkAuthentication-d - 51 - test
+2018-09-06 12:59:40,656 - pedidoHandler-d - 51 - post
+2018-09-06 12:59:40,656 - pedidoHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 12:59:40,657 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 12:59:40,657 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 12:59:41,342 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 12:59:41,342 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 12:59:41,343 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 12:59:41,343 - checkAuthentication-d - 51 - test
+2018-09-06 12:59:41,343 - pedidoHandler-d - 51 - post
+2018-09-06 12:59:41,343 - pedidoHandler-err - 60 - Body incorrecto, exception: : 'order' body: b'{"incorrect_parameter": 1}'
+2018-09-06 12:59:41,345 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 12:59:41,345 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:00:25,601 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:25,601 - loginHandler-d - 51 - post
+2018-09-06 13:00:25,602 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:25,602 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 13:00:25,603 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:26,208 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:26,208 - registerHandler-d - 51 - post
+2018-09-06 13:00:26,210 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:26,211 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 13:00:26,632 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:26,632 - loginHandler-d - 51 - post
+2018-09-06 13:00:26,634 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:26,634 - loginRepo-d - 51 - loginRepo
+2018-09-06 13:00:26,634 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 13:00:26,634 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 13:00:26,982 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 13:00:26,983 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 13:00:26,984 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:27,668 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:27,669 - loginHandler-d - 51 - post
+2018-09-06 13:00:27,669 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:27,670 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 13:00:27,670 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:28,235 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:28,235 - registerHandler-d - 51 - post
+2018-09-06 13:00:28,237 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:28,237 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 13:00:28,660 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:28,660 - loginHandler-d - 51 - post
+2018-09-06 13:00:28,661 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:28,662 - loginRepo-d - 51 - loginRepo
+2018-09-06 13:00:28,662 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 13:00:28,662 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 13:00:29,697 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:29,698 - loginHandler-d - 51 - post
+2018-09-06 13:00:29,699 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:29,699 - loginRepo-d - 51 - loginRepo
+2018-09-06 13:00:29,699 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 13:00:29,700 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 13:00:29,701 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 13:00:29,701 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 13:00:29,702 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:30,327 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:30,327 - menuHandler-d - 51 - post
+2018-09-06 13:00:30,329 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:30,329 - menuRepo-d - 51 - menuRepo
+2018-09-06 13:00:30,329 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 13:00:30,337 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:30,337 - menuHandler-d - 51 - post
+2018-09-06 13:00:30,338 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:30,339 - menuRepo-d - 51 - menuRepo
+2018-09-06 13:00:30,339 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 13:00:30,347 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:30,347 - menuHandler-d - 51 - post
+2018-09-06 13:00:30,349 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:30,349 - menuRepo-d - 51 - menuRepo
+2018-09-06 13:00:30,349 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 13:00:30,363 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:30,363 - menuHandler-d - 51 - post
+2018-09-06 13:00:30,365 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:30,366 - menuRepo-d - 51 - menuRepo
+2018-09-06 13:00:30,366 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 13:00:30,924 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:30,925 - menuHandler-d - 51 - post
+2018-09-06 13:00:30,925 - menuHandler-err - 60 - Body incorrecto, exception: : 'id_restaurante' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:30,926 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 13:00:30,926 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 13:00:31,614 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:31,615 - menuHandler-d - 51 - post
+2018-09-06 13:00:31,615 - menuHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:31,616 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 13:00:31,616 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 13:00:32,230 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:32,230 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 13:00:32,231 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 13:00:32,231 - checkAuthentication-d - 51 - test
+2018-09-06 13:00:32,231 - pedidoHandler-d - 51 - post
+2018-09-06 13:00:32,233 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:32,233 - pedidoRepo-d - 51 - pedidoRepo
+2018-09-06 13:00:32,233 - pedidoService-d - 51 - insertOrder
+2018-09-06 13:00:32,233 - pedidoRepo-d - 51 - insertNewOrder
+2018-09-06 13:00:32,234 - pedidoRepo-d - 51 - items:[{'id': '1', 'cantidad': 3, 'aclaraciones': 'sin ajo'}, {'id': '2', 'cantidad': 1, 'aclaraciones': 'sin queso'}]
+2018-09-06 13:00:33,185 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:33,185 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 13:00:33,187 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 13:00:33,188 - checkAuthentication-d - 51 - test
+2018-09-06 13:00:33,188 - pedidoHandler-d - 51 - post
+2018-09-06 13:00:33,188 - pedidoHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:33,190 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 13:00:33,190 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:00:33,850 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:33,851 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 13:00:33,852 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 13:00:33,853 - checkAuthentication-d - 51 - test
+2018-09-06 13:00:33,853 - pedidoHandler-d - 51 - post
+2018-09-06 13:00:33,854 - pedidoHandler-err - 60 - Body incorrecto, exception: : 'order' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:33,855 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 13:00:33,855 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:00:34,491 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:34,491 - registerHandler-d - 51 - post
+2018-09-06 13:00:34,491 - registerHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:34,492 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 13:00:34,492 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:35,100 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:35,100 - registerHandler-d - 51 - post
+2018-09-06 13:00:35,101 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:35,108 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:35,109 - registerHandler-d - 51 - post
+2018-09-06 13:00:35,109 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:35,118 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:35,118 - registerHandler-d - 51 - post
+2018-09-06 13:00:35,118 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:35,124 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:35,124 - registerHandler-d - 51 - post
+2018-09-06 13:00:35,124 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:35,131 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:35,131 - registerHandler-d - 51 - post
+2018-09-06 13:00:35,131 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:35,675 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:35,675 - registerHandler-d - 51 - post
+2018-09-06 13:00:35,676 - checkExceptions-err - 60 - Expecting value: line 1 column 1 (char 0)
+2018-09-06 13:00:36,293 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:36,294 - registerHandler-d - 51 - post
+2018-09-06 13:00:36,295 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:36,296 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 13:00:36,710 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:36,710 - registerHandler-d - 51 - post
+2018-09-06 13:00:36,712 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:36,712 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 13:00:36,713 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 13:00:36,714 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 13:00:36,714 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 13:00:37,382 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:37,382 - registerHandler-d - 51 - post
+2018-09-06 13:00:37,384 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:37,385 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 13:00:38,383 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:38,383 - restaurantesHandler-d - 51 - get
+2018-09-06 13:00:38,384 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:38,385 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 13:00:38,385 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 13:00:38,385 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 13:00:38,386 - restaurantesRepo-d - 51 - No hay ningun restaurante insertado...
+2018-09-06 13:00:38,976 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:38,976 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 13:00:38,977 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 13:00:38,977 - checkAuthentication-d - 51 - test
+2018-09-06 13:00:38,978 - menuItemScoreHandler-d - 51 - post
+2018-09-06 13:00:38,978 - menuItemScoreRepo-d - 51 - menuItemScoreRepo
+2018-09-06 13:00:38,979 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:38,979 - menuItemScoreService-d - 51 - insertScore
+2018-09-06 13:00:38,980 - menuItemScoreService-d - 51 - 1
+2018-09-06 13:00:38,980 - menuItemScoreService-d - 51 - 1
+2018-09-06 13:00:38,980 - menuItemScoreService-d - 51 - 2
+2018-09-06 13:00:38,980 - menuItemScoreRepo-d - 51 - insertScore
+2018-09-06 13:00:39,753 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:39,754 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 13:00:39,755 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 13:00:39,755 - checkAuthentication-d - 51 - test
+2018-09-06 13:00:39,755 - menuItemScoreHandler-d - 51 - post
+2018-09-06 13:00:39,755 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:39,756 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 13:00:39,756 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:00:40,487 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:40,487 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 13:00:40,488 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 13:00:40,488 - checkAuthentication-d - 51 - test
+2018-09-06 13:00:40,488 - menuItemScoreHandler-d - 51 - post
+2018-09-06 13:00:40,489 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : 'menu_item_score' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:40,489 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 13:00:40,490 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:00:41,115 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:41,115 - credencialesHandler-d - 51 - post
+2018-09-06 13:00:41,115 - credencialesService-crit - 63 - Token invalido
+2018-09-06 13:00:41,123 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 13:00:41,123 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 13:00:41,746 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:41,747 - credencialesHandler-d - 51 - post
+2018-09-06 13:00:41,747 - credencialesHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:41,748 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 13:00:41,748 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:42,422 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:42,422 - credencialesHandler-d - 51 - post
+2018-09-06 13:00:42,422 - credencialesHandler-err - 60 - Body incorrecto, exception: : 'token' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:42,424 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 13:00:42,424 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:43,388 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:43,388 - credencialesHandler-d - 51 - post
+2018-09-06 13:00:43,390 - credencialesService-crit - 63 - Token expirado
+2018-09-06 13:00:46,661 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:46,661 - loginHandler-d - 51 - post
+2018-09-06 13:00:46,661 - loginHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:46,662 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 13:00:46,662 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:47,224 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:47,224 - registerHandler-d - 51 - post
+2018-09-06 13:00:47,226 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:47,226 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 13:00:47,689 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:47,690 - loginHandler-d - 51 - post
+2018-09-06 13:00:47,692 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:47,692 - loginRepo-d - 51 - loginRepo
+2018-09-06 13:00:47,692 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 13:00:47,693 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 13:00:48,066 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 13:00:48,067 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 13:00:48,067 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:48,678 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:48,679 - loginHandler-d - 51 - post
+2018-09-06 13:00:48,679 - loginHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:48,680 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 13:00:48,680 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:49,220 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:49,220 - registerHandler-d - 51 - post
+2018-09-06 13:00:49,222 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:49,222 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 13:00:49,645 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:49,646 - loginHandler-d - 51 - post
+2018-09-06 13:00:49,648 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:49,648 - loginRepo-d - 51 - loginRepo
+2018-09-06 13:00:49,648 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 13:00:49,649 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 13:00:50,742 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:50,742 - loginHandler-d - 51 - post
+2018-09-06 13:00:50,744 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:50,744 - loginRepo-d - 51 - loginRepo
+2018-09-06 13:00:50,744 - loginService-d - 51 - validarUsuario loginService
+2018-09-06 13:00:50,745 - loginRepo-d - 51 - validarUsuario loginRepo
+2018-09-06 13:00:50,746 - loginRepo-err - 60 - No existe ningun usuario que coincida con esa informacion
+2018-09-06 13:00:50,747 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 13:00:50,748 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:51,408 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:51,409 - menuHandler-d - 51 - post
+2018-09-06 13:00:51,410 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:51,410 - menuRepo-d - 51 - menuRepo
+2018-09-06 13:00:51,410 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 13:00:51,418 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:51,418 - menuHandler-d - 51 - post
+2018-09-06 13:00:51,420 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:51,420 - menuRepo-d - 51 - menuRepo
+2018-09-06 13:00:51,421 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 13:00:51,428 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:51,428 - menuHandler-d - 51 - post
+2018-09-06 13:00:51,429 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:51,430 - menuRepo-d - 51 - menuRepo
+2018-09-06 13:00:51,430 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 13:00:51,448 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:51,448 - menuHandler-d - 51 - post
+2018-09-06 13:00:51,450 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:51,450 - menuRepo-d - 51 - menuRepo
+2018-09-06 13:00:51,450 - menuRepo-d - 51 - getItemsMenu
+2018-09-06 13:00:52,044 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:52,045 - menuHandler-d - 51 - post
+2018-09-06 13:00:52,045 - menuHandler-err - 60 - Body incorrecto, exception: : 'id_restaurante' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:52,046 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 13:00:52,046 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 13:00:52,679 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:52,680 - menuHandler-d - 51 - post
+2018-09-06 13:00:52,680 - menuHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:52,681 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 13:00:52,681 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 13:00:53,401 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:53,402 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 13:00:53,404 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 13:00:53,404 - checkAuthentication-d - 51 - test
+2018-09-06 13:00:53,405 - pedidoHandler-d - 51 - post
+2018-09-06 13:00:53,406 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:53,407 - pedidoRepo-d - 51 - pedidoRepo
+2018-09-06 13:00:53,407 - pedidoService-d - 51 - insertOrder
+2018-09-06 13:00:53,407 - pedidoRepo-d - 51 - insertNewOrder
+2018-09-06 13:00:53,486 - pedidoRepo-d - 51 - items:[{'id': '1', 'cantidad': 3, 'aclaraciones': 'sin ajo'}, {'id': '2', 'cantidad': 1, 'aclaraciones': 'sin queso'}]
+2018-09-06 13:00:54,482 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:54,482 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 13:00:54,483 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 13:00:54,484 - checkAuthentication-d - 51 - test
+2018-09-06 13:00:54,484 - pedidoHandler-d - 51 - post
+2018-09-06 13:00:54,484 - pedidoHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:00:54,485 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 13:00:54,485 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:00:56,390 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:56,391 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 13:00:56,392 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 13:00:56,392 - checkAuthentication-d - 51 - test
+2018-09-06 13:00:56,392 - pedidoHandler-d - 51 - post
+2018-09-06 13:00:56,392 - pedidoHandler-err - 60 - Body incorrecto, exception: : 'order' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:56,393 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 13:00:56,393 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:00:57,176 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:57,176 - registerHandler-d - 51 - post
+2018-09-06 13:00:57,177 - registerHandler-err - 60 - Body incorrecto, exception: : 'user' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:00:57,177 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 13:00:57,178 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:00:57,866 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:57,866 - registerHandler-d - 51 - post
+2018-09-06 13:00:57,867 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:57,878 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:57,878 - registerHandler-d - 51 - post
+2018-09-06 13:00:57,879 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:57,890 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:57,890 - registerHandler-d - 51 - post
+2018-09-06 13:00:57,891 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:57,906 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:57,907 - registerHandler-d - 51 - post
+2018-09-06 13:00:57,907 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:57,915 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:57,915 - registerHandler-d - 51 - post
+2018-09-06 13:00:57,915 - checkExceptions-err - 60 - Expecting value: line 1 column 58 (char 57)
+2018-09-06 13:00:58,663 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:58,663 - registerHandler-d - 51 - post
+2018-09-06 13:00:58,664 - checkExceptions-err - 60 - Expecting value: line 1 column 1 (char 0)
+2018-09-06 13:00:59,320 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:59,320 - registerHandler-d - 51 - post
+2018-09-06 13:00:59,322 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:59,322 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 13:00:59,811 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:00:59,811 - registerHandler-d - 51 - post
+2018-09-06 13:00:59,813 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:00:59,813 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 13:00:59,814 - registerRepo-err - 60 - Ya existe ese nombre de usuario
+2018-09-06 13:00:59,815 - exceptions-d - 51 - {'user_message': 'Fallo la consulta a la base de datos', 'code': 5001}
+2018-09-06 13:00:59,815 - checkExceptions-err - 60 - {"user_message": "Fallo la consulta a la base de datos", "code": 5001}
+2018-09-06 13:01:00,431 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:01:00,431 - registerHandler-d - 51 - post
+2018-09-06 13:01:00,433 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:01:00,434 - registerRepo-d - 51 - RegisterRepo
+2018-09-06 13:01:01,535 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:01:01,536 - restaurantesHandler-d - 51 - get
+2018-09-06 13:01:01,537 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:01:01,537 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-06 13:01:01,537 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-06 13:01:01,538 - restaurantesRepo-d - 51 - getAllRestaurants
+2018-09-06 13:01:01,539 - restaurantesRepo-d - 51 - No hay ningun restaurante insertado...
+2018-09-06 13:01:02,100 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:01:02,101 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 13:01:02,102 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 13:01:02,102 - checkAuthentication-d - 51 - test
+2018-09-06 13:01:02,102 - menuItemScoreHandler-d - 51 - post
+2018-09-06 13:01:02,102 - menuItemScoreRepo-d - 51 - menuItemScoreRepo
+2018-09-06 13:01:02,104 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-06 13:01:02,104 - menuItemScoreService-d - 51 - insertScore
+2018-09-06 13:01:02,104 - menuItemScoreService-d - 51 - 1
+2018-09-06 13:01:02,104 - menuItemScoreService-d - 51 - 1
+2018-09-06 13:01:02,104 - menuItemScoreService-d - 51 - 2
+2018-09-06 13:01:02,105 - menuItemScoreRepo-d - 51 - insertScore
+2018-09-06 13:01:02,854 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:01:02,854 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 13:01:02,855 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 13:01:02,856 - checkAuthentication-d - 51 - test
+2018-09-06 13:01:02,856 - menuItemScoreHandler-d - 51 - post
+2018-09-06 13:01:02,856 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:01:02,857 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 13:01:02,857 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:01:03,598 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:01:03,598 - checkAuthentication-d - 51 - check_authentication decorator
+2018-09-06 13:01:03,599 - checkAuthentication-d - 51 - {'userName': 'test'}
+2018-09-06 13:01:03,599 - checkAuthentication-d - 51 - test
+2018-09-06 13:01:03,600 - menuItemScoreHandler-d - 51 - post
+2018-09-06 13:01:03,600 - menuItemScoreHandler-err - 60 - Body incorrecto, exception: : 'menu_item_score' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:01:03,601 - exceptions-d - 51 - {'user_message': 'Error interno del servidor', 'code': 4001}
+2018-09-06 13:01:03,601 - checkExceptions-err - 60 - {"user_message": "Error interno del servidor", "code": 4001}
+2018-09-06 13:01:04,245 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:01:04,245 - credencialesHandler-d - 51 - post
+2018-09-06 13:01:04,245 - credencialesService-crit - 63 - Token invalido
+2018-09-06 13:01:04,246 - exceptions-d - 51 - {'user_message': 'No puede acceder al recurso', 'code': 2001}
+2018-09-06 13:01:04,246 - checkExceptions-err - 60 - {"user_message": "No puede acceder al recurso", "code": 2001}
+2018-09-06 13:01:04,855 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:01:04,855 - credencialesHandler-d - 51 - post
+2018-09-06 13:01:04,855 - credencialesHandler-err - 60 - Body incorrecto, exception: : Expecting value: line 1 column 1 (char 0) body: b''
+2018-09-06 13:01:04,857 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 13:01:04,857 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:01:05,453 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:01:05,453 - credencialesHandler-d - 51 - post
+2018-09-06 13:01:05,454 - credencialesHandler-err - 60 - Body incorrecto, exception: : 'token' body: b'{"incorrect_parameter": 1}'
+2018-09-06 13:01:05,454 - exceptions-d - 51 - {'user_message': 'Datos incorrectos', 'code': 3001}
+2018-09-06 13:01:05,455 - checkExceptions-err - 60 - {"user_message": "Datos incorrectos", "code": 3001}
+2018-09-06 13:01:06,073 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-06 13:01:06,074 - credencialesHandler-d - 51 - post
+2018-09-06 13:01:06,075 - credencialesService-crit - 63 - Token expirado

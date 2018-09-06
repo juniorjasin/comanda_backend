@@ -2,11 +2,12 @@ import unittest
 import requests
 import json
 import sys
+from test import Test
 
 # Nota: los metodos de las clases de test DEBEN comenzar
 # con el nombre 'test', sino no funciona.
 
-class TestMenu(unittest.TestCase):
+class TestMenu(Test):
 
     def test_getItemsMenuIncorrectBody(self):
         body = '{"incorrect_parameter": 1}'

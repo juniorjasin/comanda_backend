@@ -6,6 +6,7 @@ from utils.logger import Logger
 from handlers import base
 import json
 from decorators.handleException import handleException
+from decorators.checkAuthentication import checkAuthentication
 from exceptions import exceptions
 
 logger = Logger('menuItemScoreHandler')
@@ -18,15 +19,17 @@ class MenuItemScoreHandler(base.BaseHandler):
         
     @tornado.web.asynchronous
     @handleException
+    @checkAuthentication
     def post(self):
-        logger.debug("menuItemScoreHandler post")
+        logger.debug("post")
         try:
           data = json.loads(self.request.body)
           data['menu_item_score']
           data['menu_item_score']['id_item_menu']
           data['menu_item_score']['id_usuario']
           data['menu_item_score']['score']
-        except:
+        except Exception as e:
+          logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(self.request.body)) 
           raise exceptions.BadRequest(4001)
         svc = MenuItemScoreService()
         score = svc.insertScore(**data['menu_item_score'])

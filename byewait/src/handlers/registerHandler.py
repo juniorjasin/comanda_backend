@@ -11,13 +11,12 @@ import re
 
 logger = Logger('registerHandler')
 
-
 class RegisterHandler(base.BaseHandler):
-
+  
     @tornado.web.asynchronous
     @handleException
     def get(self):
-        logger.debug("registerHandler get")
+        logger.debug("get")
         svc = RegisterService()
         self.finish()
 
@@ -29,32 +28,21 @@ class RegisterHandler(base.BaseHandler):
     @tornado.web.asynchronous
     @handleException
     def post(self):
-        logger.debug("registerHandler post")
+        logger.debug("post")
+        data = json.loads(self.request.body)
         try:
-            data = json.loads(self.request.body)
-            if 'user' in data and 'username' in data['user'] and 'password' in data['user'] and 'email' in data['user']:
-                username = data['user']['username']
-                password = data['user']['password']
-                try: # Pruebo que se puede encodear en latin-1
-                    username.encode('latin-1')
-                    password.encode('latin-1')
-                except:
-                    raise exceptions.BadRequest(3001)
-                email = data['user']['email']
-                if not bool(re.match(r"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", email)):
-                    raise exceptions.BadRequest(3001)                    
-                svc = RegisterService()
-                respuesta = svc.registrarUsuario(username, password, email)
-                self.write(respuesta)
-            else:
-                logger.error('Error, el body es incorrecto, faltan atributos')
-                raise exceptions.BadRequest(3001)
-        except exceptions.BadRequest as ex:
-            raise(ex)
-        except exceptions.ConflictException as ex:
-            raise(ex)
-        except exceptions.InternalServerError as ex:
-            raise(ex)
-        except Exception as ex:
-            raise exceptions.InternalServerError(5001)
+            username = data['user']['username']
+            password = data['user']['password']
+            email = data['user']['email']
+            username.encode('latin-1')
+            password.encode('latin-1')
+        except Exception as e:
+            logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(self.request.body)) 
+            raise exceptions.BadRequest(3001)
+        if not bool(re.match(r"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", email)):
+            logger.error('Mal formato de email, email: {}'.format(email))
+            raise exceptions.BadRequest(3001)
+        svc = RegisterService()
+        respuesta = svc.registrarUsuario(username, password, email)
+        self.write(respuesta)
         self.finish()

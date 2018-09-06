@@ -15,7 +15,7 @@ class MenuHandler(base.BaseHandler):
     @tornado.web.asynchronous
     @handleException
     def get(self, restaurante):
-        logger.debug("menuHandler get")
+        logger.debug('get')
         svc = MenuService()
         self.finish()
 
@@ -27,16 +27,12 @@ class MenuHandler(base.BaseHandler):
     @tornado.web.asynchronous
     @handleException
     def post(self, restaurante):
-        logger.debug("menuHandler post")
-        # Controlar entrada
-        id_restaurante = -1
+        logger.debug("post")
         try:
             data = json.loads(self.request.body)
             id_restaurante = data['id_restaurante']
-
         except Exception as e:
-            msg = "Fallo conversion body a json: {}".format(e)
-            logger.error(msg)
+            logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(self.request.body)) 
             raise exceptions.BadRequest(5001)
         svc = MenuService()
         menu = svc.getItemsMenu(id_restaurante)

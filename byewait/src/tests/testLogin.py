@@ -2,13 +2,14 @@ import unittest
 import requests
 import json
 import sys
+from test import Test
 
 # Nota: los metodos de las clases de test DEBEN comenzar
 # con el nombre 'test', sino no funciona.
 
 # TODO: 
 # Caracteres extranios en username, password y email.
-class TestLogin(unittest.TestCase):
+class TestLogin(Test):
 
     def test_postIncorrectBody(self):
         body = '{"incorrect_parameter": 1}'

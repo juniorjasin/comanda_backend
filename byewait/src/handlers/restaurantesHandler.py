@@ -1,6 +1,5 @@
 from tornado.ioloop import IOLoop
 import tornado.web
-import logging
 from services.restaurantesService import RestaurantesService
 from utils.logger import Logger
 from handlers import base
@@ -14,7 +13,7 @@ class RestaurantesHandler(base.BaseHandler):
     @tornado.web.asynchronous
     @handleException
     def get(self):
-        logger.debug("restaurantesHandler get")
+        logger.debug("get")
         svc = RestaurantesService()
         restaurantes = svc.getAllRestaurants()
         self.write({"restaurantes": restaurantes})
@@ -28,6 +27,6 @@ class RestaurantesHandler(base.BaseHandler):
     @tornado.web.asynchronous
     @handleException
     def post(self):
-        logger.debug("restaurantesHandler post")
+        logger.debug("post")
         svc = RestaurantesService()
         self.finish()

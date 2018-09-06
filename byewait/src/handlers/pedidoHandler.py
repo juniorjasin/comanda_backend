@@ -27,7 +27,7 @@ class PedidoHandler(base.BaseHandler):
         
     @tornado.web.asynchronous
     @handleException
-    @checkAuthentication
+    # @checkAuthentication
     def post(self, restaurante):
         logger.debug("post")
         id_usuario = 1
@@ -43,5 +43,5 @@ class PedidoHandler(base.BaseHandler):
         pedido = svc.insertOrder(id_restaurante, items, id_usuario, id_mesa)
         # Enviar la información del pedido a los clientes del web socket
         for conn in utils.globalvars.webSockConns:
-            conn.on_message({'order': pedido, 'data': data['order']})
+            conn.conexion.on_message({'order': pedido, 'data': data['order'], 'restaurante':id_restaurante})
         self.finish({"order": pedido})

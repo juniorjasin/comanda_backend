@@ -29,7 +29,7 @@ class LoginRepo(repo.Repo):
         if row is None or not bcrypt.checkpw(password.encode('latin-1'), row[2].encode('latin-1')):
             logger.error("No existe ningun usuario que coincida con esa informacion")
             raise exceptions.Unauthorized(3001)
-        respuesta = { "id": row[0], "username": row[1], "password": row[2]}
+        respuesta = { "id": row[0], "username": row[1] }
         return respuesta
 
         

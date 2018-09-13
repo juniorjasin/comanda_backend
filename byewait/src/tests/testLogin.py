@@ -48,7 +48,6 @@ class TestLogin(Test):
         self.assertTrue('token' in content)
         self.assertTrue('id' in content['user'])
         self.assertTrue('username' in content['user'])
-        self.assertTrue('password' in content['user'])
 
     def test_postIncorrectPassword(self):
         # Registrar usuario

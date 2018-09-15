@@ -2,6 +2,8 @@ database/
 byewait/keys/
 venv/
 logs/*
+.idea/
+.vscode/
 *.pot
 *.pyc
 __pycache__/

@@ -1,0 +1,6 @@
+2018-09-15 13:41:07,259 - checkExceptions-d - 51 - Inside decorator. Calling decorated function
+2018-09-15 13:41:07,259 - restaurantesHandler-d - 51 - get
+2018-09-15 13:41:07,262 - repo-d - 51 - Conexion exitosa con base de datos
+2018-09-15 13:41:07,262 - restaurantesRepo-d - 51 - restaurantesRepo
+2018-09-15 13:41:07,262 - restaurantesService-d - 51 - getAllRestaurants
+2018-09-15 13:41:07,262 - restaurantesRepo-d - 51 - getAllRestaurants

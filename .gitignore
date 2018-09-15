@@ -1,6 +1,6 @@
 database/
 byewait/keys/
-byewait/logs/*
+logs/
 venv/
 .idea/
 .vscode/

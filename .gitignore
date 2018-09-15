@@ -1,7 +1,7 @@
 database/
 byewait/keys/
+byewait/logs/*
 venv/
-logs/*
 .idea/
 .vscode/
 *.pot

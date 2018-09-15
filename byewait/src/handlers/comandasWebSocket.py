@@ -6,7 +6,7 @@ from decorators.handleException import handleException
 from model.conexion import Conexion
 import json
 
-logger = Logger('comandasWebSocket')
+logger = Logger('---------------comandasWebSocket---------------')
 
 class ComandasWebSocket(websocket.WebSocketHandler):
   def check_origin(self, origin):
@@ -16,7 +16,6 @@ class ComandasWebSocket(websocket.WebSocketHandler):
   @handleException
   def open(self):
     logger.debug('open')
-    utils.globalvars.webSockConns.append(self) # Guardo conn del cliente
 
   @handleException
   def on_message(self, data):

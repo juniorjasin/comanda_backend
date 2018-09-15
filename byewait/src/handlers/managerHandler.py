@@ -6,7 +6,7 @@ from utils.logger import Logger
 from handlers import base
 from exceptions import exceptions
 
-logger = Logger('---------------managerHandler---------------')
+logger = Logger('managerHandler')
 
 class ManagerHandler(base.BaseHandler):
 

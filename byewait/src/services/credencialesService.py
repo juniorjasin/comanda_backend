@@ -21,10 +21,17 @@ class CredencialesService:
 
     def validarToken(self,token,username):
         try:
-            claims = jwt.decode(token, public_key,algorithms=['RS256'])            
+            claims = jwt.decode(token, public_key,algorithms=['RS256'])
             return token
         except jwt.ExpiredSignatureError:
             logger.critical("Token expirado")
+            options = {            
+            'verify_exp': False,            
+            }
+            claims = jwt.decode(token, public_key,algorithms=['RS256'], options = options)
+            if claims['userName'] != username:
+                logger.critical("intento de fraude con token")
+                raise exceptions.Unauthorized(2001)    
             payload = {'userName': username, 'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes = 3) }
             token = jwt.encode(payload, private_key, algorithm='RS256').decode('utf-8')
             return token

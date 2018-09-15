@@ -1,3 +1,7 @@
 database/
 byewait/keys/
 venv/
+logs/
+*.pot
+*.pyc
+__pycache__/

@@ -18,7 +18,9 @@ class PedidoHandler(base.BaseHandler):
     def get(self, restaurante):
         logger.debug('get')
         svc = PedidoService()
-        self.finish()
+        userId = 1
+        pedidos = svc.checkPedidoPendiente(userId)
+        self.finish({'pedidos': pedidos})
 
     @tornado.web.asynchronous
     @handleException

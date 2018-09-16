@@ -49,3 +49,36 @@ class PedidoRepo(repo.Repo):
     def isValidUserId(self, id):
         return True
         
+
+    def getPedidosPendientes(self, userId):
+        logger.debug('---------user:{} quiere obtener sus pedidos------------'.format(userId))
+        pedidos = []
+        try:
+            cursor = self.cnx.cursor()
+            consulta = "SELECT pedidos.id_pedidos, pedidos.id_restaurante, pedidos.id_mesa \
+                          FROM pedidos\
+                         WHERE pedidos.id_usuario = %s \
+                           AND pedidos.estado = 'pendiente'"
+            cursor.execute(consulta,(userId,))
+            rows = cursor.fetchone()
+            self.cnx.commit()
+            cursor.close()
+            # if rows != None:
+                # items = getItemsFromPedido(rows)
+
+            logger.debug('-------------------OBTUVE DE LA DB-------------------')
+            logger.debug(rows)
+
+        except Exception as e:
+            messg = "Fallo la consulta a la base de datos: {}".format(e)
+            logger.error(messg)
+            raise exceptions.InternalServerError(5001)
+
+        return pedidos
+
+    def getItemsFromPedido(self, id_pedido):
+        pass
+
+    
+
+    

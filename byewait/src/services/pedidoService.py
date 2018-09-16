@@ -13,3 +13,7 @@ class PedidoService:
         logger.debug('insertOrder')
         order = self.repo.insertNewOrder(id_restaurante, items, id_usuario, id_mesa)
         return order
+
+    def checkPedidoPendiente(self, userId):
+        pedidos = self.repo.getPedidosPendientes(userId)
+        return pedidos

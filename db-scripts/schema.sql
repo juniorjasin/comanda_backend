@@ -74,6 +74,7 @@ create table if not exists item_menu (
     image_url           varchar(500)    not null,
     rating              decimal(4,2)    null      check (rate >= 0 and rate <= 5),
     PRIMARY KEY (id_item_menu),
+    UNIQUE(id_item_menu, id_restaurante),
     FOREIGN KEY(id_categoria) REFERENCES categorias(id_categoria),
     FOREIGN KEY (id_restaurante) REFERENCES restaurants(id_restaurante)
 );
@@ -231,9 +232,9 @@ create table if not exists usuarios (
     PRIMARY KEY (id_usuario)
 );
 
-INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('juan', 'juan@gmail.com', 'juan', 'b', '$2b$12$qxYL/c5KbxDb0iIvVgvrYuow20y7BRgk8JV6BeMQ2Cy1wMrNAabU2');
-INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('andi', 'andi@gmail.com', 'andi', 'b', '$2b$12$AftbQ7QacpeB/VOVlXeJT.HEt0NwfNbIKF0NozVxvhZuhKnheeN6m');
-INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('jrjs', 'jrjs@gmail.com', 'junior', 'j', '$2b$12$xzcHoLXLOa.bO7XEkqQ8wupvMUFTsMgNnX8.KbxCSEMJ.zfv95DbO');
+INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('juan', 'juan@gmail.com', 'juan cruz', 'borssotto', '$2b$12$qxYL/c5KbxDb0iIvVgvrYuow20y7BRgk8JV6BeMQ2Cy1wMrNAabU2');
+INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('andi', 'andi@gmail.com', 'andres', 'balestrini', '$2b$12$AftbQ7QacpeB/VOVlXeJT.HEt0NwfNbIKF0NozVxvhZuhKnheeN6m');
+INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('jrjs', 'jrjs@gmail.com', 'junior', 'jasin', '$2b$12$xzcHoLXLOa.bO7XEkqQ8wupvMUFTsMgNnX8.KbxCSEMJ.zfv95DbO');
 
 
 create table if not exists scores_item_menu (
@@ -298,20 +299,25 @@ INSERT INTO scores_item_menu (id_item_menu, id_usuario, score) VALUES (11, 3, 5)
 create table if not exists pedidos (
     id_pedidos          integer         not null AUTO_INCREMENT,
     id_usuario          integer         not null,
+    id_restaurante      integer         not null,
     id_mesa             integer         not null,
     fecha_hora          timestamp       not null,
+    estado              varchar(30)     not null default 'pendiente' check (estado='pendiente' or estado='finalizado'), 
     PRIMARY KEY (id_pedidos),
-    FOREIGN KEY(id_usuario) REFERENCES usuarios(id_usuario)
+    UNIQUE(id_pedidos, id_restaurante),
+    FOREIGN KEY(id_usuario) REFERENCES usuarios(id_usuario),
+    FOREIGN KEY(id_restaurante) REFERENCES restaurants(id_restaurante)
 );
 
 create table if not exists items_pedido (
     id_item_menu        integer         not null,
     id_pedidos          integer         not null,
+    id_restaurante      integer         not null,
     cantidad            integer         not null,
     aclaraciones        varchar(500)    not null,
     PRIMARY KEY (id_item_menu, id_pedidos),
-    FOREIGN KEY(id_item_menu) REFERENCES item_menu(id_item_menu),
-    FOREIGN KEY(id_pedidos) REFERENCES pedidos(id_pedidos)
+    FOREIGN KEY(id_item_menu, id_restaurante) REFERENCES item_menu(id_item_menu, id_restaurante),
+    FOREIGN KEY(id_pedidos, id_restaurante) REFERENCES pedidos(id_pedidos, id_restaurante)
 );
 
 

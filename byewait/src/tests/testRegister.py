@@ -29,7 +29,7 @@ class TestRegister(Test):
 
     def test_postRepeatedUsername(self):
         # Registrar usuario
-        body = '{"user":{"username": "testrepeated", "password": "testrepeated", "email": "testrepeated@test.com"}}'
+        body = '{"user":{"username": "testrepeated", "password": "testrepeated", "nombre": "test", "apellido": "test", "email": "testrepeated@test.com"}}'
         response = requests.post("http://localhost:8888/register", data=body)
         self.assertEqual(response.status_code, 200)
 
@@ -41,7 +41,7 @@ class TestRegister(Test):
         self.assertTrue('code' in content)
 
     def test_postSuccesfulRegister(self):
-        body = '{"user":{"username": "success", "password": "success", "email": "success@test.com"}}'
+        body = '{"user":{"username": "success", "password": "success", "nombre": "test", "apellido": "test", "email": "success@test.com"}}'
         response = requests.post("http://localhost:8888/register", data=body)
         self.assertEqual(response.status_code, 200)
         content = json.loads(response.content)
@@ -54,7 +54,7 @@ class TestRegister(Test):
     def test_postIncorrectEmailFormat(self):
         badFormats = ('f', 'f.com', 'f@.com', 'f@f..com', 'f@com')
         for badFormat in badFormats:
-            body = '{"user":{"username": "wwq", "password": "ewqs", "email": %s}}' % badFormat
+            body = '{"user":{"username": "wwq", "password": "ewqs", "nombre": "test", "apellido": "test", "email": %s}}' % badFormat
             response = requests.post("http://localhost:8888/register", data=body)
             # self.assertEqual(response.status_code, 400)
             self.assertEqual(response.status_code, 500)

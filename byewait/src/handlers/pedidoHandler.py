@@ -32,19 +32,19 @@ class PedidoHandler(base.BaseHandler):
     @checkAuthentication
     def post(self, restaurante):
         logger.debug("post")
-        id_usuario = 1
         try:
             data = json.loads(self.request.body)
-            id_restaurante = data['order']['id_restaurante']
-            id_mesa = data['order']['id_mesa']
+            idUsuario = data['order']['user']['id_user']
             nombreUser = data['order']['user']['nombre']
             apellidoUser = data['order']['user']['apellido']
+            id_restaurante = data['order']['id_restaurante']
+            id_mesa = data['order']['id_mesa']
             items = data['order']['items']
         except Exception as e:
             logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(self.request.body)) 
             raise exceptions.BadRequest(4001)
         svc = PedidoService()
-        pedido = svc.insertOrder(id_restaurante, items, id_usuario, id_mesa)
+        pedido = svc.insertOrder(id_restaurante, items, idUsuario, id_mesa)
 
         # Enviar la información del pedido a los clientes del web socket
         user = {'nombre': nombreUser, 'apellido': apellidoUser}

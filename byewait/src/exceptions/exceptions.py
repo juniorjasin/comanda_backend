@@ -70,3 +70,11 @@ class ConflictException(InfoException):
         self.info[CODE] = code
 
         super(ConflictException, self).__init__(self.info)
+
+class ForbiddenException(InfoException):
+    def __init__(self, code):
+        self.info = dict()
+        self.info[USER_MESSAGE] = ''
+        self.info[CODE] = code
+
+        super(ForbiddenException, self).__init__(self.info)

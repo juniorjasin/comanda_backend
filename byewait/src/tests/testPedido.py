@@ -20,9 +20,9 @@ class TestPedido(Test):
   
     def setUp(self):
         super(TestPedido, self).setUp()
-        cnx = pymysql.connect(db="byewait_testing", user="dev", passwd="changeme", port=3306, host="mysql")
+        cnx = pymysql.connect(db="byewait", user="dev", passwd="changeme", port=3306, host="mysql")
         cursor = cnx.cursor()
-        cursor.execute("insert into usuarios(username, email, password) values('test', 'test', 'test')")
+        cursor.execute("insert into usuarios(username, nombre, apellido, email, password) values('test', 'nombretest', 'apellidotest', 'test', 'test')")
         cursor.execute("insert into categorias(nombre_categoria, imagen_categoria) values('test', 'test')")
         cursor.execute("insert into restaurants(name, description, address, image_url) values('test', 'test', 'test', 'test')")
         cursor.execute("insert into item_menu(id_categoria, id_restaurante, nombre_item_menu, description, precio, image_url, rating) values(1, 1, 'test', 'test', 1, 'test', null)")
@@ -49,7 +49,7 @@ class TestPedido(Test):
         self.assertEqual(response.status_code, 400)
 
     def test_postCorrectBody(self):
-        body = '{"order":{"id_restaurante":1,"id_mesa":3, "items":[{"id":"1","cantidad": 3,"aclaraciones": "sin ajo"},{"id":"2","cantidad": 1,"aclaraciones": "sin queso"}]}}'
+        body = '{"order":{"user": {"id_user": 1, "nombre": "nombretest", "apellido": "apellidotest"}, "id_restaurante":1,"id_mesa":3, "items":[{"id":"1","cantidad": 3,"aclaraciones": "sin ajo"},{"id":"2","cantidad": 1,"aclaraciones": "sin queso"}]}}'
         headers = {'Authorization': token}
         response = requests.post("http://localhost:8888/restaurante/pedido", data=body, headers=headers)
         self.assertEqual(response.status_code, 200)

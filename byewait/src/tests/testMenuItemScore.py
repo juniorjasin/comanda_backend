@@ -22,7 +22,7 @@ class TestMenuItemScore(Test):
         super(TestMenuItemScore, self).setUp()
         cnx = pymysql.connect(db="byewait_testing", user="dev", passwd="changeme", port=3306, host="mysql")
         cursor = cnx.cursor()
-        cursor.execute("insert into usuarios(username, email, password) values('test', 'test', 'test')")
+        cursor.execute("insert into usuarios(username, nombre, apellido, email, password) values('test', 'nombretest', 'apellidotest', 'test', 'test')")
         cursor.execute("insert into categorias(nombre_categoria, imagen_categoria) values('test', 'test')")
         cursor.execute("insert into restaurants(name, description, address, image_url) values('test', 'test', 'test', 'test')")
         cursor.execute("insert into item_menu(id_categoria, id_restaurante, nombre_item_menu, description, precio, image_url, rating) values(1, 1, 'test', 'test', 1, 'test', null)")

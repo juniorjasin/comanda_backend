@@ -27,7 +27,7 @@ class PedidoHandler(base.BaseHandler):
         
     @tornado.web.asynchronous
     @handleException
-    # @checkAuthentication
+    @checkAuthentication
     def post(self, restaurante):
         logger.debug("post")
         id_usuario = 1

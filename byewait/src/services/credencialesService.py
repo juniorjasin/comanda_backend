@@ -32,7 +32,7 @@ class CredencialesService:
             if claims['userName'] != username:
                 logger.critical("intento de fraude con token")
                 raise exceptions.Unauthorized(2001)    
-            payload = {'userName': username, 'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes = 3) }
+            payload = {'userName': username, 'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes = 1000) }
             token = jwt.encode(payload, private_key, algorithm='RS256').decode('utf-8')
             return token
         except jwt.InvalidTokenError:

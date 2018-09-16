@@ -15,9 +15,14 @@ class ComandasWebSocket(websocket.WebSocketHandler):
 
   @handleException
   def open(self):
-    logger.debug('open')
+    logger.debug('open with conn: {}'.format(self))
 
-  @handleException
+  def reportMesaPideCuenta(self, idRestaurante, idMesa):
+    logger.debug('reportMesaPideCuenta con idRestaurante: {0}, y con idMesa{1}'.format(idRestaurante, idMesa))
+    for conexion in utils.globalvars.webSockConns:
+      if conexion.id_restaurante == idRestaurante and conexion.conexion == self:
+        conexion.conexion.write_message({'code': 1, 'pedido_cuenta': { 'id_mesa': idMesa }})
+
   def on_message(self, data):
     logger.debug('on_message con data: {}'.format(data)) 
     # si esto es cierto, es que fue llamado desde frontend app_comanda
@@ -27,10 +32,11 @@ class ComandasWebSocket(websocket.WebSocketHandler):
       
       conn = Conexion(self, id)
       utils.globalvars.webSockConns.append(conn) 
-      logger.debug('agrego conexion:{}'.format(utils.globalvars.webSockConns[-1]))
+      logger.debug('agrego conexion:{}'.format(conn))
       return
     
     # si pasa hasta aca, fue llamado desde pedidoHandler
+    data['code'] = 0
     id_resto = data['restaurante']
     itemsService = ItemsService()
     # Los items vienen con id nomás, le agrego info adicional(nombre, precio...)

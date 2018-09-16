@@ -11,7 +11,7 @@ class RegisterRepo(repo.Repo):
         super(RegisterRepo, self).__init__()
         logger.debug("RegisterRepo")
     
-    def registrarUsuario(self,userName,password,email):
+    def registrarUsuario(self, userName, password, nombre, apellido, email):
         idUsuario = -1
         try:
             cursor = self.cnx.cursor()
@@ -26,8 +26,8 @@ class RegisterRepo(repo.Repo):
             else:
                 try:
                     hashedPassword = bcrypt.hashpw(password.encode('latin-1'), bcrypt.gensalt())
-                    consulta = "INSERT INTO usuarios(username, email, password) VALUES(%s,%s,%s)"
-                    cursor.execute(consulta,(userName, email, hashedPassword))
+                    consulta = "INSERT INTO usuarios(username, email, password, nombre, apellido) VALUES(%s,%s,%s,%s,%s)"
+                    cursor.execute(consulta,(userName, email, hashedPassword, nombre, apellido))
                     idUsuario = cursor.lastrowid
                     self.cnx.commit()
                     cursor.close()
@@ -47,9 +47,11 @@ class RegisterRepo(repo.Repo):
             raise exceptions.InternalServerError(5001)
 
         respuesta = {
-            "id":idUsuario,
-            "username":userName,
-            "email":email,            
+            'id': idUsuario,
+            'username': userName,
+            'email': email,
+            'nombre': nombre,
+            'apellido': apellido
         }
         return respuesta
         

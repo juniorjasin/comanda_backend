@@ -33,9 +33,13 @@ class RegisterHandler(base.BaseHandler):
         try:
             username = data['user']['username']
             password = data['user']['password']
+            nombre = data['user']['nombre']
+            apellido = data['user']['apellido']
             email = data['user']['email']
             username.encode('latin-1')
             password.encode('latin-1')
+            nombre.encode('latin-1')
+            apellido.encode('latin-1')
         except Exception as e:
             logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(self.request.body)) 
             raise exceptions.BadRequest(3001)
@@ -43,6 +47,6 @@ class RegisterHandler(base.BaseHandler):
             logger.error('Mal formato de email, email: {}'.format(email))
             raise exceptions.BadRequest(3001)
         svc = RegisterService()
-        respuesta = svc.registrarUsuario(username, password, email)
+        respuesta = svc.registrarUsuario(username, password, nombre, apellido, email)
         self.write(respuesta)
         self.finish()

@@ -23,8 +23,7 @@ class LoginService:
         token = jwt.encode(payload, private_key, algorithm='RS256').decode('utf-8')
         answer = {
             "user": temp,
-            "token":token
+            "token": token
         }
-        # return {"token":token}
         return answer
 

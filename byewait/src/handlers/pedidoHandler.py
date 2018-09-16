@@ -35,14 +35,21 @@ class PedidoHandler(base.BaseHandler):
             data = json.loads(self.request.body)
             id_restaurante = data['order']['id_restaurante']
             id_mesa = data['order']['id_mesa']
+            nombreUser = data['order']['user']['nombre']
+            apellidoUser = data['order']['user']['apellido']
             items = data['order']['items']
         except Exception as e:
             logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(self.request.body)) 
             raise exceptions.BadRequest(4001)
         svc = PedidoService()
         pedido = svc.insertOrder(id_restaurante, items, id_usuario, id_mesa)
+
         # Enviar la información del pedido a los clientes del web socket
+        user = {'nombre': nombreUser, 'apellido': apellidoUser}
         for conn in utils.globalvars.webSockConns:
-            logger.debug('conexion:{}'.format(conn))
-            conn.conexion.on_message({'order': pedido, 'data': data['order'], 'restaurante':id_restaurante})
+            conn.conexion.on_message({
+                'order': pedido, 
+                'user': user, 
+                'data': data['order'], 
+                'restaurante': id_restaurante})
         self.finish({"order": pedido})

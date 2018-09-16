@@ -5,6 +5,7 @@ import sys
 from test import Test
 import jwt
 import os
+import pymysql
 
 # Nota: los metodos de las clases de test DEBEN comenzar
 # con el nombre 'test', sino no funciona.
@@ -16,6 +17,14 @@ payload = {'userName': 'test'}
 token = jwt.encode(payload, private_key, algorithm='RS256').decode('utf-8')
 
 class TestPedirCuenta(Test):
+    def setUp(self):
+        super(TestPedirCuenta, self).setUp()
+        cnx = pymysql.connect(db="byewait_testing", user="dev", passwd="changeme", port=3306, host="mysql")
+        cursor = cnx.cursor()
+        cursor.execute("insert into restaurants(name, description, address, image_url) values('test', 'test', 'test', 'test')")
+        cnx.commit()
+        cursor.close()
+        cnx.close()
 
     def test_PedirCuentaNoAuth(self):
         body = '{"incorrect_parameter": 1}'

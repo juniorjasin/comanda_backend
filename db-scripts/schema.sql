@@ -224,14 +224,16 @@ VALUES (11, 4, "Rabas", "rabas frescas con mayonesa casera y limon", "150",
 create table if not exists usuarios (
     id_usuario          integer         not null AUTO_INCREMENT,
     username            varchar(100)    not null UNIQUE,
+    nombre              varchar(50)    not null,
+    apellido            varchar(50)    not null,
     email               varchar(100)    not null,
     password            varchar(400)    not null,
     PRIMARY KEY (id_usuario)
 );
 
-INSERT INTO usuarios (username, email, password) VALUES ('juan', 'juan@gmail.com', '$2b$12$qxYL/c5KbxDb0iIvVgvrYuow20y7BRgk8JV6BeMQ2Cy1wMrNAabU2');
-INSERT INTO usuarios (username, email, password) VALUES ('andi', 'andi@gmail.com', '$2b$12$AftbQ7QacpeB/VOVlXeJT.HEt0NwfNbIKF0NozVxvhZuhKnheeN6m');
-INSERT INTO usuarios (username, email, password) VALUES ('jrjs', 'jrjs@gmail.com', '$2b$12$xzcHoLXLOa.bO7XEkqQ8wupvMUFTsMgNnX8.KbxCSEMJ.zfv95DbO');
+INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('juan', 'juan@gmail.com', 'juan', 'b', '$2b$12$qxYL/c5KbxDb0iIvVgvrYuow20y7BRgk8JV6BeMQ2Cy1wMrNAabU2');
+INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('andi', 'andi@gmail.com', 'andi', 'b', '$2b$12$AftbQ7QacpeB/VOVlXeJT.HEt0NwfNbIKF0NozVxvhZuhKnheeN6m');
+INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('jrjs', 'jrjs@gmail.com', 'junior', 'j', '$2b$12$xzcHoLXLOa.bO7XEkqQ8wupvMUFTsMgNnX8.KbxCSEMJ.zfv95DbO');
 
 
 create table if not exists scores_item_menu (

@@ -3,7 +3,7 @@ import pymysql
 
 class Test(unittest.TestCase):
     def setUp(self):
-        cnx = pymysql.connect(db="byewait", user="dev", passwd="changeme", port=3307, host="localhost")
+        cnx = pymysql.connect(db="byewait_testing", user="dev", passwd="changeme", port=3306, host="localhost")
         cursor = cnx.cursor()
         cursor.execute('delete from managers')
         cursor.execute('delete from tags_restaurants')

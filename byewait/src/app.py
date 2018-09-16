@@ -1,5 +1,11 @@
 from tornado.ioloop import IOLoop
 import tornado.web
+import os
+# Crear carpeta para logs
+newpath = os.environ['INSTALL_DIR'] + '/logs' 
+if not os.path.exists(newpath):
+    os.makedirs(newpath)
+
 from handlers.loginHandler import LoginHandler
 from handlers.registerHandler import RegisterHandler
 from handlers.restaurantesHandler import RestaurantesHandler
@@ -10,12 +16,10 @@ from handlers.comandasWebSocket import ComandasWebSocket
 from handlers.menuItemScoreHandler import MenuItemScoreHandler
 from handlers.managerHandler import ManagerHandler
 from handlers.credencialesHandler import CredencialesHandler
-from utils.logger import Logger
-
-logger = Logger('app')
 
 class Application(tornado.web.Application):
     def __init__(self):
+
         handlers = [
             (r"/login/?", LoginHandler),
             (r"/register/?", RegisterHandler),

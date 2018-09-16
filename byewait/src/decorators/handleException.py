@@ -2,7 +2,7 @@ from functools import wraps
 from exceptions import exceptions as exception
 from utils.logger import Logger
 
-logger = Logger('checkExceptions')
+logger = Logger('handleExceptions')
 
 def handleException(f):
     @wraps(f)
@@ -19,6 +19,8 @@ def handleException(f):
                 handler.set_status(400)
             elif isinstance(ex, exception.Unauthorized):
                 handler.set_status(401)
+            elif isinstance(ex, exception.ForbiddenException):
+                handler.set_status(403)
             elif isinstance(ex, exception.NotFound):
                 handler.set_status(404)
             elif isinstance(ex, exception.ConflictException):

@@ -20,7 +20,7 @@ class TestPedido(Test):
   
     def setUp(self):
         super(TestPedido, self).setUp()
-        cnx = pymysql.connect(db="byewait_testing", user="dev", passwd="changeme", port=3306, host="mysql")
+        cnx = pymysql.connect(db="byewait", user="dev", passwd="changeme", port=3306, host="mysql")
         cursor = cnx.cursor()
         cursor.execute("insert into usuarios(username, nombre, apellido, email, password) values('test', 'nombretest', 'apellidotest', 'test', 'test')")
         cursor.execute("insert into categorias(nombre_categoria, imagen_categoria) values('test', 'test')")

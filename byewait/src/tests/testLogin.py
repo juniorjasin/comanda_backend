@@ -27,7 +27,7 @@ class TestLogin(Test):
         self.assertEqual(response.status_code, 400)
 
     def test_postUnauthorized(self):
-        body = '{"user":{"username": "testunauthorized", "password": "testunauthorized", "email": "testunauthorized@test.com"}}'
+        body = '{"user":{"username": "testunauthorized", "password": "testunauthorized", "nombre": "test", "apellido": "test", "email": "testunauthorized@test.com"}}'
         response = requests.post("http://localhost:8888/login", data=body)
         content = json.loads(response.content)
         self.assertTrue('user_message' in content)
@@ -36,7 +36,7 @@ class TestLogin(Test):
 
     def test_postSuccesfulLogin(self):
         # Registrar usuario
-        body = '{"user":{"username": "testcorrect", "password": "testcorrect", "email": "testcorrect@test.com"}}'
+        body = '{"user":{"username": "testcorrect", "password": "testcorrect", "nombre": "test", "apellido": "test", "email": "testcorrect@test.com"}}'
         response = requests.post("http://localhost:8888/register", data=body)
         self.assertEqual(response.status_code, 200)
 
@@ -51,12 +51,12 @@ class TestLogin(Test):
 
     def test_postIncorrectPassword(self):
         # Registrar usuario
-        body = '{"user":{"username": "testbadpass", "password": "testbadpass", "email": "testbadpass@test.com"}}'
+        body = '{"user":{"username": "testbadpass", "password": "testbadpass", "nombre": "test", "apellido": "test", "email": "testbadpass@test.com"}}'
         response = requests.post("http://localhost:8888/register", data=body)
         self.assertEqual(response.status_code, 200)
 
         # Probar logueo
-        body = '{"user":{"username": "testbadpass", "password": "otherpass", "email": "testbadpass@test.com"}}'
+        body = '{"user":{"username": "testbadpass", "password": "otherpass", "nombre": "test", "apellido": "test", "email": "testbadpass@test.com"}}'
         response = requests.post("http://localhost:8888/login", data=body)
         self.assertEqual(response.status_code, 401)
         content = json.loads(response.content)

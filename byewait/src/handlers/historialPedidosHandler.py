@@ -1,6 +1,7 @@
 import tornado.web
 import json
 from decorators.handleException import handleException
+from decorators.checkAuthentication import checkAuthentication
 from services.historialPedidosService import HistorialPedidosService
 from utils.logger import Logger
 from handlers import base
@@ -9,9 +10,15 @@ from exceptions import exceptions
 logger = Logger('historialPedidosHandler')
 
 class HistorialPedidosHandler(base.BaseHandler):
+
+    @tornado.web.asynchronous
+    @handleException
+    def options(self):
+        self.finish()
         
     @tornado.web.asynchronous
     @handleException
+    @checkAuthentication
     def post(self):
         logger.debug('post')
         try:

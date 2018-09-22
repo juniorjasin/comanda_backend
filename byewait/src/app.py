@@ -32,7 +32,7 @@ class Application(tornado.web.Application):
             (r"/comandas/?", ComandasWebSocket),
             (r"/manager/?", ManagerHandler),
             (r"/credenciales/?", CredencialesHandler),
-            (r"/restaurante/historial/pedidos/?", HistorialPedidosHandler),
+            (r"/restaurantes/historial/pedidos/?", HistorialPedidosHandler),
             (r"/images/(.*)",tornado.web.StaticFileHandler, {"path": "/opt/byewait/images"},),
         ]
         tornado.web.Application.__init__(self, handlers)

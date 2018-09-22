@@ -19,6 +19,10 @@ class LoginRepo(repo.Repo):
             consulta = "SELECT id_usuario, username, password, nombre, apellido FROM usuarios WHERE usuarios.username = %s"
             cursor.execute(consulta,(username,))
             row = cursor.fetchone()
+            if row is None:
+                consulta = "SELECT id_usuario, username, password, nombre, apellido FROM usuarios WHERE usuarios.email = %s"
+                cursor.execute(consulta,(username,))
+                row = cursor.fetchone()
             self.cnx.commit()
             cursor.close()
         except Exception as e:

@@ -14,7 +14,6 @@ class HistorialPedidosService:
 
     def validarManagerCoincideRestaurante(self, idManager, idRestaurante):
         logger.debug('validarManagerCoincideRestaurante')
-        logger.debug(__name__)
         return self.repo.validarManagerCoincideRestaurante(idManager, idRestaurante)
 
     def getHistorialPedidos(self, idRestaurante):

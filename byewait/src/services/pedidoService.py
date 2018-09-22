@@ -15,5 +15,6 @@ class PedidoService:
         return order
 
     def checkPedidoPendiente(self, userId):
+        logger.debug('checkPedidoPendiente()')
         pedidos = self.repo.getPedidosPendientes(userId)
         return pedidos

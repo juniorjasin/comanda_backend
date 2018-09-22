@@ -27,6 +27,7 @@ class PedirCuentaHandler(base.BaseHandler):
             # idsPedidos = data['cuenta']['ids_pedidos']
             idRestaurante = data['cuenta']['id_restaurante']
             idMesa = data['cuenta']['id_mesa']
+            pedidos = data['cuenta']['pedidos']
             # if not isinstance(idsPedidos, list):
             #     raise Exception('idsPedidos no es un array')
         except Exception as e:
@@ -34,4 +35,6 @@ class PedirCuentaHandler(base.BaseHandler):
             raise exceptions.BadRequest(3001)
         svc = PedirCuentaService()
         svc.pedirCuenta(idRestaurante, idMesa)
+        logger.debug('pedidos:{}'.format(pedidos))
+        svc.actualizarPedidos(pedidos, 'finalizado')
         self.finish({'cuenta': 'pedida'})

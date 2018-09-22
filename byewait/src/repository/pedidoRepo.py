@@ -1,6 +1,7 @@
 from repository import repo
 from exceptions import exceptions
 from utils.logger import Logger
+from repository.restaurantesRepo import RestaurantesRepo
 
 logger = Logger('pedidoRepo')
 
@@ -53,32 +54,98 @@ class PedidoRepo(repo.Repo):
     def getPedidosPendientes(self, userId):
         logger.debug('---------user:{} quiere obtener sus pedidos------------'.format(userId))
         pedidos = []
+        items = []
+        restaurante = ()
+        id_restaurante = None
+        id_mesa = None
+
         try:
             cursor = self.cnx.cursor()
             consulta = "SELECT pedidos.id_pedidos, pedidos.id_restaurante, pedidos.id_mesa \
                           FROM pedidos\
                          WHERE pedidos.id_usuario = %s \
-                           AND pedidos.estado = 'pendiente'"
+                           AND pedidos.estado = 'pendiente' \
+                      ORDER BY pedidos.fecha_hora ASC"
             cursor.execute(consulta,(userId,))
-            rows = cursor.fetchone()
+            rows = cursor.fetchall()
             self.cnx.commit()
             cursor.close()
-            # if rows != None:
-                # items = getItemsFromPedido(rows)
 
-            logger.debug('-------------------OBTUVE DE LA DB-------------------')
-            logger.debug(rows)
+            if rows is not None and len(rows) > 0:
+                for index, row in enumerate(rows):
+                    id_pedidos, id_restaurante, id_mesa = row
+                    items = self.getItemsFromPedido(id_pedidos)
+                    pedidos.append({"id_pedidos":id_pedidos, "nroPedido":index, "items":items})
+                    
+            logger.debug('pedidos pediente de user[{}]:{}'.format(userId, pedidos))
 
         except Exception as e:
-            messg = "Fallo la consulta a la base de datos: {}".format(e)
+            messg = "getPedidosPendientes() - Fallo la consulta a la base de datos: {}".format(e)
             logger.error(messg)
             raise exceptions.InternalServerError(5001)
 
-        return pedidos
+        
+        if len(pedidos) > 0 and id_restaurante is not None:
+            logger.debug('llamo a getRestaurantById({})'.format(id_restaurante))
+            restaurantRepo = RestaurantesRepo()
+            restaurante = restaurantRepo.getRestaurantById(id_restaurante)
+            restaurante = restaurante._asdict()
+            logger.debug('restaurante:{}'.format(restaurante))
+            
+        return (pedidos, id_mesa, restaurante)
 
+    
     def getItemsFromPedido(self, id_pedido):
-        pass
+        items = []
+        try:        
+            cursor = self.cnx.cursor()
+            query = "SELECT item_menu.id_item_menu, item_menu.nombre_item_menu, item_menu.description, item_menu.image_url, item_menu.precio, items_pedido.cantidad \
+                       FROM item_menu \
+                       JOIN items_pedido \
+                         ON item_menu.id_item_menu = items_pedido.id_item_menu \
+                      WHERE items_pedido.id_pedidos = %s"
+            cursor.execute(query, (id_pedido,))
+            rows = cursor.fetchall()
+            cursor.close()
 
+            if rows is not None and len(rows) > 0:
+
+                for index, row in enumerate(rows):
+                    id, name, description, image_url, price, cantidad = row
+                    item = {"id": id, "name": name, "description":description, "image_url":image_url, "price":price, "cantidad":cantidad}
+                    items.append(item)
+
+            logger.debug('items asociados al pedido[{}]:{}'.format(id_pedido, items))
+
+        except Exception as e:
+            msg = "getItemsFromPedido() - Fallo la consulta de getItem a la base de datos: {}".format(e)
+            logger.error(msg)
+            raise exceptions.InternalServerError(5001)
+        return items
     
 
-    
+
+    def actualizarPedidos(self, pedidos, estado):
+        logger.debug('actualizarPedidos()')
+        cursor = self.cnx.cursor()
+        try: 
+            for pedido in pedidos:
+                logger.debug('pedido:{}'.format(pedido))
+                update = "UPDATE pedidos \
+                             SET pedidos.estado = %s \
+                           WHERE pedidos.id_pedidos = %s \
+                             AND pedidos.estado <> %s ;"
+                
+                values = (estado, pedido['idPedido'], estado)
+                cursor.execute(update, values)
+
+            self.cnx.commit()
+            cursor.close()
+
+        except Exception as e:
+            self.cnx.rollback()
+            msg = "actualizarPedidos() - Fallo update en la base de datos, se hace rollback(). Error: {}".format(e)
+            logger.error(msg)
+            raise exceptions.InternalServerError(5001)
+
+        return

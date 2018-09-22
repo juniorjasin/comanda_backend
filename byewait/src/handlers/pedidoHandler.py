@@ -15,12 +15,20 @@ class PedidoHandler(base.BaseHandler):
   
     @tornado.web.asynchronous
     @handleException
-    def get(self, restaurante):
+    def get(self, userId):
         logger.debug('get')
         svc = PedidoService()
-        userId = 1
-        pedidos = svc.checkPedidoPendiente(userId)
-        self.finish({'pedidos': pedidos})
+        logger.debug('user:{}, quiere pedidos sin finalizar'.format(userId))
+        infoPedidos = svc.checkPedidoPendiente(userId)
+        pedidos, id_mesa, restaurante = infoPedidos
+        response = None
+
+        if restaurante is None or id_mesa is None or pedidos is None or len(pedidos) == 0:
+            response = {'message': 'no hay pedidos pendientes'}
+        else:
+            response = {'id_mesa':id_mesa, 'restaurante':restaurante, 'pedidos':pedidos}
+
+        self.finish(response)
 
     @tornado.web.asynchronous
     @handleException

@@ -5,7 +5,7 @@ import datetime
 from utils.logger import Logger
 from exceptions import exceptions
 
-logger = Logger('credencialesService')
+logger = Logger('-------------credencialesService--------------')
 
 public_key_file = os.path.join(os.environ['INSTALL_DIR'], 'keys','byewaitKeyy.pub')
 with open(public_key_file, 'r') as fd:
@@ -20,6 +20,8 @@ class CredencialesService:
         pass
 
     def validarToken(self,token,username):
+        logger.debug('validarToken()')
+        
         try:
             claims = jwt.decode(token, public_key,algorithms=['RS256'])
             return token
@@ -32,6 +34,10 @@ class CredencialesService:
             if claims['userName'] != username:
                 logger.critical("intento de fraude con token")
                 raise exceptions.Unauthorized(2001)    
+
+            logger.debug('expira:{}'.format(datetime.datetime.utcnow() + datetime.timedelta(minutes = 1000)))
+            logger.debug('utcnow():{}'.format(datetime.datetime.utcnow()))
+
             payload = {'userName': username, 'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes = 1000) }
             token = jwt.encode(payload, private_key, algorithm='RS256').decode('utf-8')
             return token

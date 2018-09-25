@@ -20,7 +20,7 @@ class ManagerService:
     def validarUsuario(self, username_ingresado, password_ingresada):
         usuarioCorrecto = self.repo.validarUsuario(username_ingresado, password_ingresada)
 
-        payload = {'userName': usuarioCorrecto['username'], 'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes = 999) }
+        payload = {'userName': usuarioCorrecto['username'], 'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes = 1000) }
         token = jwt.encode(payload, private_key, algorithm='RS256').decode('utf-8')
         response = {
             "user": usuarioCorrecto,

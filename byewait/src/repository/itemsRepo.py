@@ -26,9 +26,9 @@ class ItemsRepo(repo.Repo):
             if row is not None and len(row) > 0:
                 id, name, description, image_url, price, rating = row
                 if rating != None:
-                    item = Item(id, name, description, image_url, price, int(rating))
+                    item = Item(id, name, description, image_url, price, int(rating), opciones=[])
                 else:
-                    item = Item(id, name, description, image_url, price, None)
+                    item = Item(id, name, description, image_url, price, None, opciones=[])
 
 
         except Exception as e:

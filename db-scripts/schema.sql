@@ -269,6 +269,9 @@ create table if not exists item_menu_opciones_item_menu (
 INSERT INTO item_menu_opciones_item_menu(id_item_menu, id_opciones_item_menu)
 VALUES(1, 1);
 
+INSERT INTO item_menu_opciones_item_menu(id_item_menu, id_opciones_item_menu)
+VALUES(1, 2);
+
 
 create table if not exists usuarios (
     id_usuario          integer         not null AUTO_INCREMENT,

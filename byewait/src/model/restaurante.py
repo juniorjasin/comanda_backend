@@ -1,3 +1,3 @@
 from collections import namedtuple
 
-Restaurante = namedtuple('Restaurante', 'id name description address image_url tags')
+Restaurante = namedtuple('Restaurante', 'id name description address image_url precio_cubiertos tags')

@@ -18,7 +18,7 @@ class RestaurantesRepo(repo.Repo):
 
         try:        
             cursor = self.cnx.cursor()
-            query = "SELECT id_restaurante, name, description, address, image_url from restaurants"            
+            query = "SELECT id_restaurante, name, description, address, image_url, precio_cubiertos from restaurants"            
             cursor.execute(query)
             rows = cursor.fetchall()
             self.cnx.commit()
@@ -32,7 +32,7 @@ class RestaurantesRepo(repo.Repo):
                         # por cada restaurante, deberia obtener todos tags
                         # asi despues los meto en la estrucutra Restaurante
                         tags = self.getAllRestaurantsTags(row[0])
-                        r = Restaurante(id=row[0], name=row[1], description=row[2], address=row[3], image_url=row[4], tags=tags)
+                        r = Restaurante(id=row[0], name=row[1], description=row[2], address=row[3], image_url=row[4], precio_cubiertos=float(row[5]), tags=tags)
                         restaurantes.append(r)
                 except Exception as e:
                     msg = "Fallo la creacion del array de restaurantes: {}".format(e)

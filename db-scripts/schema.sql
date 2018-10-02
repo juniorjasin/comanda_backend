@@ -7,13 +7,14 @@ drop table managers;
 drop table tags_restaurants;
 drop table scores_item_menu;
 drop table tags;
+drop table opciones_items_pedido;
 drop table items_pedido;
 drop table pedidos;
 drop table usuarios;
-drop table item_menu;
-drop table opciones_item_menu;
-drop table detalle_opciones_item_menu;
 drop table item_menu_opciones_item_menu;
+drop table detalle_opciones_item_menu;
+drop table opciones_item_menu;
+drop table item_menu;
 drop table categorias;
 drop table restaurants;
 
@@ -369,6 +370,18 @@ create table if not exists items_pedido (
     PRIMARY KEY (id_item_menu, id_pedidos),
     FOREIGN KEY(id_item_menu, id_restaurante) REFERENCES item_menu(id_item_menu, id_restaurante),
     FOREIGN KEY(id_pedidos, id_restaurante) REFERENCES pedidos(id_pedidos, id_restaurante)
+);
+
+
+create table if not exists opciones_items_pedido (
+    id_item_menu          integer         not null,
+    id_pedidos            integer         not null,
+    id_opciones_item_menu integer       not null,
+    nro_detalle           integer       not null,
+    PRIMARY KEY (id_item_menu, id_pedidos, id_opciones_item_menu, nro_detalle),
+    FOREIGN KEY(id_item_menu, id_pedidos) REFERENCES items_pedido(id_item_menu, id_pedidos),
+    FOREIGN KEY(id_opciones_item_menu, nro_detalle) REFERENCES detalle_opciones_item_menu(id_opciones_item_menu, nro_detalle),
+    FOREIGN KEY(id_item_menu, id_opciones_item_menu) REFERENCES item_menu_opciones_item_menu(id_item_menu, id_opciones_item_menu)
 );
 
 

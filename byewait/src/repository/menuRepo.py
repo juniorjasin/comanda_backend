@@ -41,7 +41,8 @@ class MenuRepo(repo.Repo):
 				cursor.execute("SELECT doim.id_opciones_item_menu, \
 									   oim.nombre, \
 									   doim.nombre, \
-									   doim.precio \
+									   doim.precio, \
+				             doim.nro_detalle \
 								  FROM item_menu_opciones_item_menu imoim \
 									  JOIN opciones_item_menu oim \
 										ON imoim.id_opciones_item_menu = oim.id \
@@ -53,10 +54,10 @@ class MenuRepo(repo.Repo):
 				detallesOpcionItem = []
 				opcionesItem = []
 				for indexOpcion, opcion in enumerate(opcionesItemMenu):
-					id, nombreOpcion, nombreDetalle, precioDetalle = opcion
-					detallesOpcionItem.append(DetalleOpcionItem(nombre=nombreDetalle, precio=precioDetalle)._asdict())
+					id, nombreOpcion, nombreDetalle, precioDetalle, nroDetalle = opcion
+					detallesOpcionItem.append(DetalleOpcionItem(nro_detalle=nroDetalle, nombre=nombreDetalle, precio=precioDetalle)._asdict())
 					if indexOpcion + 1 == len(opcionesItemMenu) or id != opcionesItemMenu[indexOpcion + 1][0]:
-						opcionesItem.append(OpcionItem(nombre=nombreOpcion, detalle=detallesOpcionItem)._asdict())
+						opcionesItem.append(OpcionItem(id_opcion=id, nombre=nombreOpcion, detalle=detallesOpcionItem)._asdict())
 						detallesOpcionItem = []
 
 				items.append(Item(id=idItemMenu, name=nombreItemMenu, 

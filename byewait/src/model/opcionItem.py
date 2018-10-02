@@ -1,3 +1,3 @@
 from collections import namedtuple
 
-OpcionItem = namedtuple('OpcionItem', 'nombre detalle')
+OpcionItem = namedtuple('OpcionItem', 'id_opcion nombre detalle')

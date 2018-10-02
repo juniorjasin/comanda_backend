@@ -55,9 +55,9 @@ class MenuRepo(repo.Repo):
 				opcionesItem = []
 				for indexOpcion, opcion in enumerate(opcionesItemMenu):
 					id, nombreOpcion, nombreDetalle, precioDetalle, nroDetalle = opcion
-					detallesOpcionItem.append(DetalleOpcionItem(nro_detalle=nroDetalle, nombre=nombreDetalle, precio=precioDetalle)._asdict())
+					detallesOpcionItem.append(DetalleOpcionItem(nro=nroDetalle, nombre=nombreDetalle, precio=precioDetalle)._asdict())
 					if indexOpcion + 1 == len(opcionesItemMenu) or id != opcionesItemMenu[indexOpcion + 1][0]:
-						opcionesItem.append(OpcionItem(id_opcion=id, nombre=nombreOpcion, detalle=detallesOpcionItem)._asdict())
+						opcionesItem.append(OpcionItem(id=id, nombre=nombreOpcion, detalle=detallesOpcionItem)._asdict())
 						detallesOpcionItem = []
 
 				items.append(Item(id=idItemMenu, name=nombreItemMenu, 

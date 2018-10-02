@@ -52,10 +52,10 @@ class MenuRepo(repo.Repo):
 				
 				detallesOpcionItem = []
 				opcionesItem = []
-				for index, opcion in enumerate(opcionesItemMenu):
+				for indexOpcion, opcion in enumerate(opcionesItemMenu):
 					id, nombreOpcion, nombreDetalle, precioDetalle = opcion
 					detallesOpcionItem.append(DetalleOpcionItem(nombre=nombreDetalle, precio=precioDetalle)._asdict())
-					if index + 1 == len(opcionesItemMenu) or id != opcionesItemMenu[index + 1][0]:
+					if indexOpcion + 1 == len(opcionesItemMenu) or id != opcionesItemMenu[indexOpcion + 1][0]:
 						opcionesItem.append(OpcionItem(nombre=nombreOpcion, detalle=detallesOpcionItem)._asdict())
 						detallesOpcionItem = []
 

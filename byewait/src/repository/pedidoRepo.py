@@ -30,7 +30,9 @@ class PedidoRepo(repo.Repo):
                     insertItemPedido = 'INSERT INTO items_pedido(id_item_menu, id_pedidos, id_restaurante, cantidad, aclaraciones) VALUES(%s, %s, %s, %s, %s)'
                     items_pedido = ( item['id'], idPedido, id_restaurante, item['cantidad'], item['aclaraciones'] ) 
                     cursor.execute(insertItemPedido, items_pedido)
-
+                    for opcion in item['opciones']:
+                        insertOpcion = 'INSERT INTO opciones_items_pedido(id_item_menu, id_pedidos, id_opciones_item_menu, nro_detalle) VALUES(%s, %s, %s, %s)'
+                        cursor.execute(insertOpcion, (item['id'], idPedido, opcion['id_opcion'], opcion['nro_detalle']))
             except Exception as e:
                 msg = "Fallo insert a items_pedido: {}".format(e)
                 logger.error(msg)

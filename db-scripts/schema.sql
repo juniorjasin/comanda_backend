@@ -25,13 +25,14 @@ create table if not exists restaurants (
     description         varchar(500)    not null,
     address             varchar(500)    not null,
     image_url           varchar(500)    not null,
+    precio_cubiertos    decimal(4,2)    not null default 0.0 check (precio_cubiertos >= 0), 
     PRIMARY KEY (id_restaurante)
 );
 
 
 -- test para tablas
-INSERT INTO restaurants (name, description, address, image_url)
-VALUES ('La Mamma', 'Restaurante', 'Av. Rafael Núñez 6092, 5021 Córdoba', 'http://34.230.44.202:8888/images/1-lamamma_logo4.jpg');
+INSERT INTO restaurants (name, description, address, image_url, precio_cubiertos)
+VALUES ('La Mamma', 'Restaurante', 'Av. Rafael Núñez 6092, 5021 Córdoba', 'http://34.230.44.202:8888/images/1-lamamma_logo4.jpg', 35.00);
 
 INSERT INTO restaurants (name, description, address, image_url)
 VALUES ('Fresco', 'Restaurante', 'Jose Manuel Estrada 18, Nueva Cordoba', 'http://34.230.44.202:8888/images/2-fresco_logo1.jpg');

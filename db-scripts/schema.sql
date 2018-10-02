@@ -11,6 +11,9 @@ drop table items_pedido;
 drop table pedidos;
 drop table usuarios;
 drop table item_menu;
+drop table opciones_item_menu;
+drop table detalle_opciones_item_menu;
+drop table item_menu_opciones_item_menu;
 drop table categorias;
 drop table restaurants;
 
@@ -112,7 +115,6 @@ VALUES (13, 1, "Controfiletto hongroisse", "Entrecorte en crema de hongos acompa
 INSERT INTO item_menu (id_categoria, id_restaurante, nombre_item_menu, description, precio, image_url)
 VALUES (11, 1, "Antipasto italiano", "antipasto con cebolla picada, berenjenas, zucchini, pimiento y aceite de oliva", "90",
 "http://34.230.44.202:8888/images/1-5.jpg");
-
 
 
 -- restaurante 2: fresco
@@ -220,6 +222,52 @@ INSERT INTO item_menu (id_categoria, id_restaurante, nombre_item_menu, descripti
 VALUES (11, 4, "Rabas", "rabas frescas con mayonesa casera y limon", "150",
 "http://34.230.44.202:8888/images/4-6.jpg");
 
+
+create table if not exists opciones_item_menu (
+    id                  integer         not null AUTO_INCREMENT,
+    nombre              varchar(100)    not null,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO opciones_item_menu(nombre)
+VALUES('Salsas');
+
+INSERT INTO opciones_item_menu(nombre)
+VALUES('Aderezos');
+
+
+create table if not exists detalle_opciones_item_menu (
+    id_opciones_item_menu        integer         not null,
+    nro_detalle                  integer         not null,
+    nombre                       varchar(100)    not null,
+    precio                       varchar(10)     null,
+    PRIMARY KEY (id_opciones_item_menu, nro_detalle),
+    FOREIGN KEY(id_opciones_item_menu) REFERENCES opciones_item_menu(id)
+);
+
+INSERT INTO detalle_opciones_item_menu(id_opciones_item_menu, nro_detalle, nombre, precio)
+VALUES(1, 1, 'Salsa normal', '60.00');
+
+INSERT INTO detalle_opciones_item_menu(id_opciones_item_menu, nro_detalle, nombre, precio)
+VALUES(1, 2, 'Salsa anormal', '0.00');
+
+INSERT INTO detalle_opciones_item_menu(id_opciones_item_menu, nro_detalle, nombre, precio)
+VALUES(2, 1, 'Ketchup', '20.00');
+
+INSERT INTO detalle_opciones_item_menu(id_opciones_item_menu, nro_detalle, nombre, precio)
+VALUES(2, 2, 'Mayonesa', '25.00');
+
+
+create table if not exists item_menu_opciones_item_menu (
+    id_item_menu                 integer         not null,
+    id_opciones_item_menu        integer         not null,
+    PRIMARY KEY (id_item_menu, id_opciones_item_menu),
+    FOREIGN KEY(id_item_menu) REFERENCES item_menu(id_item_menu),
+    FOREIGN KEY(id_opciones_item_menu) REFERENCES opciones_item_menu(id)
+);
+
+INSERT INTO item_menu_opciones_item_menu(id_item_menu, id_opciones_item_menu)
+VALUES(1, 1);
 
 
 create table if not exists usuarios (

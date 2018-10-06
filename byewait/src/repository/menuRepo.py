@@ -6,6 +6,7 @@ from model.item import Item
 from model.opcionItem import OpcionItem 
 from model.detalleOpcionItem import DetalleOpcionItem 
 from model.categoria import Categoria
+from model.subcategoria import Subcategoria
 
 logger = Logger('menuRepo')
 
@@ -21,18 +22,36 @@ class MenuRepo(repo.Repo):
 
 		try:        
 			cursor = self.cnx.cursor()
-			cursor.execute("select categorias.id_categoria, categorias.nombre_categoria, categorias.imagen_categoria, item_menu.id_item_menu, item_menu.nombre_item_menu, item_menu.description, item_menu.image_url, item_menu.precio, item_menu.rating \
-					 FROM item_menu JOIN categorias on item_menu.id_categoria = categorias.id_categoria \
-					 WHERE item_menu.id_restaurante = %s \
-					 ORDER BY categorias.id_categoria ASC",(id,))
+			cursor.execute("select c.id_categoria, \
+			                       c.nombre_categoria, \
+														 c.imagen_categoria, \
+														 im.id_item_menu, \
+														 im.nombre_item_menu, \
+														 im.description, \
+														 im.image_url, \
+														 im.precio, \
+														 im.rating, \
+														 sc.id_subcategoria, \
+														 sc.nombre_subcategoria \
+					              FROM item_menu im \
+												     JOIN categorias c \
+												       on im.id_categoria = c.id_categoria \
+														 LEFT JOIN subcategorias_categorias sc \
+														   on sc.id_categoria = im.id_categoria \
+															and sc.id_subcategoria = im.id_subcategoria \
+					             WHERE im.id_restaurante = %s \
+				              ORDER BY c.id_categoria ASC",(id,))
 			rows = cursor.fetchall()
+			logger.debug('!!!!!!!!!!!!!')
+			logger.debug(rows)
 			if rows == None or len(rows) == 0:
 				return menu
 			items = []
 			categorias = []
 			for index, row in enumerate(rows):
 				idCategoria, nombreCategoria, imagenCategoria, idItemMenu, nombreItemMenu, \
-				descriptionItemMenu, imageUrlItemMenu, precioItemMenu, ratingItemMenu \
+				descriptionItemMenu, imageUrlItemMenu, precioItemMenu, ratingItemMenu, \
+				idSubcategoria, nombreSubcategoria \
 				= row
 				# Si viene null no le aplico float
 				ratingItemMenu = float(ratingItemMenu) if ratingItemMenu != None else ratingItemMenu
@@ -62,7 +81,9 @@ class MenuRepo(repo.Repo):
 
 				items.append(Item(id=idItemMenu, name=nombreItemMenu, 
 					description=descriptionItemMenu, image_url=imageUrlItemMenu, 
-					price=float(precioItemMenu), rating=ratingItemMenu, opciones=opcionesItem)._asdict())
+					price=float(precioItemMenu), rating=ratingItemMenu, 
+					subcategoria = Subcategoria(id=idSubcategoria, name=nombreSubcategoria)._asdict(), 
+					opciones=opcionesItem)._asdict())
 
 				if index + 1 == len(rows) or idCategoria != rows[index + 1][0]:
 					categorias.append(Categoria(

@@ -41,12 +41,14 @@ class ComandasWebSocket(websocket.WebSocketHandler):
     itemsService = ItemsService()
     # Los items vienen con id nomás, le agrego info adicional(nombre, precio...)
     for item in data['data']['items']:
-      id, name, description, image_url, price, rating = itemsService.getItem(item['id'])
+      id, name, description, image_url, price, rating, opciones = itemsService.getItem(item['id'])
+
       item['name'] = name
       item['description'] = description
       item['image_url'] = image_url
       item['price'] = price
       item['rating'] = rating
+      item['opciones'] = opciones
 
     # buscar en todas las conexiones y mandarsela a la que corresponda
     for i in utils.globalvars.webSockConns:

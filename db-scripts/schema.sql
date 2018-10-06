@@ -410,23 +410,25 @@ create table if not exists tags_restaurants (
     FOREIGN KEY(id_restaurante) REFERENCES restaurants(id_restaurante)
 );
 
+-- BUG: no se porque no se pueden agregar si ejecuto el schema.sql pero si copio y 
+--      pego esto en la terminal si se ejecuta 
 -- la mamma
 INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (4,1);
 INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (5,1);
 INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (6,1);
 
 -- fresco, peñon, antares
-INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (1,2);
-INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (2,2);
-INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (3,2);
+-- INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (1,2);
+-- INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (2,2);
+-- INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (3,2);
 
-INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (1,3);
-INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (2,3);
-INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (3,3);
+-- INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (1,3);
+-- INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (2,3);
+-- INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (3,3);
 
-INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (1,4);
-INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (2,4);
-INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (3,4);
+-- INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (1,4);
+-- INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (2,4);
+-- INSERT INTO tags_restaurants (id_tag, id_restaurante) VALUES (3,4);
 
 
 create table if not exists managers (
@@ -442,8 +444,13 @@ create table if not exists managers (
 INSERT INTO managers (username, email, password, id_restaurante) 
 VALUES ('jrjs', 'jrjs@gmail.com', '$2b$12$xzcHoLXLOa.bO7XEkqQ8wupvMUFTsMgNnX8.KbxCSEMJ.zfv95DbO', 1);
 
-INSERT INTO managers (username, email, password, id_restaurante) 
-VALUES ('juan', 'juan@gmail.com', '$2b$12$qxYL/c5KbxDb0iIvVgvrYuow20y7BRgk8JV6BeMQ2Cy1wMrNAabU2', 2);
 
 INSERT INTO managers (username, email, password, id_restaurante) 
- VALUES ('andi', 'andi@gmail.com', '$2b$12$AftbQ7QacpeB/VOVlXeJT.HEt0NwfNbIKF0NozVxvhZuhKnheeN6m', 3);
+VALUES ('admin', 'admin@lamamma.com', '$2b$12$xzcHoLXLOa.bO7XEkqQ8wupvMUFTsMgNnX8.KbxCSEMJ.zfv95DbO', 1);
+
+
+-- INSERT INTO managers (username, email, password, id_restaurante) 
+-- VALUES ('juan', 'juan@gmail.com', '$2b$12$qxYL/c5KbxDb0iIvVgvrYuow20y7BRgk8JV6BeMQ2Cy1wMrNAabU2', 2);
+
+-- INSERT INTO managers (username, email, password, id_restaurante) 
+-- VALUES ('andi', 'andi@gmail.com', '$2b$12$AftbQ7QacpeB/VOVlXeJT.HEt0NwfNbIKF0NozVxvhZuhKnheeN6m', 3);

@@ -1,20 +1,20 @@
 INSERT INTO restaurants (name, description, address, image_url, precio_cubiertos)
 VALUES ('La Mamma', 'Restaurante', 'Av. Rafael Núñez 6092, 5021 Córdoba', 'http://34.230.44.202:8888/images/1-lamamma_logo4.jpg', 35.00);
 
-INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Antipasti Freddi", "https://image.flaticon.com/icons/svg/174/174381.svg"); --1
-INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Antipasti Caldi", "https://image.flaticon.com/icons/svg/174/174378.svg"); --2
-INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Pasta Secca De Cecco", "https://image.flaticon.com/icons/svg/701/701980.svg"); --3
-INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Le lasagne La Mamma", "https://image.flaticon.com/icons/svg/468/468631.svg"); --4
-INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("La Pasta Fatta in Casa La Mamma", "https://image.flaticon.com/icons/svg/701/701980.svg"); --5
-INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Pasta Ripiena La Mamma", "https://image.flaticon.com/icons/svg/701/701980.svg"); --6
-INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Risotti  La  Mamma", "https://image.flaticon.com/icons/svg/94/94322.svg"); --7
-INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Carni Alla Griglia", "https://image.flaticon.com/icons/svg/80/80298.svg"); --8
-INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Spiedini  La  Mamma", "https://image.flaticon.com/icons/svg/933/933286.svg"); --9
-INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Frutti  Di  Mare", "https://image.flaticon.com/icons/svg/701/701976.svg"); --10
-INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Carni Bianche", "https://image.flaticon.com/icons/svg/933/933310.svg"); --11
-INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Carni Rosse", "https://image.flaticon.com/icons/svg/933/933310.svg"); --12
-INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Insalate", "https://image.flaticon.com/icons/svg/701/701974.svg"); --13
-INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Zuppe", "https://image.flaticon.com/icons/svg/203/203811.svg"); --14
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Antipasti Freddi", "https://image.flaticon.com/icons/svg/174/174381.svg"); 
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Antipasti Caldi", "https://image.flaticon.com/icons/svg/174/174378.svg"); 
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Pasta Secca De Cecco", "https://image.flaticon.com/icons/svg/701/701980.svg"); 
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Le lasagne La Mamma", "https://image.flaticon.com/icons/svg/468/468631.svg"); 
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("La Pasta Fatta in Casa La Mamma", "https://image.flaticon.com/icons/svg/701/701980.svg"); 
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Pasta Ripiena La Mamma", "https://image.flaticon.com/icons/svg/701/701980.svg");
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Risotti  La  Mamma", "https://image.flaticon.com/icons/svg/94/94322.svg");
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Carni Alla Griglia", "https://image.flaticon.com/icons/svg/80/80298.svg");
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Spiedini  La  Mamma", "https://image.flaticon.com/icons/svg/933/933286.svg");
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Frutti  Di  Mare", "https://image.flaticon.com/icons/svg/701/701976.svg");
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Carni Bianche", "https://image.flaticon.com/icons/svg/933/933310.svg");
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Carni Rosse", "https://image.flaticon.com/icons/svg/933/933310.svg");
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Insalate", "https://image.flaticon.com/icons/svg/701/701974.svg");
+INSERT INTO categorias (nombre_categoria, imagen_categoria) VALUES ("Zuppe", "https://image.flaticon.com/icons/svg/203/203811.svg");
 
 
 INSERT INTO item_menu (id_categoria, id_restaurante, nombre_item_menu, description, precio, image_url)

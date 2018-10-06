@@ -40,13 +40,12 @@ class MenuRepo(repo.Repo):
 														   on sc.id_categoria = im.id_categoria \
 															and sc.id_subcategoria = im.id_subcategoria \
 					             WHERE im.id_restaurante = %s \
-				              ORDER BY c.id_categoria ASC",(id,))
+				              ORDER BY c.id_categoria, im.id_subcategoria ASC",(id,))
 			rows = cursor.fetchall()
-			logger.debug('!!!!!!!!!!!!!')
-			logger.debug(rows)
 			if rows == None or len(rows) == 0:
 				return menu
 			items = []
+			subcategorias = []
 			categorias = []
 			for index, row in enumerate(rows):
 				idCategoria, nombreCategoria, imagenCategoria, idItemMenu, nombreItemMenu, \
@@ -82,13 +81,18 @@ class MenuRepo(repo.Repo):
 				items.append(Item(id=idItemMenu, name=nombreItemMenu, 
 					description=descriptionItemMenu, image_url=imageUrlItemMenu, 
 					price=float(precioItemMenu), rating=ratingItemMenu, 
-					subcategoria = Subcategoria(id=idSubcategoria, name=nombreSubcategoria)._asdict(), 
 					opciones=opcionesItem)._asdict())
+
+				if  index + 1 == len(rows) or idSubcategoria != rows[index + 1][9] or idCategoria != rows[index + 1][0]:
+					subcategorias.append(Subcategoria(
+            id=idSubcategoria, name=nombreSubcategoria, items=items)._asdict())
+					items = []
 
 				if index + 1 == len(rows) or idCategoria != rows[index + 1][0]:
 					categorias.append(Categoria(
-							id=idCategoria, name=nombreCategoria, image=imagenCategoria, items=items)._asdict())
-					items = []
+							id=idCategoria, name=nombreCategoria, 
+							image=imagenCategoria, subcategorias=subcategorias)._asdict())
+					subcategorias = []
 			menu = {
 				"style":{  
 					"font-family":"Helvetica",

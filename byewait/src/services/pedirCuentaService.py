@@ -13,7 +13,9 @@ class PedirCuentaService:
         logger.debug('pedirCuenta')
         for conn in utils.globalvars.webSockConns:
             conn.conexion.reportMesaPideCuenta(idRestaurante, idMesa)
+        logger.debug('salgo de pedirCuenta')
 
     def actualizarPedidos(self, pedidos, estado):
+        logger.debug('actualizarPedidos')
         self.repo.actualizarPedidos(pedidos, estado)
         return

@@ -49,7 +49,7 @@ class RestaurantesRepo(repo.Repo):
         restaurante = None
         try:        
             cursor = self.cnx.cursor()
-            query = "SELECT id_restaurante, name, description, address, image_url \
+            query = "SELECT id_restaurante, name, description, address, image_url, precio_cubiertos \
                        FROM restaurants \
                       WHERE id_restaurante = %s" 
             cursor.execute(query, (id_restaurante,))
@@ -58,7 +58,7 @@ class RestaurantesRepo(repo.Repo):
             cursor.close()
 
             if row is not None:     
-                id, name, description, address, image_url = row
+                id, name, description, address, image_url, precio_cubiertos = row
                 tags = self.getAllRestaurantsTags(id_restaurante)
                 restaurante = Restaurante(
                     id=id, 
@@ -66,11 +66,12 @@ class RestaurantesRepo(repo.Repo):
                     description=description,
                     address=address, 
                     image_url=image_url, 
+                    precio_cubiertos=float(precio_cubiertos),
                     tags=tags)
                 
 
         except Exception as e2:
-            msg = "Fallo la consulta de getAllRestaurants a la base de datos: {}".format(e2)
+            msg = "Fallo la consulta de getRestaurantById a la base de datos: {}".format(e2)
             logger.error(msg)
             raise exceptions.InternalServerError(5001)
         return restaurante

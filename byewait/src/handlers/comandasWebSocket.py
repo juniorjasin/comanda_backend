@@ -5,6 +5,7 @@ from services.itemsService import ItemsService
 from decorators.handleException import handleException
 from model.conexion import Conexion
 import json
+from repository.comandaRepo import ComandaRepo
 
 logger = Logger('---------------comandasWebSocket---------------')
 
@@ -39,30 +40,39 @@ class ComandasWebSocket(websocket.WebSocketHandler):
     data['code'] = 0
     id_resto = data['restaurante']
     itemsService = ItemsService()
-    # Los items vienen con id nomás, le agrego info adicional(nombre, precio...)
-    for item in data['data']['items']:
-      id, name, description, image_url, price, rating, opciones = itemsService.getItem(item['id'])
 
-      item['name'] = name
-      item['description'] = description
-      item['image_url'] = image_url
-      item['price'] = price
-      item['rating'] = rating
-      item['opciones'] = opciones
+    logger.debug('data:{}'.format(data))
+    repo = ComandaRepo()
+    items = repo.getItemsFromPedido(data['order']['id'])
+    data['data']['items'] = items
+
+    # id_pedido = data['order']['id']
+    # for item in data['data']['items']:
+    #   id, name, description, image_url, price, rating, opciones = itemsService.getItem(item['id'])
+    #   id_item = item['id']
+      
+
+    #   item['name'] = name
+    #   item['description'] = description
+    #   item['image_url'] = image_url
+    #   item['price'] = price
+    #   item['rating'] = rating
+    #   item['opciones'] = opciones
 
     # buscar en todas las conexiones y mandarsela a la que corresponda
-    for i in utils.globalvars.webSockConns:
-      logger.debug('todas las conexiones:{}'.format(i))
-      logger.debug('vino pedido de restaurant:{}, y estoy revisando conexion con restaurante:{}'.format(id_resto, i.id_restaurante))
-      if i.id_restaurante == id_resto and i.conexion == self:
-        logger.debug('se envia a restaurante:{}'.format(i.id_restaurante))
-        i.conexion.write_message(data)
+    for cnx in utils.globalvars.webSockConns:
+      logger.debug('todas las conexiones:{}'.format(cnx))
+      logger.debug('vino pedido de restaurant:{}, y estoy revisando conexion con restaurante:{}'.format(id_resto, cnx.id_restaurante))
+      if cnx.id_restaurante == id_resto and cnx.conexion == self:
+        logger.debug('se envia a restaurante:{}'.format(cnx.id_restaurante))
+        logger.debug('ENVIO:{}'.format(data))
+        cnx.conexion.write_message(data)
 
   @handleException 
   def on_close(self):
-    for i in utils.globalvars.webSockConns:
-      if i.conexion == self:
-        logger.debug('Conexión cerrada para objeto:{}, del restaurante: {}'.format(i.conexion, i.id_restaurante))
-        utils.globalvars.webSockConns.remove(i)
+    for cnx in utils.globalvars.webSockConns:
+      if cnx.conexion == self:
+        logger.debug('Conexión cerrada para objeto:{}, del restaurante: {}'.format(cnx.conexion, cnx.id_restaurante))
+        utils.globalvars.webSockConns.remove(cnx)
 
     logger.debug('conexiones abiertas:{}'.format(len(utils.globalvars.webSockConns)))

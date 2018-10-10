@@ -126,6 +126,14 @@ VALUES(1, 1);
 INSERT INTO item_menu_opciones_item_menu(id_item_menu, id_opciones_item_menu)
 VALUES(1, 2);
 
+INSERT INTO item_menu_opciones_item_menu(id_item_menu, id_opciones_item_menu)
+VALUES(2, 1);
+
+INSERT INTO item_menu_opciones_item_menu(id_item_menu, id_opciones_item_menu)
+VALUES(3, 1);
+INSERT INTO item_menu_opciones_item_menu(id_item_menu, id_opciones_item_menu)
+VALUES(3, 2);
+
 
 INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('juan', 'juan@gmail.com', 'juan cruz', 'borssotto', '$2b$12$qxYL/c5KbxDb0iIvVgvrYuow20y7BRgk8JV6BeMQ2Cy1wMrNAabU2');
 INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('andi', 'andi@gmail.com', 'andres', 'balestrini', '$2b$12$AftbQ7QacpeB/VOVlXeJT.HEt0NwfNbIKF0NozVxvhZuhKnheeN6m');

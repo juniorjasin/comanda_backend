@@ -20,11 +20,11 @@ class CredencialesHandler(base.BaseHandler):
     def post(self):
         logger.debug("post")
         try:
-            data = json.loads(self.request.body)
+            data = json.loads(self.request.body.decode('utf-8'))
             token = data["token"]
             username = data["username"]
         except Exception as e:
-            logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(self.request.body))
+            logger.error('Body incorrecto, exception: : {}'.format(e))
             raise exceptions.BadRequest(3001)
         svc = CredencialesService()
         token = svc.validarToken(token, username)

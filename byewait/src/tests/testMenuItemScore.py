@@ -20,7 +20,7 @@ class TestMenuItemScore(Test):
 
     def setUp(self):
         super(TestMenuItemScore, self).setUp()
-        cnx = pymysql.connect(db="byewait", user="dev", passwd="changeme", port=3306, host="mysql")
+        cnx = pymysql.connect(db="byewait", user="dev", passwd="changeme", port=3307, host="mysql")
         cursor = cnx.cursor()
         cursor.execute("insert into usuarios(username, nombre, apellido, email, password) values('test', 'nombretest', 'apellidotest', 'test', 'test')")
         cursor.execute("insert into categorias(nombre_categoria, imagen_categoria) values('test', 'test')")
@@ -34,7 +34,7 @@ class TestMenuItemScore(Test):
         body = '{"incorrect_parameter": 1}'
         headers = {'Authorization': token}
         response = requests.post("http://localhost:8888/menu/item/score", data=body, headers=headers)
-        content = json.loads(response.content)
+        content = json.loads(response.content.decode('utf-8'))
         self.assertTrue('user_message' in content)
         self.assertTrue('code' in content)
         self.assertEqual(response.status_code, 400)
@@ -42,7 +42,7 @@ class TestMenuItemScore(Test):
     def test_getItemsMenuNoBody(self):
         headers = {'Authorization': token}
         response = requests.post("http://localhost:8888/menu/item/score", headers=headers)
-        content = json.loads(response.content)
+        content = json.loads(response.content.decode('utf-8'))
         self.assertTrue('user_message' in content)
         self.assertTrue('code' in content)
         self.assertEqual(response.status_code, 400)
@@ -51,7 +51,10 @@ class TestMenuItemScore(Test):
         body = '{"menu_item_score": {"id_item_menu": 1,"id_usuario": 1,"score": 2}}'
         headers = {'Authorization': token}
         response = requests.post("http://localhost:8888/menu/item/score", data=body, headers=headers)
-        content = json.loads(response.content)
+        content = json.loads(response.content.decode('utf-8'))
+
+        print('menu_item_score:{}'.format(content))
+
         self.assertTrue('id' in content['menu_item_score'])
         self.assertTrue('id_item_menu' in content['menu_item_score'])
         self.assertTrue('id_usuario' in content['menu_item_score'])

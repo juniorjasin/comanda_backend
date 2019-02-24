@@ -29,7 +29,7 @@ class RegisterHandler(base.BaseHandler):
     @handleException
     def post(self):
         logger.debug("post")
-        data = json.loads(self.request.body)
+        data = json.loads(self.request.body.decode('utf-8'))
         try:
             username = data['user']['username']
             password = data['user']['password']
@@ -41,7 +41,7 @@ class RegisterHandler(base.BaseHandler):
             nombre.encode('latin-1')
             apellido.encode('latin-1')
         except Exception as e:
-            logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(self.request.body)) 
+            logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(data)) 
             raise exceptions.BadRequest(3001)
         if not bool(re.match(r"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", email)):
             logger.error('Mal formato de email, email: {}'.format(email))

@@ -41,7 +41,7 @@ class PedidoHandler(base.BaseHandler):
     def post(self, restaurante):
         logger.debug("post")
         try:
-            data = json.loads(self.request.body)
+            data = json.loads(self.request.body.decode('utf-8'))
             idUsuario = data['order']['user']['id_user']
             nombreUser = data['order']['user']['nombre']
             apellidoUser = data['order']['user']['apellido']

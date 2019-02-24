@@ -9,14 +9,14 @@ class TestCredenciales(Test):
     def test_postPedidoIncorrectBody(self):
         body = '{"incorrect_parameter": 1}'
         response = requests.post("http://localhost:8888/credenciales", body)
-        content = json.loads(response.content)
+        content = json.loads(response.content.decode('utf-8'))
         self.assertTrue('user_message' in content)
         self.assertTrue('code' in content)
         self.assertEqual(response.status_code, 400)
 
     def test_postNoBody(self):
         response = requests.post("http://localhost:8888/credenciales")
-        content = json.loads(response.content)
+        content = json.loads(response.content.decode('utf-8'))
         self.assertTrue('user_message' in content)
         self.assertTrue('code' in content)
         self.assertEqual(response.status_code, 400)
@@ -24,7 +24,7 @@ class TestCredenciales(Test):
     def test_postTokenExpired(self):
         body = '{"username":"andi","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyTmFtZSI6ImFuZGkiLCJleHAiOjE1MzU1NjU1MjN9.WfbogQuNnXbtc_KhFLTeozeBp5dDihPWgNvFRC4C7coi1yiXWUlGZSGFJ2Sc16CAxLf-4XshJM--lCT58HDYDmzkFXDGvUh80GqQSf_LUx8E59dhqLGXefLcaIRp-iCn6F6yvyuPlDd2Sx89LrbbkpKHb8xoORezyy5ESO-vLuDrnSFS3SBtSwfe9QyGsl_YaPC1WvnROQHFi2QpdVNVdAxr0IHOu8-4wvpI6GLQOqqI5A3412oMk7i-XHQE5-HAZHGrqsuKkxekNcnOT7mysFDs5jkfajz1vedwFvM6F4fiLliFCMeF3sMg1HQgHr2XrVrUmCpWp8KR9qppyXhMP7zPgf2u-lAkB-XJgF7qIRLa27HwJNhq5a6_QQj0tRLzJ8t37GAUwzLK-XKcI5dclU0WTK8NbMDX6cvA7jX6AgvQxwTFLd9j8724hUIfYUoTRnnhnBlEQ9cAwmPhXe-vy7Uz217zV0oBXhiyoICoOOFt0CSGL6WOyan7WypWbVdIs60QlKPszWI1DzuwhqN-Qh6EFHWlhIl518TdrU3I4_YrMXwB6dtlajxp8cjquL2Z61ttoZFseFjRfJgZt3q244jsrAFFBkrchzXhKZdNzR0opECEcVUmIXQ_j8vQXzweGcHFon3Ee32owd9Q78VqDyDXSPJRvsPgfitI10jZmfg"}'
         response = requests.post("http://localhost:8888/credenciales",body)
-        content = json.loads(response.content)
+        content = json.loads(response.content.decode('utf-8'))
         self.assertTrue('token' in content) 
         self.assertEqual(response.status_code, 200)
 
@@ -39,7 +39,7 @@ class TestCredenciales(Test):
         2lMZiLnaTexlWYmh5_NwjrKQ_fp59qFD4XWPg9Hys_VyMwxlognx-0Gh81GO405j6h68Pq3fAOpk7zCqgMY5kgdIRkEWbzQ \
         N2P9qLaNc2ioEK_JpQFbU1ZltgDv4W4BhjtP5amMW_cl-xmKE","username":"andi"}'
         response = requests.post("http://localhost:8888/credenciales",body)
-        content = json.loads(response.content)
+        content = json.loads(response.content.decode('utf-8'))
         self.assertTrue('user_message' in content)
         self.assertTrue('code' in content)
         self.assertEqual(response.status_code, 401)

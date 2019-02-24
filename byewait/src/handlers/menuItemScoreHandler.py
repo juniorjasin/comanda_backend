@@ -23,13 +23,13 @@ class MenuItemScoreHandler(base.BaseHandler):
     def post(self):
         logger.debug("post")
         try:
-          data = json.loads(self.request.body)
+          data = json.loads(self.request.body.decode('utf-8'))
           data['menu_item_score']
           data['menu_item_score']['id_item_menu']
           data['menu_item_score']['id_usuario']
           data['menu_item_score']['score']
         except Exception as e:
-          logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(self.request.body)) 
+          logger.error('exception: : {}'.format(e)) 
           raise exceptions.BadRequest(4001)
         svc = MenuItemScoreService()
         score = svc.insertScore(**data['menu_item_score'])

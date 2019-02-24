@@ -15,14 +15,14 @@ class TestRegister(Test):
     def test_postIncorrectBody(self):
         body = '{"incorrect_parameter": 1}'
         response = requests.post("http://localhost:8888/register", body)
-        content = json.loads(response.content)
+        content = json.loads(response.content.decode('utf-8'))
         self.assertTrue('user_message' in content)
         self.assertTrue('code' in content)
         self.assertEqual(response.status_code, 400)
 
     def test_postNoBody(self):
         response = requests.post("http://localhost:8888/register")
-        content = json.loads(response.content)
+        content = json.loads(response.content.decode('utf-8'))
         self.assertTrue('user_message' in content)
         self.assertTrue('code' in content)
         self.assertEqual(response.status_code, 500)
@@ -36,7 +36,7 @@ class TestRegister(Test):
         # Registrar mismo usuarios
         response = requests.post("http://localhost:8888/register", data=body)
         self.assertEqual(response.status_code, 409)
-        content = json.loads(response.content)
+        content = json.loads(response.content.decode('utf-8'))
         self.assertTrue('user_message' in content)
         self.assertTrue('code' in content)
 
@@ -44,7 +44,7 @@ class TestRegister(Test):
         body = '{"user":{"username": "success", "password": "success", "nombre": "test", "apellido": "test", "email": "success@test.com"}}'
         response = requests.post("http://localhost:8888/register", data=body)
         self.assertEqual(response.status_code, 200)
-        content = json.loads(response.content)
+        content = json.loads(response.content.decode('utf-8'))
         self.assertTrue('user' in content)
         self.assertTrue('token' in content)
         self.assertTrue('id' in content['user'])
@@ -58,7 +58,7 @@ class TestRegister(Test):
             response = requests.post("http://localhost:8888/register", data=body)
             # self.assertEqual(response.status_code, 400)
             self.assertEqual(response.status_code, 500)
-            content = json.loads(response.content)
+            content = json.loads(response.content.decode('utf-8'))
             self.assertTrue('user_message' in content)
             self.assertTrue('code' in content)
                 

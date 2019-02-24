@@ -32,9 +32,14 @@ class ComandaHandler(base.BaseHandler):
     @handleException
     def post(self):
         logger.debug('post')       
-        data = json.loads(self.request.body)
-        id_pedido = data['id_pedido']
-        nuevo_estado = data['estado']
+
+        try:
+            data = json.loads(self.request.body.decode('utf-8'))
+            id_pedido = data['id_pedido']
+            nuevo_estado = data['estado']
+        except Exception as e:
+            logger.error('exception: : {}'.format(e))
+            raise exceptions.BadRequest(3001)
 
         svc = ComandaService()
         svc.actualizarEstadoPlato(id_pedido, nuevo_estado)

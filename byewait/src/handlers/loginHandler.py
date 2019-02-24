@@ -29,14 +29,17 @@ class LoginHandler(base.BaseHandler):
     def post(self):
         logger.debug('post')
         try:
-            data = json.loads(self.request.body)
+            logger.debug('intento sacar body vacio')
+            data = json.loads(self.request.body.decode('utf-8'))
+            logger.debug('despues de obtenerlo')
             username = data['user']['username']
             password = data['user']['password']
             username.encode('latin-1')
             password.encode('latin-1')
         except Exception as e:
-            logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(self.request.body))
+            logger.error('Exception: : {}'.format(e))
             raise exceptions.BadRequest(3001)
+
         svc = LoginService()
         respuesta = svc.validarUsuario(username, password)
         self.finish(respuesta)

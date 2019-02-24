@@ -1,6 +1,10 @@
 from tornado.ioloop import IOLoop
 import tornado.web
 import os
+from utils.logger import Logger
+
+logger = Logger('app')
+
 # Crear carpeta para logs
 newpath = os.environ['INSTALL_DIR'] + '/logs' 
 if not os.path.exists(newpath):
@@ -43,8 +47,10 @@ class Application(tornado.web.Application):
 def main():
     app = Application()
     app.listen(8888)
+    logger.debug("listening at 8888")
     # utils.globals.init() # Inicializo web socket connections en []
     IOLoop.instance().start()
+    
 
 
 if __name__ == '__main__':

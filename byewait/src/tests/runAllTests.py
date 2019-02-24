@@ -8,8 +8,10 @@ from testMenuItemScore import TestMenuItemScore
 from testCredenciales import TestCredenciales
 
 if __name__ == '__main__':
-    test_classes_to_run = [TestLogin, TestMenu, TestPedido, TestRegister, TestRestaurante, TestMenuItemScore, TestCredenciales]
 
+    test_classes_to_run = [TestLogin, TestMenu, TestPedido, TestRegister, TestRestaurante, TestMenuItemScore, TestCredenciales]
+    # no tienen test: comandaHandler, comandasWebSocket, historialPedidosHandler, managerHandler, pedirCuentaHandler
+    
     loader = unittest.TestLoader()
 
     suites_list = []

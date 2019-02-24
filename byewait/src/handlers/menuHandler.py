@@ -29,10 +29,13 @@ class MenuHandler(base.BaseHandler):
     def post(self, restaurante):
         logger.debug("post")
         try:
-            data = json.loads(self.request.body)
+            # logger.debug('body:' + self.request.body.decode('utf-8'))
+            body = self.request.body.decode('utf-8')
+            data = json.loads(body)
+            logger.debug('data:{}'.format(data))
             id_restaurante = data['id_restaurante']
         except Exception as e:
-            logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(self.request.body)) 
+            logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(body)) 
             raise exceptions.BadRequest(5001)
         svc = MenuService()
         menu = svc.getItemsMenu(id_restaurante)

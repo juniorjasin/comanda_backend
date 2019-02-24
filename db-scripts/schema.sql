@@ -64,56 +64,6 @@ create table if not exists item_menu (
     FOREIGN KEY (id_restaurante) REFERENCES restaurants(id_restaurante)
 );
 
-delimiter |
-create trigger check_subcategoria_item_menu_on_insert
-  before insert on item_menu 
-  for each row begin
-    if new.id_subcategoria is not null
-      then
-        if (select count(*) 
-          from subcategorias_categorias 
-         where id_categoria    = new.id_categoria
-           and id_subcategoria = new.id_subcategoria) = 0 
-          then
-            signal sqlstate '45000';
-        end if;
-    else
-      if (select count(*)
-            from subcategorias_categorias 
-           where id_categoria = new.id_categoria) > 0 
-        then
-          signal sqlstate '45000';
-      end if;
-    end if;
-  end
-|
-delimiter ;
-
-delimiter |
-create trigger check_subcategoria_item_menu_on_update
-  before update on item_menu 
-  for each row begin
-    if new.id_subcategoria is not null
-      then
-        if (select count(*) 
-          from subcategorias_categorias 
-         where id_categoria    = new.id_categoria
-           and id_subcategoria = new.id_subcategoria) = 0 
-          then
-            signal sqlstate '45000';
-        end if;
-    else
-      if (select count(*)
-            from subcategorias_categorias 
-           where id_categoria = new.id_categoria) > 0 
-        then
-          signal sqlstate '45000';
-      end if;
-    end if;
-  end
-|
-delimiter ;
-
 
 create table if not exists opciones_item_menu (
     id                  integer         not null AUTO_INCREMENT,
@@ -161,43 +111,6 @@ create table if not exists scores_item_menu (
     FOREIGN KEY(id_item_menu)    REFERENCES item_menu(id_item_menu),
     FOREIGN KEY (id_usuario)     REFERENCES usuarios(id_usuario)
 );
-
-delimiter |
-create trigger update_item_menu_rating_on_insert
-  after insert on scores_item_menu
-  for each row begin
-    update item_menu set rating = (select avg(score) 
-                                    from scores_item_menu 
-                                   where id_item_menu = new.id_item_menu)
-    where id_item_menu = new.id_item_menu;
-end
-|
-delimiter ;
-
-delimiter |
-create trigger update_item_menu_rating_on_update
-  after update on scores_item_menu
-  for each row begin
-  update item_menu set rating = (select avg(score) 
-                                  from scores_item_menu 
-                                 where id_item_menu = new.id_item_menu)
-  where id_item_menu = new.id_item_menu;
-end
-|
-delimiter ;
-
-delimiter |
-create trigger update_item_menu_rating_on_delete
-  after delete on scores_item_menu
-  for each row begin
-  update item_menu set rating = (select avg(score) 
-                                  from scores_item_menu 
-                                 where id_item_menu = old.id_item_menu)
-  where id_item_menu = old.id_item_menu;
-end
-|
-delimiter ;
-
 
 create table if not exists pedidos (
     id_pedidos          integer         not null AUTO_INCREMENT,
@@ -262,3 +175,108 @@ create table if not exists managers (
     FOREIGN KEY(id_restaurante) REFERENCES restaurants(id_restaurante),
     PRIMARY KEY (id_manager)
 );
+
+
+
+
+
+
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+-----------------------------------TRIGGERS--------------------------------------------
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+
+
+
+delimiter |
+create trigger update_item_menu_rating_on_insert
+  after insert on scores_item_menu
+  for each row begin
+    update item_menu set rating = (select avg(score) 
+                                    from scores_item_menu 
+                                   where id_item_menu = new.id_item_menu)
+    where id_item_menu = new.id_item_menu;
+end
+|
+delimiter ;
+
+
+
+delimiter |
+create trigger update_item_menu_rating_on_update
+  after update on scores_item_menu
+  for each row begin
+  update item_menu set rating = (select avg(score) 
+                                  from scores_item_menu 
+                                 where id_item_menu = new.id_item_menu)
+  where id_item_menu = new.id_item_menu;
+end
+|
+delimiter ;
+
+delimiter |
+create trigger update_item_menu_rating_on_delete
+  after delete on scores_item_menu
+  for each row begin
+  update item_menu set rating = (select avg(score) 
+                                  from scores_item_menu 
+                                 where id_item_menu = old.id_item_menu)
+  where id_item_menu = old.id_item_menu;
+end
+|
+delimiter ;
+
+
+
+delimiter |
+create trigger check_subcategoria_item_menu_on_insert
+  before insert on item_menu 
+  for each row begin
+    if new.id_subcategoria is not null
+      then
+        if (select count(*) 
+          from subcategorias_categorias 
+         where id_categoria    = new.id_categoria
+           and id_subcategoria = new.id_subcategoria) = 0 
+          then
+            signal sqlstate '45000';
+        end if;
+    else
+      if (select count(*)
+            from subcategorias_categorias 
+           where id_categoria = new.id_categoria) > 0 
+        then
+          signal sqlstate '45000';
+      end if;
+    end if;
+  end
+|
+delimiter ;
+
+
+
+delimiter |
+create trigger check_subcategoria_item_menu_on_update
+  before update on item_menu 
+  for each row begin
+    if new.id_subcategoria is not null
+      then
+        if (select count(*) 
+          from subcategorias_categorias 
+         where id_categoria    = new.id_categoria
+           and id_subcategoria = new.id_subcategoria) = 0 
+          then
+            signal sqlstate '45000';
+        end if;
+    else
+      if (select count(*)
+            from subcategorias_categorias 
+           where id_categoria = new.id_categoria) > 0 
+        then
+          signal sqlstate '45000';
+      end if;
+    end if;
+  end
+|
+delimiter ;

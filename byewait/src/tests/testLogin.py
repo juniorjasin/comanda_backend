@@ -22,7 +22,6 @@ class TestLogin(Test):
     def test_postNoBody(self):
         response = requests.post("http://localhost:8888/login")
         content = json.loads(response.content.decode('utf-8'))
-        print(content)
         self.assertTrue('user_message' in content)
         self.assertTrue('code' in content)
         self.assertEqual(response.status_code, 400)

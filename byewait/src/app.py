@@ -2,6 +2,8 @@ from tornado.ioloop import IOLoop
 import tornado.web
 import os
 from utils.logger import Logger
+from memory_profiler import profile
+import sys
 
 logger = Logger('app')
 
@@ -43,15 +45,35 @@ class Application(tornado.web.Application):
         ]
         tornado.web.Application.__init__(self, handlers)
 
-
+fp=open('memory_profiler.log','w+')
+@profile(precision=6)
 def main():
+    ''' codigo original: menos performante '''
+    # app = Application()
+    # app.listen(8888)
+    # logger.debug("listening at 8888")
+    # # utils.globals.init() # Inicializo web socket connections en []
+    # IOLoop.instance().start()
+
+    ''' segunda version: usa todos los procesadores, mucho mas performante que el original '''
     app = Application()
-    app.listen(8888)
+    server = tornado.httpserver.HTTPServer(app)
+    server.bind(8888)
+    server.start(0)  # forks one process per cpu
     logger.debug("listening at 8888")
-    # utils.globals.init() # Inicializo web socket connections en []
-    IOLoop.instance().start()
+    IOLoop.current().start()
     
+    ''' tercera version: abre sockets, igual performance  '''
+    # app = Application()
+    # sockets = tornado.netutil.bind_sockets(8888)
+    # tornado.process.fork_processes(0)
+    # server = tornado.httpserver.HTTPServer(app)
+    # server.add_sockets(sockets)
+    # logger.debug("listening at 8888")
+    # IOLoop.current().start()
 
 
 if __name__ == '__main__':
     main()
+    
+    

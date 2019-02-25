@@ -25,14 +25,14 @@ class TestMenu(Test):
         self.assertEqual(response.status_code, 400)
 
     def test_getItemsMenuCorrectBody(self):
-        for i in range(1, 5):
+        for i in range(1, 2):
             body = '{"id_restaurante": '+ str(i) +'}'
             response = requests.post("http://localhost:8888/asd/menu", data=body)
             self.assertEqual(response.status_code, 200)
 
             menu = json.loads(response.content.decode('utf-8'))
             if menu['menu']: # menu['menu'] distinto de {}
-                print('EXISTE menu para id_restaurante:{}'.format(i))
+                # print('EXISTE menu para id_restaurante:{}'.format(i))
 
                 self.assertTrue('menu' in menu)
                 self.assertTrue('style' in menu['menu'])
@@ -60,8 +60,6 @@ class TestMenu(Test):
                             self.assertTrue('image_url' in item)
                             self.assertTrue('price' in item)
                             self.assertTrue('opciones' in item)
-            else:
-                print('NO EXISTE menu para id_restaurante:{}'.format(i))
 
 if __name__ == "__main__":
     unittest.main()

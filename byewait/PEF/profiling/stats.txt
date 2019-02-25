@@ -1,0 +1,51 @@
+Sun Feb 24 18:26:12 2019    /home/jrjs/Desktop/apuntes/semestre10/PEF/final/comanda_backend/byewait/PEF/profiling/results.txt
+
+         27661052 function calls (27638673 primitive calls) in 280.038 seconds
+
+   Ordered by: cumulative time, internal time, call count
+   List reduced from 2862 to 572 due to restriction <0.2>
+   List reduced from 572 to 40 due to restriction <'app.py|Repo.py|Handler.py|Service.py'>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  280.263  280.263 app.py:1(<module>)
+        1    0.000    0.000  280.049  280.049 app.py:47(main)
+      600    0.009    0.000   59.075    0.098 registerHandler.py:28(post)
+      250    0.004    0.000   58.450    0.234 registerService.py:19(registrarUsuario)
+      250    0.006    0.000   56.827    0.227 registerRepo.py:14(registrarUsuario)
+      250    0.004    0.000   26.949    0.108 loginHandler.py:27(post)
+      150    0.002    0.000   26.639    0.178 loginService.py:18(validarUsuario)
+      150    0.003    0.000   26.329    0.176 loginRepo.py:14(validarUsuario)
+      150    0.003    0.000   21.104    0.141 menuHandler.py:27(post)
+       50    0.003    0.000   20.810    0.416 menuService.py:10(getItemsMenu)
+       50    0.333    0.007   20.807    0.416 menuRepo.py:19(getItemsMenu)
+       50    0.002    0.000   11.076    0.222 restaurantesHandler.py:13(get)
+       50    0.002    0.000   10.912    0.218 restaurantesService.py:13(getAllRestaurants)
+       50    0.207    0.004   10.843    0.217 restaurantesRepo.py:15(getAllRestaurants)
+    22700    0.088    0.000    9.381    0.000 restaurantesRepo.py:80(getAllRestaurantsTags)
+      200    0.004    0.000    1.005    0.005 credencialesHandler.py:18(post)
+      100    0.004    0.000    0.868    0.009 credencialesService.py:22(validarToken)
+      150    0.003    0.000    0.702    0.005 pedidoHandler.py:38(post)
+      150    0.003    0.000    0.620    0.004 menuItemScoreHandler.py:20(post)
+      250    0.001    0.000    0.449    0.002 registerService.py:16(__init__)
+      250    0.002    0.000    0.447    0.002 registerRepo.py:10(__init__)
+       50    0.001    0.000    0.443    0.009 pedidoService.py:12(insertOrder)
+       50    0.002    0.000    0.443    0.009 pedidoRepo.py:14(insertNewOrder)
+       50    0.001    0.000    0.376    0.008 menuItemScoreService.py:10(insertScore)
+       50    0.001    0.000    0.375    0.008 menuItemScoreRepo.py:15(insertScore)
+      150    0.001    0.000    0.198    0.001 loginService.py:15(__init__)
+      150    0.001    0.000    0.197    0.001 loginRepo.py:10(__init__)
+       50    0.000    0.000    0.111    0.002 pedidoService.py:9(__init__)
+       50    0.000    0.000    0.111    0.002 pedidoRepo.py:10(__init__)
+       50    0.000    0.000    0.097    0.002 menuItemScoreService.py:7(__init__)
+       50    0.000    0.000    0.097    0.002 menuItemScoreRepo.py:11(__init__)
+       50    0.000    0.000    0.091    0.002 menuService.py:7(__init__)
+       50    0.000    0.000    0.091    0.002 menuRepo.py:15(__init__)
+       50    0.000    0.000    0.086    0.002 restaurantesService.py:10(__init__)
+       50    0.000    0.000    0.086    0.002 restaurantesRepo.py:11(__init__)
+       50    0.005    0.000    0.067    0.001 restaurantesService.py:19(<listcomp>)
+        1    0.000    0.000    0.059    0.059 loginHandler.py:1(<module>)
+        1    0.000    0.000    0.052    0.052 loginService.py:1(<module>)
+        1    0.000    0.000    0.015    0.015 loginRepo.py:1(<module>)
+        1    0.000    0.000    0.006    0.006 menuHandler.py:1(<module>)
+
+

@@ -5,6 +5,7 @@ from utils.logger import Logger
 from handlers import base
 import json
 from decorators.handleException import handleException
+from tornado import gen
 
 logger = Logger('restaurantesHandler')
 
@@ -24,9 +25,3 @@ class RestaurantesHandler(base.BaseHandler):
     def options(self):
         self.finish()
         
-    @tornado.web.asynchronous
-    @handleException
-    def post(self):
-        logger.debug("post")
-        svc = RestaurantesService()
-        self.finish()

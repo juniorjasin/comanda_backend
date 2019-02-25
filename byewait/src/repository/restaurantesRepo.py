@@ -5,6 +5,7 @@ import pymysql
 from collections import namedtuple
 from model.restaurante import Restaurante
 
+
 logger = Logger('restaurantesRepo')
 
 class RestaurantesRepo(repo.Repo):
@@ -12,27 +13,31 @@ class RestaurantesRepo(repo.Repo):
         super(RestaurantesRepo, self).__init__()
         logger.debug('restaurantesRepo')
 
+    
     def getAllRestaurants(self):
         logger.debug('getAllRestaurants')
         restaurantes = []
 
         try:        
             cursor = self.cnx.cursor()
-            query = "SELECT id_restaurante, name, description, address, image_url, precio_cubiertos from restaurants"            
+            query = "SELECT id_restaurante, name, description, address, image_url, precio_cubiertos \
+                       FROM restaurants"
             cursor.execute(query)
             rows = cursor.fetchall()
             self.cnx.commit()
             cursor.close()
-            if rows == None or len(rows) == 0:     
+
+            if rows == None:     
                 logger.debug('No hay ningun restaurante insertado...')       
                 return restaurantes
             else:
                 try:
                     for row in rows:
-                        # por cada restaurante, deberia obtener todos tags
-                        # asi despues los meto en la estrucutra Restaurante
                         tags = self.getAllRestaurantsTags(row[0])
-                        r = Restaurante(id=row[0], name=row[1], description=row[2], address=row[3], image_url=row[4], precio_cubiertos=float(row[5]), tags=tags)
+                        id, name, description, address, image_url, precio_cubiertos = row
+
+                        r = { "id": id, "name": name, "description": description, "address": address,
+                              "image_url":image_url, "precio_cubiertos":float(precio_cubiertos), "tags":tags}
                         restaurantes.append(r)
                 except Exception as e:
                     msg = "Fallo la creacion del array de restaurantes: {}".format(e)
@@ -42,6 +47,7 @@ class RestaurantesRepo(repo.Repo):
             msg = "Fallo la consulta de getAllRestaurants a la base de datos: {}".format(e2)
             logger.error(msg)
             raise exceptions.InternalServerError(5001)
+
         return restaurantes
 
     def getRestaurantById(self, id_restaurante):
@@ -89,13 +95,12 @@ class RestaurantesRepo(repo.Repo):
         values = (id_restaurante)
         cursor.execute(query, values)
         rows = cursor.fetchall()
+        self.cnx.commit()
+        cursor.close()
 
         for row in rows:
             tag = {"id":row[0], "nombre":row[1]}
             tags.append(tag)
-
-        self.cnx.commit()
-        cursor.close()
 
         return tags
         

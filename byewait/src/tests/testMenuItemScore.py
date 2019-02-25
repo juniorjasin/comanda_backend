@@ -53,8 +53,6 @@ class TestMenuItemScore(Test):
         response = requests.post("http://localhost:8888/menu/item/score", data=body, headers=headers)
         content = json.loads(response.content.decode('utf-8'))
 
-        print('menu_item_score:{}'.format(content))
-
         self.assertTrue('id' in content['menu_item_score'])
         self.assertTrue('id_item_menu' in content['menu_item_score'])
         self.assertTrue('id_usuario' in content['menu_item_score'])

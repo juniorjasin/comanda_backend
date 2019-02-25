@@ -49,15 +49,20 @@ class Logger():
 
   def debug(self, message):
     self.debugLogger.debug(message)
+    
 
   def info(self, message):
     self.infoLogger.info(message)
+    
 
   def warning(self, message):
     self.warningLogger.warning(message)
+    
 
   def error(self, message):
     self.errorLogger.error(message)
+    
    
   def critical(self, message):
     self.criticalLogger.critical(message)
+    

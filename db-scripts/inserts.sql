@@ -138,7 +138,7 @@ VALUES(3, 2);
 INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('juan', 'juan@gmail.com', 'juan cruz', 'borssotto', '$2b$12$qxYL/c5KbxDb0iIvVgvrYuow20y7BRgk8JV6BeMQ2Cy1wMrNAabU2');
 INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('andi', 'andi@gmail.com', 'andres', 'balestrini', '$2b$12$AftbQ7QacpeB/VOVlXeJT.HEt0NwfNbIKF0NozVxvhZuhKnheeN6m');
 INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('jrjs', 'jrjs@gmail.com', 'junior', 'jasin', '$2b$12$xzcHoLXLOa.bO7XEkqQ8wupvMUFTsMgNnX8.KbxCSEMJ.zfv95DbO');
-
+INSERT INTO usuarios (username, email, nombre, apellido, password) VALUES ('testcorrect', 'testcorrect@test.com', 'test', 'test', '$2b$12$.c8SDXQAgGg6x0Re/5LI1eP3a0FGpuWZAi60kwC4Rz7qtiJY686ES');
 
 INSERT INTO scores_item_menu (id_item_menu, id_usuario, score) VALUES (1, 3, 5);
 INSERT INTO scores_item_menu (id_item_menu, id_usuario, score) VALUES (2, 3, 5);

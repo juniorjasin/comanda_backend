@@ -11,15 +11,10 @@ import re
 
 logger = Logger('registerHandler')
 
+email_regex = re.compile(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
+
 class RegisterHandler(base.BaseHandler):
   
-    @tornado.web.asynchronous
-    @handleException
-    def get(self):
-        logger.debug("get")
-        svc = RegisterService()
-        self.finish()
-
     @tornado.web.asynchronous
     @handleException
     def options(self):
@@ -36,16 +31,14 @@ class RegisterHandler(base.BaseHandler):
             nombre = data['user']['nombre']
             apellido = data['user']['apellido']
             email = data['user']['email']
-            username.encode('latin-1')
-            password.encode('latin-1')
-            nombre.encode('latin-1')
-            apellido.encode('latin-1')
+            
         except Exception as e:
-            logger.error('Body incorrecto, exception: : {}'.format(e) + ' body: {}'.format(data)) 
+            logger.error('Body incorrecto, exception: : {}'.format(e)) 
             raise exceptions.BadRequest(3001)
-        if not bool(re.match(r"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", email)):
+        if not email_regex.match(email):
             logger.error('Mal formato de email, email: {}'.format(email))
             raise exceptions.BadRequest(3001)
+
         svc = RegisterService()
         respuesta = svc.registrarUsuario(username, password, nombre, apellido, email)
         self.write(respuesta)

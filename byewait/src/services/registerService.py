@@ -17,6 +17,7 @@ class RegisterService:
         self.repo = registerRepo.RegisterRepo()
 
     def registrarUsuario(self, userName, password, nombre, apellido, email):
+        logger.debug('registrarUsuario')
         respuesta = self.repo.registrarUsuario(userName, password, nombre, apellido, email)
         payload = {'userName': userName, 'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes = 1000) }
         token = jwt.encode(payload, private_key, algorithm='RS256').decode('utf-8')

@@ -1,0 +1,43 @@
+Mon Feb 25 17:50:06 2019    /home/jrjs/Desktop/apuntes/semestre10/PEF/final/comanda_backend/byewait/PEF/profiling/test-register.txt
+
+         492354 function calls (485307 primitive calls) in 16.648 seconds
+
+   Ordered by: cumulative time, internal time, call count
+   List reduced from 2970 to 594 due to restriction <0.2>
+   List reduced from 594 to 32 due to restriction <'app.py|Repo.py|Handler.py|Service.py'>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   16.650   16.650 app.py:1(<module>)
+        1    0.001    0.001   16.310   16.310 app.py:49(main)
+      100    0.004    0.000    7.357    0.074 registerHandler.py:23(post)
+       30    0.001    0.000    7.143    0.238 registerService.py:19(registrarUsuario)
+       30    0.003    0.000    6.717    0.224 registerRepo.py:14(registrarUsuario)
+       30    0.000    0.000    0.097    0.003 registerService.py:16(__init__)
+       30    0.000    0.000    0.097    0.003 registerRepo.py:10(__init__)
+        1    0.000    0.000    0.069    0.069 loginHandler.py:1(<module>)
+        1    0.000    0.000    0.060    0.060 loginService.py:1(<module>)
+        1    0.000    0.000    0.031    0.031 app.py:29(__init__)
+        1    0.000    0.000    0.018    0.018 loginRepo.py:1(<module>)
+        1    0.000    0.000    0.008    0.008 menuHandler.py:1(<module>)
+        1    0.000    0.000    0.005    0.005 menuService.py:1(<module>)
+        1    0.000    0.000    0.004    0.004 menuRepo.py:1(<module>)
+        1    0.000    0.000    0.004    0.004 historialPedidosHandler.py:1(<module>)
+        1    0.000    0.000    0.004    0.004 managerHandler.py:1(<module>)
+        1    0.000    0.000    0.004    0.004 restaurantesHandler.py:1(<module>)
+        1    0.000    0.000    0.004    0.004 menuItemScoreHandler.py:1(<module>)
+        1    0.000    0.000    0.003    0.003 registerHandler.py:1(<module>)
+        1    0.000    0.000    0.003    0.003 credencialesHandler.py:1(<module>)
+        1    0.000    0.000    0.003    0.003 pedidoHandler.py:1(<module>)
+        1    0.000    0.000    0.003    0.003 historialPedidosService.py:1(<module>)
+        1    0.000    0.000    0.003    0.003 restaurantesService.py:1(<module>)
+        1    0.000    0.000    0.003    0.003 managerService.py:1(<module>)
+        1    0.000    0.000    0.003    0.003 menuItemScoreService.py:1(<module>)
+        1    0.000    0.000    0.002    0.002 restaurantesRepo.py:1(<module>)
+        1    0.000    0.000    0.002    0.002 pedirCuentaHandler.py:1(<module>)
+        1    0.000    0.000    0.002    0.002 itemsService.py:1(<module>)
+        1    0.000    0.000    0.002    0.002 historialPedidosRepo.py:1(<module>)
+        1    0.000    0.000    0.002    0.002 pedidoService.py:1(<module>)
+        1    0.000    0.000    0.002    0.002 registerService.py:1(<module>)
+        1    0.000    0.000    0.002    0.002 comandaHandler.py:1(<module>)
+
+

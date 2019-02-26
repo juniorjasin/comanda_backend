@@ -5,6 +5,7 @@ from services.loginService import LoginService
 from utils.logger import Logger
 from handlers import base
 from exceptions import exceptions
+from tornado import gen
 
 logger = Logger('loginHandler')
 
@@ -29,13 +30,10 @@ class LoginHandler(base.BaseHandler):
     def post(self):
         logger.debug('post')
         try:
-            logger.debug('intento sacar body vacio')
             data = json.loads(self.request.body.decode('utf-8'))
-            logger.debug('despues de obtenerlo')
             username = data['user']['username']
             password = data['user']['password']
-            username.encode('latin-1')
-            password.encode('latin-1')
+            
         except Exception as e:
             logger.error('Exception: : {}'.format(e))
             raise exceptions.BadRequest(3001)

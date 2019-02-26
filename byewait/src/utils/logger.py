@@ -50,6 +50,7 @@ class Logger():
   def debug(self, message):
     self.debugLogger.debug(message)
     
+    
 
   def info(self, message):
     self.infoLogger.info(message)

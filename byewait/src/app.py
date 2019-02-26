@@ -45,8 +45,6 @@ class Application(tornado.web.Application):
         ]
         tornado.web.Application.__init__(self, handlers)
 
-fp=open('memory_profiler.log','w+')
-@profile(precision=6)
 def main():
     ''' codigo original: menos performante '''
     # app = Application()

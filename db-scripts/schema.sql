@@ -96,7 +96,7 @@ create table if not exists usuarios (
     username            varchar(100)    not null UNIQUE,
     nombre              varchar(50)    not null,
     apellido            varchar(50)    not null,
-    email               varchar(100)    not null,
+    email               varchar(100)    not null UNIQUE,
     password            varchar(400)    not null,
     PRIMARY KEY (id_usuario)
 );

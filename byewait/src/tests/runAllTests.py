@@ -9,13 +9,13 @@ from testCredenciales import TestCredenciales
 
 if __name__ == '__main__':
 
-    # test_classes_to_run = [TestLogin, TestMenu, TestPedido, TestRegister, TestRestaurante, TestMenuItemScore, TestCredenciales]
+    test_classes_to_run = [TestLogin, TestMenu, TestPedido, TestRegister, TestRestaurante, TestMenuItemScore, TestCredenciales]
     # no tienen test: comandaHandler, comandasWebSocket, historialPedidosHandler, managerHandler, pedirCuentaHandler
-    test_classes_to_run = [TestLogin]
+    # test_classes_to_run = [TestRestaurante]
     loader = unittest.TestLoader()
 
     suites_list = []
-    for i in range(10):
+    for i in range(1):
         for test_class in test_classes_to_run:
             suite = loader.loadTestsFromTestCase(test_class)
             suites_list.append(suite)

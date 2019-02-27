@@ -31,6 +31,7 @@ class MenuItemScoreHandler(base.BaseHandler):
         except Exception as e:
           logger.error('exception: : {}'.format(e)) 
           raise exceptions.BadRequest(4001)
+          
         svc = MenuItemScoreService()
         score = svc.insertScore(**data['menu_item_score'])
         self.finish({'menu_item_score': score})

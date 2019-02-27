@@ -3,9 +3,7 @@ import tornado.web
 from services.restaurantesService import RestaurantesService
 from utils.logger import Logger
 from handlers import base
-import json
 from decorators.handleException import handleException
-from tornado import gen
 
 logger = Logger('restaurantesHandler')
 

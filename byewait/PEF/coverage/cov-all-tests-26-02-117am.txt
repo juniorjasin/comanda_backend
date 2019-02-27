@@ -1,0 +1,1 @@
+Couldn't read data from '/home/jrjs/Desktop/apuntes/semestre10/PEF/final/comanda_backend/.coverage': JSONDecodeError: Extra data: line 1 column 77225 (char 77224)

@@ -5,7 +5,6 @@ import bcrypt
 
 logger = Logger('registerRepo')
 
-
 class RegisterRepo(repo.Repo):
     def __init__(self):
         super(RegisterRepo, self).__init__()
@@ -35,9 +34,7 @@ class RegisterRepo(repo.Repo):
                     idUsuario = cursor.lastrowid
                     self.cnx.commit()
                 except Exception as ex:
-                    self.cnx.rollback()
-                    messg = "Fallo la consulta a la base de datos: {}".format(ex)
-                    logger.error(messg)                    
+                    self.cnx.rollback()                  
                     raise exceptions.InternalServerError(5001)
                 finally:
                     cursor.close()
@@ -48,8 +45,7 @@ class RegisterRepo(repo.Repo):
         except exceptions.InternalServerError as ex:
             raise(ex)
         except Exception as e:
-            messg = "Fallo la consulta a la base de datos: {}".format(e)
-            logger.error(messg)
+            logger.error("Fallo la consulta a la base de datos: {}".format(e))
             raise exceptions.InternalServerError(5001)
 
         respuesta = {
